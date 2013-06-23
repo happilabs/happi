@@ -46,6 +46,8 @@ class SubscribersController < ApplicationController
       if @subscriber.save
         format.html { redirect_to @subscriber, notice: 'Subscriber was successfully created.' }
         format.json { render json: @subscriber, status: :created, location: @subscriber }
+
+        #sends the subscriber a welcome email
         email = UserMailer.welcome_email(@user)
         email.deliver
       else
