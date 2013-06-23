@@ -48,7 +48,7 @@ class SubscribersController < ApplicationController
         format.json { render json: @subscriber, status: :created, location: @subscriber }
 
         #sends the subscriber a welcome email
-        email = UserMailer.welcome_email(@user)
+        email = NewsletterMailer.welcome_email(@subscriber)
         email.deliver
       else
         format.html { render action: "new" }
