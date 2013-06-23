@@ -205,6 +205,112 @@ h2 {
 	margin-top: 30px;
 }
 
+<<<<<<< HEAD
+
+
+#header-section .hero-unit {
+	padding: 70px 20px 20px;
+}
+
+.navbar-fixed-top{
+	margin-bottom:30px;
+}
+
+.navbar-inverse .navbar-inner{
+	padding:5px 0px;
+}
+.hero-unit h1{
+	font-size:40px;
+	line-height:50px;
+}
+
+#header-section .innerbg {
+	min-height: 450px;
+	height:100%;
+}
+
+.navbar-inverse .nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus{
+    color: #ffff00;
+  }
+
+
+.innerbg {
+ background: rgba(44, 62, 80, 0.8) url(cover2.jpg) 50% 0 fixed repeat;
+ min-height:650px;
+ width:100%;
+ display:inline-block;
+ margin:0px;
+ padding:0px;
+ background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ -webkit-background-size: cover;
+ position:relative;
+ padding-bottom:50px;
+}
+
+.leftbg {
+  background: rgba(40, 170, 157, 0.4) url(pixel.png) 0% 0% repeat;
+  min-height:100%;
+  height:100%;
+  width:100%;
+  display:block;
+  margin:0px 0px 0px 0px;
+  padding:0px 0px 0px 0px;
+  position:absolute;
+  bottom:0px;
+  z-index:1;
+}
+
+.feature-box ul li{
+  list-style: square;
+  text-align: left;
+  font-size: 12px;
+}
+
+.get-it {
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.page-header h3 {
+  color: #00AEEF;
+  font-weight: 200;
+  /*border-bottom: 14px solid #898989;
+  border-top: 14px solid #898989;*/
+}
+
+
+.btn.btn-danger {
+  background-color: #FFFF00;
+  box-shadow: 2px 2px 8px #898989;
+}
+
+.btn.btn-success {
+  background: #34495E;
+}
+
+.gray .pricing-table-header .price-header {
+  background: #898989;
+}
+
+.green .pricing-table-header .price-header {
+  background: #898989;
+}
+
+.dark-green .pricing-table-header .price-header {
+  background: green;
+}
+
+.red .pricing-table-header .price-header {
+  background: #00b0f0;
+}
+
+.small-font {
+  font-size: 14px;
+}
+
+
 .center-box {
 	width: 450px;
 	margin: 0 auto;
