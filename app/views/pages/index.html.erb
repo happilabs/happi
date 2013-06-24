@@ -54,9 +54,11 @@
           <hr class="half">
         </div>
           <div class="camein">
-              <a href="#price-section" class="btn btn-large btn-danger btn-block-third " title="">SIGN UP NOW</a>
+
+              <%= link_to "SIGN UP NOW", new_subscriber_url, class: "btn btn-large btn-danger btn-block-third" %>
+
               <i class="or">- or -</i>
-              <a href="#aboutus-section" class="btn btn-large btn-block-third btn-warning" title="">LEARN MORE</a>
+              <%= link_to "LEARN MORE", about_us_url, class: "btn btn-large btn-block-third btn-warning" %>
           </div>
       </div>
 
