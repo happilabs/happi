@@ -1,7 +1,25 @@
+<div class="sky-background about-us">
 
+  <%= form_for @message, :url => voices_path do |f| %>
+      <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
 
+      <div>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </div>
 
+      <div>
+        <%= f.label :body %>
+        <%= f.text_area :body %>
+      </div>
 
+      <%= f.submit "Send" %>
+  <% end %>
+
+</div>
 
 
 
