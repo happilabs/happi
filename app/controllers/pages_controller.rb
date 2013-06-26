@@ -12,4 +12,8 @@ class PagesController < ApplicationController
 
   end
 
+  def voices
+
+  end
+
 end
