@@ -1,7 +1,7 @@
 class PagesMailer < ActionMailer::Base
 
   default :from => "yoyo@youdomain.dev"
-  default :to => "aweiksnar@gmail.com"
+  default :to => "happidevelopers@gmail.com"
 
   def new_message(message)
     @message = message
