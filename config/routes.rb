@@ -1,5 +1,14 @@
 Happilabs3::Application.routes.draw do
 
+  resources :reports
+
+
+  resources :products
+
+
+  resources :categories
+
+
   resources :subscribers
 
 
