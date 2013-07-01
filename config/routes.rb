@@ -1,5 +1,8 @@
 Happilabs3::Application.routes.draw do
 
+  resources :reviews
+
+
   resources :reports
 
 
