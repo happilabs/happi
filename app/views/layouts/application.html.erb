@@ -33,6 +33,16 @@
             <li><%= link_to "Subscriptions", sign_up_path %></li>
             <li><%= link_to "Voices", voices_path %></li>
             <li><a href="#contact-section">Contact</a> </li>
+            <div id="user_nav">
+              <% if user_signed_in? %>
+                Logged in as <strong><%= current_user.email %></strong>.
+                <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+                <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "Sign up", new_user_registration_path %></li>
+                <li><%= link_to "Login", new_user_session_path %></li>
+              <% end %>
+            </div>
             </ul>
           </nav>
           </div>
