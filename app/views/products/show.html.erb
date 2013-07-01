@@ -1,30 +1,32 @@
-<p id="notice"><%= notice %></p>
+<section class="about-us group">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @product.title %>
-</p>
+    <p>
+      <b>Title:</b>
+      <%= @product.title %>
+    </p>
 
-<p>
-  <b>Category:</b>
-  <%= @product.category_id %>
-</p>
+    <p>
+      <b>Category:</b>
+      <%= @product.category_id %>
+    </p>
 
-<p>
-  <b>Product number:</b>
-  <%= @product.product_number %>
-</p>
+    <p>
+      <b>Product number:</b>
+      <%= @product.product_number %>
+    </p>
 
-<p>
-  <b>Summary:</b>
-  <%= @product.summary %>
-</p>
+    <p>
+      <b>Summary:</b>
+      <%= @product.summary %>
+    </p>
 
-<p>
-  <b>Photo:</b>
-  <%= @product.photo %>
-</p>
+    <p>
+      <b>Photo:</b>
+      <%= @product.photo %>
+    </p>
 
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+</section>

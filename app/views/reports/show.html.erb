@@ -1,25 +1,28 @@
-<p id="notice"><%= notice %></p>
+<section class="about-us group">
 
-<p>
-  <b>Title:</b>
-  <%= @report.title %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Summary:</b>
-  <%= @report.summary %>
-</p>
+    <p>
+      <b>Title:</b>
+      <%= @report.title %>
+    </p>
 
-<p>
-  <b>Link:</b>
-  <%= @report.link %>
-</p>
+    <p>
+      <b>Summary:</b>
+      <%= @report.summary %>
+    </p>
 
-<p>
-  <b>Html link:</b>
-  <%= @report.html_link %>
-</p>
+    <p>
+      <b>Link:</b>
+      <%= @report.link %>
+    </p>
+
+    <p>
+      <b>Html link:</b>
+      <%= @report.html_link %>
+    </p>
 
 
-<%= link_to 'Edit', edit_report_path(@report) %> |
-<%= link_to 'Back', reports_path %>
+    <%= link_to 'Edit', edit_report_path(@report) %> |
+    <%= link_to 'Back', reports_path %>
+</section>
