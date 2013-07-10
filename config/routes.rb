@@ -24,6 +24,7 @@ Happilabs3::Application.routes.draw do
   get "sign_up" => "Pages#sign_up", as: "sign_up"
   get "/voices" => "Pages#voices", as: "voices"
   match '/voices' => 'Pages#create_voice', :as => 'voices', :via => :post
+  get "/contact" => "Pages#contact", as: "contact"
 
 
 end
