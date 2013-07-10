@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def index
-
+    @message = Message.new
   end
 
   def about_us
@@ -29,5 +29,8 @@ class PagesController < ApplicationController
     end
   end
 
+  def contact
+
+  end
 
 end
