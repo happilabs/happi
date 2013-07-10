@@ -15,8 +15,29 @@ h2 {
 	text-align: center;
 }
 
+.about-us {
+	padding: 60px 0px 90px 0px;
+}
 
-.about-us h4 {
+.about-us h2 {
+	margin: 10px 0px 20px 0px;
+	text-shadow: 2px 2px 2px #898989;
+	letter-spacing: .1em;
+}
+
+.about-us-container {
+	margin: 0 auto;
+	margin-top: 20px;
+	display: block;
+	width: 90%;
+}
+
+
+.subscribe-us h2 {
+	margin: 30px 0px;
+}
+
+.subscribe-us h4 {
 		font-size: 14px;
 		color: black;
 		font-weight: 400;
@@ -32,7 +53,7 @@ h2 {
 		margin: 10px;
 	}
 
-.about-us {
+.subscribe-us {
 		width: 1100px;
 		margin: 0 auto;
 		/*height: 300px;*/
@@ -43,24 +64,20 @@ h2 {
 	}
 
 
-.about-us ul {
-	height: 100px;
-}
-
 .tom-image {
 		float: left;
 		height: 330px;
 		width: 300px;
-		padding: 10px 0px 0px 50px;
-		margin: 10px 20px 0px 50px;
+		padding: 10px;
+		margin: 20px 20px 0px 120px;
 	}
 
 .graph-image {
 	float: left;
 	height: 40%;
 	width: 30%;
-	padding: 10px 0px 0px 50px;
-	margin: 10px 20px 0px 50px;
+	padding: 10px 0px 0px 20px;
+	margin: 10px 20px 0px 20px;
 }
 
 .shoutout {
@@ -71,25 +88,31 @@ h2 {
 	color: #898989;
 }
 
+
 .text-right-img {
-	float: left;
-	width: 500px;
-	padding-left: 20px;
-	margin-left: 50px;
-	line-height: 32px;
-	font-size: 16px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+		float: left;
+		width: 510px;
+		padding-left: 80px;
+		margin: 25px 0 0px 50px;
+		line-height: 26px;
+		font-size: 16px;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: #757575;
+	}
 
-.text-right-img2 {
-	margin-left: 50px;
-}
+.text-left-img {
+		float: left;
+		width: 420px;
+		padding-left: 20px;
+		padding-right: 30px;
+		margin: 25px 0 0px 50px;
+		line-height: 26px;
+		font-size: 16px;
+		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: #757575;
+	}
 
-.why-img {
-	width: 100%;
-	/*height: 154px;
-	width: 179px;*/
-}
+
 
 .welcome-img {
 	position: relative;
@@ -118,9 +141,65 @@ h2 {
 
 }
 
+/* *********  WHY WE DO IT  **************** */
+
 .why-box {
+	height: 480px;
+	width: 28%;
+	background-color: #FFF;
+  	border-radius: 9px;
+  	box-shadow: 1px 1px 10px #898989,
+  				-1px -1px 10px #898989;
+  	float: left;
+  	margin-left: 50px;
+  	margin-bottom: 30px;
+  	position: relative;
+}
+
+.why-box h3 {
+	width: 100%;
+	background-color: #898989;
+	border-top-left-radius: 9px;
+	border-top-right-radius: 9px;
+	text-align: center;
+	color: #fff;
+	padding: 10px 0px 10px;
+	width:100%;
+	font-size: 18px;
+	line-height: 32px;
+	font-weight: 400;
+}
+
+.why-box h4 {
+	padding: 20px;
+	text-align: center;
+	line-height: 20px;
+	font-size: 14px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.why-box ul {
 	padding: 10px;
-	height: 470px;
+}
+
+.why-box li {
+	font-size: 12px;
+	list-style: square;
+}
+
+#morespace {
+	margin-bottom: 50px;
+}
+
+.goals {
+	background-color: #00AEEF;
+	border-bottom-left-radius: 9px;
+	border-bottom-right-radius: 9px;
+	color: #fff;
+	font-weight: 300;
+	letter-spacing: .1em;
+	position: absolute;
+	top: 400px;
 }
 
 .price-box {
@@ -135,17 +214,9 @@ h2 {
 
 .sky-background {
 	background-color: #CEF3FF;
-  background-size: 100%;
+  	background-size: 100%;
 }
 
-.sky-background ul {
-	margin-bottom: 30px;
-}
-
-.sky-background li {
-	line-height: 30px;
-	list-style: none;
-}
 
 .btn-price {
 	width: 270px;
@@ -156,38 +227,26 @@ h2 {
 
 .btn-why {
 	margin-top: 15px;
+	margin-bottom: 50px;
 	margin-left: 338px;
 	box-shadow: 2px 2px 2px #898989;
 }
 
-.img-holder {
-	background-color: #CCF2FF;
-	width: 300px;
-	height: 160px;
-}
 
 .price-value {
 	padding-bottom: 16px;
 }
 
-#arrow-li ul {
-	list-style-image: url(assets/img/old_go_next.png);
-	color: #00AEEF;
-	font-size: 18px;
-}
-
-#arrow-li ul li {
-	line-height: 30px;
-}
 
 .important {
-	font-weight: 500;
+	font-weight: 300;
 	letter-spacing: 1px;
 	padding: 0px 3px 0px 3px;
+	text-shadow: 1px 1px 1px #ffff00;
 }
 
 .important-blue {
-	color: #00AEEF;
+	/*color: #00AEEF;*/
 }
 
 
@@ -282,22 +341,6 @@ h2 {
   background: #34495E;
 }
 
-.gray .pricing-table-header .price-header {
-  background: #898989;
-}
-
-.green .pricing-table-header .price-header {
-  background: #898989;
-}
-
-.dark-green .pricing-table-header .price-header {
-  background: green;
-}
-
-.red .pricing-table-header .price-header {
-  background: #00b0f0;
-}
-
 .small-font {
   font-size: 14px;
 }
@@ -308,15 +351,6 @@ h2 {
 	margin: 0 auto;
 }
 
-.text-right-img {
-		float: left;
-		width: 520px;
-		padding-left: 20px;
-		margin: 25px 0 0px 50px;
-		line-height: 32px;
-		font-size: 16px;
-		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	}
 
 #benefits li {
 	padding: 5px 0 5px 5px;
@@ -328,14 +362,13 @@ h2 {
 
 #signup-box {
 	width: 350px;
-	height: 320px;
 	margin: 35px 0 150px 30px;
-	background-image: url(pipettetip.jpg);
-	background-size: contain;
+	background: url(assets/images/pixel.png);
+	background-size: contain;	
 	border-radius: 5px;
 	float: left;
 	border: 2px solid #00AEEF;
-	padding: 15px;
+	padding: 25px;
 }
 
 
@@ -408,7 +441,6 @@ padding-bottom:4px;
 	}
 
 	.headertop {
-		padding-top:40px;
 		background: #2C3E50;
 		background: -moz-linear-gradient(45deg, #2C3E50 0%, #527394 100%) 50% 0 fixed;
 		background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#2C3E50), color-stop(100%,#527394))50% 0 fixed;
@@ -425,7 +457,45 @@ padding-bottom:4px;
 
 	}
 
+/* **************    Footer      ***************/
+ /******************************************/
 
+footer {
+	padding-top: 30px;
+	height: 320px;
+	background-color: #00aeef;
+}
+
+.footer-col h5 {
+	border-bottom: 2px inset #ffff00;
+	color: #ffff00;
+	letter-spacing: .1em;
+	font-weight: 500;
+	margin-bottom: 7px;
+}
+
+.footer-col li {
+	color: #fff;
+	letter-spacing: .1em;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 23px;
+	padding: 5px 0px 0px 15px;
+	text-shadow: 2px 2px 2px #898989;
+	list-style: none;
+}
+
+.footer-col {
+	width: 20%;
+	float: left;
+	padding: 20px 10px 0 10px;
+	margin: 0 10px 0 10px;
+}
+
+/*.footer-cloud {
+	width: 70%;
+	height: 70%;
+	padding-left: 20px;
+}*/
 /************************************** CUSTOM STYLES *************************/
 
 
@@ -492,10 +562,14 @@ padding-bottom:4px;
 		display:block;
 
 	}
-	p{
+	
+
+	p {
 		/*text-align:justify;*/
 		padding:10px 0px;
+
 	}
+
 	.pricing-table p{
 		padding:0px;
 		margin-top:5px;
@@ -668,21 +742,34 @@ padding-bottom:4px;
 
 /***************************** PRICE ********************************/
 
-.pricing-table-header .price-header{
+.pricing-table-header {
+	padding: 20px 0px;
+}
 
+
+.price-header{
 	background-size: 16px 16px;
 	border-radius: 6px 6px 0 0;
-	color: #fff;
-	padding: 19px 0px 20px;
+	color: #00AEEF;
+	padding: 40px 0px 20px;
 	width:100%;
-	display:inline-block;
-	font-size: 18px;
+	display:inline;
+	font-size: 28px;
+	line-height: 32px;
 	font-weight: 550;
 
 }
 
-.gray .pricing-table-header .price-header {
-	background: #898989;
+.price-header-price {
+	background-size: 16px 16px;
+	border-radius: 6px 6px 0 0;
+	color: #00AEEF;
+	padding: 19px 0px 20px;
+	width:100%;
+	display:inline;
+	line-height: 20px;
+	font-weight: 550;
+	font-size: 16px;
 }
 
 .pricing-table-features, .pricing-table-header .price-value{
@@ -945,5 +1032,4 @@ padding-top: 18px;
 
 	max-height:180px;
 	}
-
 
