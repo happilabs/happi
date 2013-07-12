@@ -9,9 +9,8 @@ gem 'devise'
 group :development do
   gem 'sqlite3'
 end
-
 group :production do
-  gem 'pg'
+	gem 'pg'
 end
 # gem "letter_opener", :group => :development
 
