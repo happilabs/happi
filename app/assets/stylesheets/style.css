@@ -251,6 +251,42 @@ h4 {
 	box-shadow: 2px 2px 5px #757575;
 }
 
+.section-intro {
+	width: 80%;
+	margin: 20px 0px 40px 60px;
+	background-color: #F1F1F1;
+	padding: 5px 10px 5px 10px;
+	border-radius: 5px;
+  	border-top: 2px solid #00aeef;
+  	border-left: 2px solid #00aeef;
+  	border-right: 2px solid #00aeef;
+  	box-shadow: 10px 10px 10px #757575;
+}
+
+.section-intro h3 {
+	margin: 20px 0px 10px 20px;
+	text-shadow: 1px 1px 1px #757575;
+	letter-spacing: .1em;
+	line-height: 42px;
+	font-size: 36px;
+	font-family: "open sans", sans-serif;
+	font-weight: 500;
+	text-align: left;
+	color: green;
+}
+
+.section-intro p {
+	margin: 0px 0px 20px 60px;
+	line-height: 30px;
+	font-size: 22px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #757575;
+	font-weight: 200;
+	padding: 0px;
+
+}
+
+
 .human-bio {
 	width: 90%;
 	margin: 0 auto;
