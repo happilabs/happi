@@ -39,69 +39,79 @@
 
     <!-- START PARALLAX BG -->
   <div class="innerbg">
-    <div class="leftbg"></div>
-
-
-  <div class="hero-unit">
-    <div class="container">
-      <div class="row-fluid">
-        <div class="text-center">
-          <hr class="half">
-            <h1>Our <span class="yellow">Mission</span>:</h1>
-            <h2 class="text-center">
-            <span class="get-it">to improve the happiness of scientists & the quality of their research</span>
-            </h2>
-          <hr class="half">
-        </div>
-          <div class="camein">
-
-              <%= link_to "SIGN UP NOW", new_subscriber_url, class: "btn btn-large btn-danger btn-block-third" %>
-
-              <i class="or">- or -</i>
-              <%= link_to "LEARN MORE", about_us_url, class: "btn btn-large btn-block-third btn-warning" %>
-          </div>
-      </div>
-
+    <div class="leftbg">
     </div>
-  </div>
 
 
+      <div class="hero-unit">
+        <div class="container">
+          <div class="row-fluid">
+            <div class="text-center">
+              <hr class="half">
+                <h1>Our <span class="yellow">Mission</span>:</h1>
+                <h2 class="text-center">
+                <span class="get-it">to improve the happiness of scientists & the quality of their research</span>
+                </h2>
+              <hr class="half">
+            </div>
+            <div class="camein">
 
-  </div>
+                  <%= link_to "SIGN UP NOW", new_subscriber_url, class: "btn btn-large btn-danger btn-block-third" %>
 
-  <div class="midlevel group">
-
-      <div class="submit-option">
-        <h3>Submit a Quality Review</h3>
-        <div class="submit-btn btn btn-large btn-block-third btn-warning">
-          Select a Category
+                  <i class="or">- or -</i>
+                  <%= link_to "LEARN MORE", about_us_url, class: "btn btn-large btn-block-third btn-warning" %>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="review-intro">
-        <h4>Or quickly...</h4>
-        <h3 class="darktitle">Share Your Voice</h3>
-        <p>This is the place to <strong>voice your opinion</strong> about life in the lab. Warn us about a faulty product, tell us when an experiment works, or complain about a co-worker. We're here to listen.</p>
-        <br>
-        <p><strong>Our goal</strong> is to identify common sources of happiness and unhappiness in labs. Then we'll celebrate with you or find you a solution, respectively. Submit a comment quickly below or log in to keep track of your comments.</p>
+  </div>
+
+</header>
+      
+      <div class="hello grid">
+        <ul>
+          <li>Hello</li>
+          <li>Ni hao</li>
+          <li>Guten tag</li>
+          <li>Konichiwah</li>
+          <li>Privet</li>
+          <li>Namaste</li>
+          <li>Guten tag</li>
+          <li>Konichiwah</li>
+        </ul>
+      </div>
+
+  <div class="midlevel grid group">
+
+      <div class="voices-intro">
+
+        <h2>Share Your Voice</h2>
+        <p>This is the place to voice <span class="important">your opinion</span> about life in the lab. Warn us about a faulty product, tell us when an experiment works, or complain about a co-worker. We're here to listen.</p>
+        
+        <p><span class="important">Our goal</span> is to identify common sources of happiness and unhappiness in labs. Then we'll celebrate with you or find you a solution, respectively. Submit a comment quickly below or log in to keep track of your comments.</p>
       </div>
 
     <div class="voices-section group">
       <div class="voicesbox group">
+        
         <div class="voices group">
-          <h5>Happy</h5>
+          <h5 class="happy">Happy</h5>
           <p>"My paper was accepted!"</p>
         </div>
+        
         <div class="voices group">
-          <h5>Unhappy</h5>
+          <h5 class="unhappy">Unhappy</h5>
           <p>"Unmotivational motivational speeches from my PI"</p>
         </div>
+        
         <div class="voices group">
-          <h5>Happy</h5>
+          <h5 class="happy">Happy</h5>
           <p>"Getting brand new syringes that makes our mouse experiments go more smoothly."</p>
         </div>
+      
       </div>
 
-      <div>
+      <div class="voices-textbox">
 
         <%= form_for @message, :url => voices_path do |f| %>
             <div>
@@ -123,22 +133,27 @@
       </div>
 
       <div class="voicesbox group">
+        
         <div class="voices group">
-          <h5>Unhappy</h5>
+          <h5 class="unhappy">Unhappy</h5>
           <p>"People borrowing your stuff without asking."</p>
         </div>
+        
         <div class="voices group">
-          <h5>Happy</h5>
+          <h5 class="happy">Happy</h5>
           <p>"Solid co-workers."</p>
         </div>
+        
         <div class="voices group">
-          <h5>Unhappy</h5>
+          <h5 class="unhappy">Unhappy</h5>
           <p>"My snow boots have a hole in them and sitting here with wet feet sucks."</p>
         </div>
+      
       </div>
     </div>
+
   </div>
-</header>
+
 
 
 </div>
