@@ -426,6 +426,22 @@ h4 {
 
 }
 
+
+/* *********  Sign up Box  **************** */
+
+.center {
+	width: 30%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+.information {
+	border: 1px solid #898989;
+	padding: 20px 0px 20px 30px;
+	}
+
+
+
 /* *********  WHY WE DO IT  **************** */
 
 .why-box {
