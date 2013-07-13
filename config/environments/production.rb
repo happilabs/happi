@@ -20,6 +20,23 @@ Happilabs3::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  config.action_mailer.raise_delivery_errors = true
+  ActionMailer::Base.delivery_method = :smtp
+
+ ActionMailer::Base.smtp_settings =
+   {
+
+     :address            => 'smtp.gmail.com',
+     :port               => 587,
+     :domain             => 'gmail.com', #you can also use google.com
+     :authentication     => :plain,
+     :user_name          => 'happidevelopers@gmail.com',
+     :password           => 'happiness2013'
+   }
+
+   #devise
+   config.action_mailer.default_url_options = { :host => 'hltesting.heroku.com' }
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
