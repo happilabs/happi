@@ -1,5 +1,5 @@
 class Voice
-  # include ActiveAttr::Model
+  include ActiveAttr::Model
 
   attribute :name
   attribute :email
