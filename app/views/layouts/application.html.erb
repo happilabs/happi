@@ -25,6 +25,7 @@
                   <span><span class="yellow">Happi</span>Labs<span style="color:#898989">.org</span></span>
                   </a>
 
+<<<<<<< HEAD
              <!-- TOP NAVIGATION-->
              <div id="main-nav" class="scroller-spy">
               <nav class="nav-collapse collapse" >
@@ -39,6 +40,32 @@
                 </ul>
               </nav>
             </div>
+=======
+         <!-- TOP NAVIGATION-->
+         <div id="main-nav" class="scroller-spy">
+          <nav class="nav-collapse collapse" >
+            <ul class="nav pull-right" id="nav">
+              <!-- #TODO: make active page highlighted- can use class="active" but needs to be dynamic -->
+            <li><%= link_to "Home", root_url %></li>
+            <li><%= link_to "About", about_us_path %></li>
+            <li><%= link_to "Subscriptions", sign_up_path %></li>
+            <li><%= link_to "Reviews", reviews_path %></li>
+            <li><%= link_to "Contact", contact_path %></li>
+              <li>
+                <div id="user_nav">
+                  <% if user_signed_in? %>
+                    <li><%= link_to 'Profile', edit_user_registration_path %></li>
+                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                  <% else %>
+                    <li><%= link_to "Sign up", new_user_registration_path %></li>
+                    <li><%= link_to "Login", new_user_session_path %></li>
+                  <% end %>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          </div>
+>>>>>>> fa0de1786b6b3ebe971f6ba98d4b7f02ba54663a
 
           </div>
         </div>
