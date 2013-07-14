@@ -52,27 +52,27 @@ h4 {
 }
 
 .whoareyou {
-	height: 38px;
 	width: 200px;
-	background-color: yellow;
-	margin: 38px 20px 0px 0px;
+	background-color: #898989;
 	position: fixed;
-	padding: ;
-	float: right;
 	z-index: 3;
+	margin: 30px 0px 0px 450px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 
 .whoareyou li {
 	display: inline;
 	list-style: none;
 	font-size: 18px;
-
+	padding: 4px 8px 6px 10px;
 }
 
 .hello {
 	height: 38px;
 	padding: 20px 0px;
 }
+
 .hello ul {
 	height: 40px;
 	background-image: url(pixel.png) 0% 0% repeat;
@@ -169,7 +169,7 @@ h4 {
 
 
 .about-us {
-	padding: 60px 0px 90px 0px;
+	padding: 80px 0px 90px 0px;
 }
 
 .about-us h2 {
@@ -669,8 +669,50 @@ h4 {
 	padding: 25px;
 }
 
+/*********************   REVIEWS   ******************************/
+
+.search-box {
+	width: 80%;
+	margin: auto;
+	/*border-bottom: 4px solid #898989;*/
+}
+
+.search-box li {
+	float: left;
+	height: 30px;
+	border: 1px solid #898989;
+	background: linear-gradient(to bottom, #00aeef, #66CEF5);
+	padding: 10px 10px;
+	list-style: none;
+}
+
+.search-bar li:hover {
+	background: #00aeef;
+}
+
+#green-bkg {
+	background-color: green;
+}
+
+.search-bar h4 {
+	color: #fff;
+	font-size: 14px;
+	font-family: 'helvetica';
+	letter-spacing: .1em;
+	font-weight: normal;
+}
+
+
+
+
+
 
 /*************************** TOP ******************************/
+
+
+
+
+
 	.navbar {
   font-size: 18px; }
 

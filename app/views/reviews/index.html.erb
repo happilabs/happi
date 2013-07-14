@@ -1,29 +1,48 @@
-<h1>Listing reviews</h1>
+<div class="about-us grid group ">
+    <h2>Select a category</h2>
+        <div class="search-box group">
+          <ul class="search-bar">
+            <li><h4>Tubes</h4></li>
+            <li><h4>Pipette Tips</h4></li>
+            <li><h4>Cell Culture</h4></li>
+            <li id="green-bkg"><h4>Sustainability</h4></li>
+            <li><h4>Conical Tubes</h4></li>
+            <li><h4>Online Services</h4></li>
+            <li><h4>Companies</h4></li>
+          </ul>
+        </div>
 
-<table>
-  <tr>
-    <th>User</th>
-    <th>Product</th>
-    <th>Rating</th>
-    <th>Review</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="product-summary">
+        <h3>T75 Flask</h3>
 
-<% @reviews.each do |review| %>
-  <tr>
-    <td><%= review.user_id %></td>
-    <td><%= review.product_id %></td>
-    <td><%= review.rating %></td>
-    <td><%= review.review %></td>
-    <td><%= link_to 'Show', review %></td>
-    <td><%= link_to 'Edit', edit_review_path(review) %></td>
-    <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
+  </div>
 
-<%= link_to 'New Review', new_review_path %>
+</div>
+<!--     <table>
+      <tr>
+        <th>User</th>
+        <th>Product</th>
+        <th>Rating</th>
+        <th>Review</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <%# @reviews.each do |review| %>
+      <tr>
+        <td><%# review.user_id %></td>
+        <td><%# review.product_id %></td>
+        <td><%# review.rating %></td>
+        <td><%# review.review %></td>
+        <td><%# link_to 'Show', review %></td>
+        <td><%# link_to 'Edit', edit_review_path(review) %></td>
+        <td><%# link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <%# end %>
+    </table>
+
+    <br />
+
+    <%# link_to 'New Review', new_review_path %> -->
