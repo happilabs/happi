@@ -429,18 +429,43 @@ h4 {
 
 /* *********  Sign up Box  **************** */
 
-.center {
-	width: 30%;
-	margin: 0 auto;
-	margin-bottom: 30px;
-}
 
 .information {
-	border: 1px solid #898989;
-	padding: 20px 0px 20px 30px;
+	padding: 20px 0px 20px 80px;
+	width: 26%;
+	margin: auto;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	border: 2px solid #00AEEF;
+	/*background-color: #F1F1F1;*/
 	}
 
+.cover2 {
+	background: url("/which_brand.JPG") no-repeat;
+	background-size: contain;
+}
 
+.signup {
+	padding: 20px 0px 10px 0px;
+}
+
+.signup h2 {
+	margin: 10px 0px 10px 0px;
+	text-shadow: 2px 2px 2px #898989;
+	color: #ffff00;
+	letter-spacing: .1em;
+	line-height: 30px;
+}
+
+.signup p {
+	padding: 10px 0px 35px 0px;
+	text-align: center;
+	line-height: 26px;
+	font-size: 24px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #fff;
+	font-weight: 200;
+	}
 
 /* *********  WHY WE DO IT  **************** */
 
@@ -758,6 +783,7 @@ footer {
     right: -4px;
     top: -4px;
     width: 82px; }
+  
   .feature-box p {
 
   	font-size: 15px;}
