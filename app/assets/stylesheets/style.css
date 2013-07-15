@@ -200,6 +200,7 @@ h4 {
 	text-shadow: 2px 2px 2px #898989;
 	letter-spacing: .1em;
 	line-height: 30px;
+	color: #ffff00;
 }
 
 .contact-us p {
@@ -208,7 +209,7 @@ h4 {
 	line-height: 26px;
 	font-size: 24px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #757575;
+	color: #fff;
 	font-weight: 200;
 	}
 
@@ -256,6 +257,8 @@ h4 {
 
 	padding-bottom: 100px;
 	padding-top: 50px;
+	/*background-image: url(/happi_chicago.jpg);
+	background-image-size: contain;*/
 }
 
 .contact-img {
@@ -449,6 +452,11 @@ h4 {
   background-image: url('tiny_grid.png');
 }
 
+.chicago-sky {
+	background: url("/happi_chicago.jpg") no-repeat;
+	background-size: 100%;
+}
+
 .top-padded {
   padding-top: 50px;
 
@@ -470,7 +478,7 @@ h4 {
 
 .cover2 {
 	background: url("/which_brand.JPG") no-repeat;
-	background-size: contain;
+	background-size: 100%;
 }
 
 .signup {
@@ -492,6 +500,24 @@ h4 {
 	font-size: 24px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #fff;
+	font-weight: 200;
+	}
+
+.login-page h2 {
+	margin: 50px 0px 10px 0px;
+	text-shadow: 2px 2px 2px #898989;
+	color: #00AEEF;
+	letter-spacing: .1em;
+	line-height: 30px
+}
+
+.login-page p {
+	padding: 10px 0px 15px 0px;
+	text-align: center;
+	line-height: 26px;
+	font-size: 24px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #898989;
 	font-weight: 200;
 	}
 
