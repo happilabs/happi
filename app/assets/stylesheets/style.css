@@ -730,9 +730,10 @@ h4 {
 	width: 88%;
 	height: 20px;
 	border: 1px solid #898989;
-	background: linear-gradient(to bottom, #00aeef, #66CEF5);
+	background: linear-gradient(to bottom, #77cc33, #66CEF5);
 	padding: 5px 9px;
 	list-style: none;
+	text-shadow: 1px 1px 1px #898989;
 }
 
 .search-box h5 {
@@ -752,7 +753,7 @@ h4 {
 }
 
 #green-bkg {
-	background-color: green;
+	background-color: #77cc33;
 }
 
 .search-bar h4 {
@@ -819,17 +820,19 @@ h4 {
 	margin-top: 20px;
 	margin-left: 60px;
 	padding: 8px 4px;
-	border: 2px solid #00AEEF;
+	/*border: 2px solid #00AEEF;*/
 	border-radius: 10px;
-	background-color: #ffff00;
+	background-color: #00AEEF;
 	float: left;
 	box-shadow: 2px 2px 6px #00AEEF;
 }
 
 .rating-box h4 {
 	text-align: center;
-	color: #898989;
+	color: #fff;
 	margin-bottom: 18px;
+	letter-spacing: .1em;
+	font-weight: 400;
 }
 
 
@@ -837,30 +840,45 @@ h4 {
 	line-height: 70px;
 	text-align: center;
 	font-weight: bold;
-	color: #00AEEF;
+	color: #ffff00;
 	font-family: "museo-slab-1","museo-slab-2",Helvetica,Arial,sans-serif;
 	font-size: 68px;
 	padding: 0px 0;
-	text-shadow: 1px 1px 1px #898989;
+	text-shadow: 2px 2px 4px #898989;
 }
 
 .rating-sub {
 	text-align: center;
-	color: #898989;
+	color: #fff;
 }
 
-/*.price-box {
-	width: 30%;
-	height: 30%;
-	display: block;
-	margin: 0 auto;
-	margin-top: 20px;
-	padding: 8px 4px;
-	border: 2px solid #00AEEF;
-	border-radius: 10px;
-	background-color: #ffff00;
+.qual-price-rev {
 	float: left;
-}*/
+	margin: 23px 0px 0px 60px;
+}
+
+.qual-price-rev h4, p{
+	margin: 0px;
+	text-align: center;
+	padding: 10px 12px;
+	font-size: 16px;
+	color: #fff;
+	font-weight: 300;
+	font-family: Helvetica "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.review-price {
+	background-color: #77cc33;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.review-qual {
+	background-color: #77cc33;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border-top: 2px dashed #898989;
+}
 
 .rating-icon {
 	display: block;
@@ -872,8 +890,12 @@ h4 {
 .vendor-brand {
 	float: left;
 	width: 28%;
-	margin-left: 50px;
+	margin-left: 10px;
 	margin-top: 20px;
+}
+
+.vendor-brand ul {
+	list-style: none;
 }
 
 .review-heading {
@@ -882,14 +904,14 @@ h4 {
 	color: #898989;
 	font-family: "helvetica neue",helvetica,arial,sans-serif;
 	text-shadow: text-shadow: 0px 1px 1px #666;
-	padding-top: 10px;
-	margin-top: 10px;
+	padding: 10px 0px;
 }
 
 .brand_name {
 	color: #00AEEF;
 	font-weight: 400;
 	font-size: 30px;
+	margin-bottom: 10px;
 }
 
 .vendor-brand p, h5 {
@@ -899,7 +921,7 @@ h4 {
 }
 
 .review-box {
-	margin-left: 40px;
+	margin-left: 10px;
 }
 
 .review-rank {
@@ -931,6 +953,10 @@ h4 {
 	margin: 0 auto;
 	border-radius: 10px;
 	border: 2px solid #00AEEF;
+}
+
+.top-review p {
+	color: black;
 }
 
 
@@ -1429,7 +1455,7 @@ padding-top: 18px;
     font-weight: 500;
     box-shadow: 2px 2px 8px #898989; }
     .btn.btn-premium:hover, .btn.btn-premium:focus {
-      background-color: #ffff00;
+      background-color: #77cc33;
       color: #00AEEF; }
     .btn.btn-premium:active, .btn.btn-premium.active {
       background-color: #ffff00; }
