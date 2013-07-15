@@ -12,9 +12,10 @@
         <th></th>
       </tr>
 
+
     <% @reports.each do |report| %>
       <tr>
-        <td><%= report.title %></td>
+        <td><%= link_to report.title, report.link %></td>
         <td><%= report.summary %></td>
         <td><%= report.link %></td>
         <td><%= report.html_link %></td>
@@ -26,6 +27,5 @@
     </table>
 
     <br />
-
     <%= link_to 'New Report', new_report_path %>
 </section>
