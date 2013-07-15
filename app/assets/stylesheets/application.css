@@ -40,9 +40,10 @@
  }
 
  .darktitle {
-   font-size: 44px;
+   font-size: 38px;
    text-align: center;
-   color: #00AEEF;
+   color: #77cc33;
+   text-shadow: 1px 1px 1px #00aeef;
    font-weight: 500;
    text-transform: none;
    line-height: 52px;
