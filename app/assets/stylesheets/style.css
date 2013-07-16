@@ -192,7 +192,7 @@ h4 {
 /*  ************  Contact Us  ***********  */
 
 .contact-us {
-	padding: 60px 0px 10px 0px;
+	padding: 0px 0px 10px 0px;
 }
 
 .contact-us h2 {
@@ -209,7 +209,7 @@ h4 {
 	line-height: 26px;
 	font-size: 24px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #fff;
+	color: #898989;
 	font-weight: 200;
 	}
 
@@ -567,9 +567,6 @@ h4 {
 	list-style: square;
 }
 
-#morespace {
-	margin-bottom: 50px;
-}
 
 .goals {
 	background-color: #00AEEF;
@@ -718,7 +715,7 @@ h4 {
 	border-top-right-radius: 20px;
 	border: 1px solid #898989;
 	margin-top: 20px;
-	position: relative;
+	/*position: relative;*/
 	z-index: 2;
 }
 
@@ -857,7 +854,7 @@ h4 {
 	margin: 23px 0px 0px 60px;
 }
 
-.qual-price-rev h4, p{
+.qual-price-rev h4 {
 	margin: 0px;
 	text-align: center;
 	padding: 10px 12px;
