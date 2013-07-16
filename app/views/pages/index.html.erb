@@ -111,26 +111,42 @@
 
       </div>
 
-      <div class="voices-textbox">
+      <% if user_signed_in? %>
+        <div class= "voices-textbox">
+          <%= form_for @user_voice, :url => user_voices_path do |f| %>
 
-        <%= form_for @message, :url => voices_path do |f| %>
+            <%= f.hidden_field :user_id, :value => current_user.id %>
             <div>
-              <%= f.text_field :name, :placeholder => "Name" %>
+            <%= f.text_area :message, placeholder: "Share one thing that makes you happy or unhappy in your lab", :rows => 6 %>
             </div>
 
             <div>
-              <%= f.text_field :email, :placeholder => "Email" %>
+              <%= f.submit "Send" %>
             </div>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="voices-textbox">
+          <%= form_for @message, :url => voices_path do |f| %>
+              <div>
+                <%= f.text_field :name, :placeholder => "Name" %>
+              </div>
 
-            <div>
-              <%= f.text_area :body, :placeholder => "Share one thing that makes you happy or unhappy in your lab", :rows => 6 %>
-            </div>
+              <div>
+                <%= f.text_field :email, :placeholder => "Email" %>
+              </div>
 
-            <div>
-            <%= f.submit "Send", :class => "submit-btn btn btn-large btn-block-third btn-warning" %>
-            </div>
-        <% end %>
-      </div>
+              <div>
+                <%= f.text_area :body, :placeholder => "Share one thing that makes you happy or unhappy in your lab", :rows => 6 %>
+              </div>
+
+              <div>
+              <%= f.submit "Send", :class => "submit-btn btn btn-large btn-block-third btn-warning" %>
+              </div>
+          <% end %>
+        </div>
+      <% end %>
+
 
       <div class="voicesbox group">
 
