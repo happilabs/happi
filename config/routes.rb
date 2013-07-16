@@ -25,6 +25,8 @@ Happilabs3::Application.routes.draw do
   get "/voices" => "Pages#voices", as: "voices"
   match '/voices' => 'Pages#create_voice', :as => 'voices', :via => :post
   get "/contact" => "Pages#contact", as: "contact"
+  get "/200ml" => "Pages#two_hundred_ml", as: "two_hundred_ml"
+  get "/1000ml" => "Pages#one_thousand_ml", as: "one_thousand_ml"
 
 
 end
