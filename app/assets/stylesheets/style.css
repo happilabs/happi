@@ -14,11 +14,19 @@ h2 {
 	text-transform: uppercase;
 	text-align: center;
 	text-shadow: 2px 2px 2px #898989;
-	letter-spacing: .1em;
+	letter-spacing: 2px;
 }
 
 h4 {
 
+}
+
+.ul {
+	text-transform: lowercase;
+}
+
+.page-heading {
+	margin: 55px 0px 55px 0px;
 }
 
 /*  ************  Home Page  ***********  */
@@ -53,10 +61,12 @@ h4 {
 
 .whoareyou {
 	width: 200px;
-	background-color: #898989;
+	background-color: #ffff00;
 	position: fixed;
+	right: 20px;
 	z-index: 3;
-	margin: 30px 0px 0px 450px;
+	margin: 30px 0px 0px 0px;
+	/*float: right;*/
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
@@ -169,6 +179,7 @@ h4 {
 
 
 .about-us {
+	margin: auto;
 	padding: 80px 0px 90px 0px;
 }
 
@@ -179,10 +190,10 @@ h4 {
 }
 
 .about-us-container {
-	margin: 0 auto;
+	/*margin: auto;*/
 	margin-top: 20px;
 	display: block;
-	width: 90%;
+	/*width: 90%;*/
 }
 
 
@@ -361,12 +372,6 @@ h4 {
 
 
 
-
-
-.page-heading {
-	margin: 55px 0px 55px 0px;
-}
-
 .subscribe-us h2 {
 	margin: 30px 0px 0px 0px;
 }
@@ -424,6 +429,61 @@ h4 {
 }
 
 
+
+
+/* ################ 200ul Subscription page ##############  */
+
+
+.subscribe-question {
+	float: left;
+	width: 300px;
+	margin: 0 auto;
+}
+
+.twohundred_data {
+	width: 800px;
+	margin: auto;
+	padding: 0px 40px;
+	border-radius: 9px;
+	margin-bottom: 60px;
+	background: linear-gradient(to bottom, #FFFFB2, #ffff00);
+	box-shadow: -2px -2px 8px #898989;
+}
+
+#fortymarginleft {
+	margin-left: 180px;
+}
+
+#twomarginleft {
+	margin-top: 60px;
+}
+
+.question {
+	line-height: 28px;
+	font-size: 22px;
+	color: #333;
+	font-weight: 300;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.qleft {
+	margin-top: 42px;
+}
+
+.reportimg {
+	float: left;
+	margin: 0px 0px 0px 40px;
+}
+
+.report-right {
+	margin-top: 0px;
+	float: left;
+	width: 600px;
+}
+
+/* ################ About Us page ##############  */
+
 .text-right-img {
 		float: left;
 		width: 510px;
@@ -447,6 +507,9 @@ h4 {
 		color: #757575;
 	}
 
+/*.less-margin {
+	margin-top: 5px;
+}*/
 
 .grid {
   background-image: url('tiny_grid.png');
