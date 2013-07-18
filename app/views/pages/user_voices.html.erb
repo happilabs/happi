@@ -1,0 +1,12 @@
+<div class="about-us">
+  <h1>User Voices</h1>
+  <ol>
+    <% @user_voices.reverse.each do |user_voice| %>
+      <li>
+        <h3><%= user_voice.user.first_name %><%= user_voice.user.first_name %></h3>
+        <h4>"<%= user_voice.message %>"</h4>
+        <h6><%= mail_to user_voice.user.email %></h6>
+      </li>
+    <% end %>
+  </ol>
+</div>
