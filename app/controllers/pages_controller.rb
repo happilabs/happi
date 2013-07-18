@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def index
     @message = Message.new
+    @user_voice = UserVoice.new
   end
 
   def about_us
@@ -26,6 +27,24 @@ class PagesController < ApplicationController
     else
       flash.now.alert = "Please fill all fields."
       render :new
+    end
+  end
+
+  def user_voices
+    @user_voices = UserVoice.all
+  end
+
+  def create_user_voice
+    @user_voice = UserVoice.new(params[:user_voice])
+
+    respond_to do |format|
+      if @user_voice.save
+        format.html { redirect_to root_path, notice: 'Voice was successfully created. Thank you for your input' }
+        format.json { render json: @user_voice, status: :created, location: @user_voice}
+      else
+        format.html { render 'index', notice: "Voice did not save, please try again" }
+        format.json { render json: @user_voice.errors, status: :unprocessable_entity }
+      end
     end
   end
 
