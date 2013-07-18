@@ -415,7 +415,7 @@ h5 {
 		height: 330px;
 		width: 300px;
 		padding: 10px;
-		margin: 20px 20px 0px 120px;
+		margin: 70px 20px 0px 120px;
 	}
 
 .about-image {
@@ -426,12 +426,23 @@ h5 {
 	margin: 40px 20px 0px 20px;
 }
 
+#stuff {
+	float: left;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-weight: 200;
+		font-size: 14px;
+		text-align: center;
+		margin: 10px;
+		color: #757575;
+}
+
 .shoutout {
 	font-size: 10px;
 	width: 120px;
 	height: 100px;
 	float: right;
 	color: #898989;
+	margin: 50px;
 }
 
 
@@ -439,16 +450,22 @@ h5 {
 
 /* ################ 200ul Subscription page ##############  */
 
-/*.page-heading-box {
-	background-color: #fff;
-	box-shadow: 2px 2px 9px #898989;
+.page-heading-box {
 	width: 800px;
 	padding: 10px 20px;
-	margin: auto;
 	margin-top: 40px;
 	border-radius: 10px;
 	padding-bottom: 30px;
-}*/
+}
+
+#subscribe-pipette {
+	float: left;
+}
+
+#float-left {
+	float: left;
+}
+
 .subscribe-question {
 	float: left;
 	width: 300px;
@@ -504,15 +521,15 @@ h5 {
 		font-weight: 400;
 		letter-spacing: 1px;
 		list-style: none;
-		color: #fff;
+		/*color: #fff;*/
 		line-height: 30px;
 		font-size: 25px;
 		float: left;
 		width: 450px;
-		background-color: #00AEEF;
+		/*background-color: #00AEEF;
 		padding: 10px;
 		box-shadow: 2px 2px 8px #898989;
-		border-radius: 10px;
+		border-radius: 10px;*/
 		text-align: center;
 }
 
@@ -559,7 +576,6 @@ h5 {
 }
 
 .benefit li {
-	list-style: none;
 	padding: 6px;
 	line-height: 20px;
 		font-size: 18px;
@@ -567,6 +583,7 @@ h5 {
 		color: #757575;
 		font-weight: 300;
 		letter-spacing: 1px;
+		margin-left: 18px;
 }
 
 #holding-signup-box {
@@ -593,7 +610,7 @@ h5 {
 
 .text-left-img {
 		float: left;
-		width: 420px;
+		width: 490px;
 		padding-left: 20px;
 		padding-right: 30px;
 		margin: 25px 0 0px 50px;
