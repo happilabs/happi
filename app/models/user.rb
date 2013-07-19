@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :user_voices
+  belongs_to :organization
+  has_many :reviews
 
   #write boolean method to see if logged in user is a paying customer
 end
