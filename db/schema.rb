@@ -51,16 +51,9 @@ ActiveRecord::Schema.define(:version => 20130716185305) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.boolean  "active"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "user_voice", :force => true do |t|
-    t.integer  "user_id"
-    t.text     "message"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.boolean  "active",     :default => true
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
   end
 
   create_table "user_voices", :force => true do |t|
