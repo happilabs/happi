@@ -7,7 +7,7 @@ one:
   product_num: MyString
   photo: MyString
   manufacturer_name: MyString
-  distribtor_name: MyString
+  distributor_name: MyString
   price: MyString
   recommended: false
   url: MyString
@@ -19,7 +19,7 @@ two:
   product_num: MyString
   photo: MyString
   manufacturer_name: MyString
-  distribtor_name: MyString
+  distributor_name: MyString
   price: MyString
   recommended: false
   url: MyString
