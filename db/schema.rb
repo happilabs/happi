@@ -11,22 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130716185305) do
+ActiveRecord::Schema.define(:version => 20130719002609) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text     "desc"
+  end
+
+  create_table "organizations", :force => true do |t|
+    t.string   "org_name"
+    t.string   "dept"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "products", :force => true do |t|
-    t.string   "title"
     t.integer  "category_id"
-    t.string   "product_number"
-    t.text     "summary"
+    t.string   "product_name"
+    t.text     "product_desc"
+    t.string   "product_num"
     t.string   "photo"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.string   "manufacturer_name"
+    t.string   "distributor_name"
+    t.string   "price"
+    t.boolean  "recommended"
+    t.string   "url"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "reports", :force => true do |t|
@@ -40,11 +53,13 @@ ActiveRecord::Schema.define(:version => 20130716185305) do
 
   create_table "reviews", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "product_id"
+    t.boolean  "admin_approved"
+    t.boolean  "make_anonymous"
+    t.boolean  "user_recommended"
     t.integer  "rating"
-    t.text     "review"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.text     "desc"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "subscribers", :force => true do |t|
@@ -82,6 +97,13 @@ ActiveRecord::Schema.define(:version => 20130716185305) do
     t.string   "role"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "address"
+    t.string   "address_2"
+    t.string   "city"
+    t.string   "zip"
+    t.string   "phone"
+    t.string   "website_url"
+    t.string   "subcription_level"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
