@@ -116,12 +116,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_attr
+  active_attr (= 0.8.2)
   coffee-rails (~> 3.2.1)
-  devise
-  jquery-rails
+  devise (= 2.2.4)
+  jquery-rails (= 3.0.1)
   pg
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
-  sqlite3
+  sqlite3 (= 1.3.7)
   uglifier (>= 1.0.3)

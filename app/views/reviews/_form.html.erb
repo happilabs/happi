@@ -16,16 +16,24 @@
     <%= f.number_field :user_id %>
   </div>
   <div class="field">
-    <%= f.label :product_id %><br />
-    <%= f.number_field :product_id %>
+    <%= f.label :admin_approved %><br />
+    <%= f.check_box :admin_approved %>
+  </div>
+  <div class="field">
+    <%= f.label :make_anonymous %><br />
+    <%= f.check_box :make_anonymous %>
+  </div>
+  <div class="field">
+    <%= f.label :user_recommended %><br />
+    <%= f.check_box :user_recommended %>
   </div>
   <div class="field">
     <%= f.label :rating %><br />
     <%= f.number_field :rating %>
   </div>
   <div class="field">
-    <%= f.label :review %><br />
-    <%= f.text_area :review %>
+    <%= f.label :desc %><br />
+    <%= f.text_area :desc %>
   </div>
   <div class="actions">
     <%= f.submit %>

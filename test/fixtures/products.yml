@@ -1,15 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
   category_id: 1
-  product_number: MyString
-  summary: MyText
+  product_name: MyString
+  product_desc: MyText
+  product_num: MyString
   photo: MyString
+  manufacturer_name: MyString
+  distribtor_name: MyString
+  price: MyString
+  recommended: false
+  url: MyString
 
 two:
-  title: MyString
   category_id: 1
-  product_number: MyString
-  summary: MyText
+  product_name: MyString
+  product_desc: MyText
+  product_num: MyString
   photo: MyString
+  manufacturer_name: MyString
+  distribtor_name: MyString
+  price: MyString
+  recommended: false
+  url: MyString

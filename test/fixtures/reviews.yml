@@ -2,12 +2,16 @@
 
 one:
   user_id: 1
-  product_id: 1
+  admin_approved: false
+  make_anonymous: false
+  user_recommended: false
   rating: 1
-  review: MyText
+  desc: MyText
 
 two:
   user_id: 1
-  product_id: 1
+  admin_approved: false
+  make_anonymous: false
+  user_recommended: false
   rating: 1
-  review: MyText
+  desc: MyText

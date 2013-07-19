@@ -1,13 +1,13 @@
 Happilabs3::Application.routes.draw do
 
-  devise_for :users
+  resources :products
+
 
   resources :reviews
 
+
+  devise_for :users
   resources :reports
-
-  resources :products
-
   resources :categories
 
   resources :subscribers
