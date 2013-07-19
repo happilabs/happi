@@ -1,8 +1,5 @@
 class CreateReviews < ActiveRecord::Migration
   def change
-    drop_table :products
-    drop_table :reviews
-
     create_table :reviews do |t|
       t.integer :user_id
       t.boolean :admin_approved
