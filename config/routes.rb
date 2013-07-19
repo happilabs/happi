@@ -27,5 +27,4 @@ Happilabs3::Application.routes.draw do
   get "/contact" => "Pages#contact", as: "contact"
   get "/200ml" => "Pages#two_hundred_ml", as: "two_hundred_ml"
   get "/1000ml" => "Pages#one_thousand_ml", as: "one_thousand_ml"
-
 end
