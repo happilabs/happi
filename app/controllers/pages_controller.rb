@@ -60,4 +60,8 @@ class PagesController < ApplicationController
 
   end
 
+  def our_people
+
+  end
+
 end
