@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'active_attr'
-gem 'devise'
+gem 'active_attr', '0.8.2'
+gem 'devise', '2.2.4'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
-  gem 'sqlite3'
+  gem 'sqlite3', '1.3.7'
 end
 group :production do
 	gem 'pg'
@@ -26,7 +26,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '3.0.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
