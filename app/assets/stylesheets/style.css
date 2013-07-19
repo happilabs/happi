@@ -241,7 +241,7 @@ h5 {
   	border: 1px solid #00aeef;
   	padding: 4px 10px;
   	box-shadow: 2px 2px 4px #757575;
-  	background-color: #F1F1F1;
+  	background-color: #fff;
   	margin: 0px 20px 0px 10px;
 }
 
@@ -379,11 +379,11 @@ h5 {
 
 
 .subscribe-us h2 {
-	margin: 30px 0px 0px 0px;
+	margin: 5px 0px 0px 0px;
 }
 
 .subscribe-us h4 {
-	padding: 10px 0px 0px 0px;
+	padding: 15px 0px 0px 0px;
 	text-align: center;
 	line-height: 26px;
 	font-size: 20px;
@@ -420,8 +420,8 @@ h5 {
 
 .about-image {
 	float: left;
-	height: 40%;
-	width: 30%;
+	/*height: 40%;
+	width: 30%;*/
 	padding: 10px 0px 0px 20px;
 	margin: 40px 20px 0px 20px;
 }
@@ -451,7 +451,7 @@ h5 {
 /* ################ 200ul Subscription page ##############  */
 
 .page-heading-box {
-	width: 800px;
+	width: 870px;
 	padding: 10px 20px;
 	margin-top: 40px;
 	border-radius: 10px;
@@ -472,22 +472,43 @@ h5 {
 	margin: 0 auto;
 }
 
-.twohundred_data {
-	width: 800px;
-	margin: auto;
-	padding: 0px 40px;
-	border-radius: 9px;
-	margin-bottom: 60px;
-	background: linear-gradient(to bottom, #FFFFB2, #ffff00);
-	box-shadow: -2px -2px 8px #898989;
+.subscribe-price {
+	font-size: 40px;
+	line-height: 46px;
+	font-weight: 400;
+	text-shadow: 1px 1px 1px #898989;
+	color: #77cc33;
+	margin-top: 5px;
 }
 
-#fortymarginleft {
-	margin-left: 180px;
+#price-graph {
+	width: 300px;
+	height: auto;
+	text-align: center;
+	/*margin-left: 130px;*/
+	margin: 10px 100px 0px 0px;
+	float: left;
 }
 
-#twomarginleft {
-	margin-top: 60px;
+#labmanager {
+	width: 240px;
+	height: auto;
+	text-align: center;
+	/*margin-left: 130px;*/
+	margin: 10px 100px 0px 0px;
+	float: left;
+}
+
+.year {
+	font-size: 14px;
+}
+
+.subscribe-list li {
+	list-style: none;
+	margin-top: 10px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #757575;
+	font-weight: 200;
 }
 
 .reportimg {
@@ -514,24 +535,6 @@ h5 {
 	margin-top: 5px;
 }
 
-.question li {
-		display: block;
-		margin: 18px 0 0px 40px;
-		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		font-weight: 400;
-		letter-spacing: 1px;
-		list-style: none;
-		/*color: #fff;*/
-		line-height: 30px;
-		font-size: 25px;
-		float: left;
-		width: 450px;
-		/*background-color: #00AEEF;
-		padding: 10px;
-		box-shadow: 2px 2px 8px #898989;
-		border-radius: 10px;*/
-		text-align: center;
-}
 
 #center-box {
 	display: block;
@@ -612,7 +615,7 @@ h5 {
 		float: left;
 		width: 490px;
 		padding-left: 20px;
-		padding-right: 30px;
+		padding-right: 20px;
 		margin: 25px 0 0px 50px;
 		line-height: 24px;
 		font-size: 18px;
@@ -759,7 +762,7 @@ h5 {
 }
 
 .price-box {
-	height: 670px;
+	height: 500px;
 }
 
 	.group:after {
@@ -777,7 +780,7 @@ h5 {
 .btn-price {
 	width: 270px;
 	position: absolute;
-	top: 600px;
+	top: 440px;
 	right: 14px;
 }
 
@@ -898,7 +901,6 @@ h5 {
 	width: 13%;
 	margin: auto;
 	float: left;
-	position: fixed;
 	background-color: #fff;
 	margin: 0px 0px 10px 10px;
 	border-top-left-radius: 20px;
@@ -912,15 +914,15 @@ h5 {
 .search-box ul {
 	margin: 0px;
 }
-.search-box li {
+.search-bar li {
 	/*float: left;*/
-	width: 88%;
-	height: 20px;
 	border: 1px solid #898989;
 	background: linear-gradient(to bottom, #77cc33, #66CEF5);
 	padding: 5px 9px;
 	list-style: none;
 	text-shadow: 1px 1px 1px #898989;
+	font-size: 10px;
+	font-weight: 200;
 }
 
 .search-box h5 {
@@ -952,7 +954,7 @@ h5 {
 }
 
 .product_summary {
-	width: 68%;
+	width: 73%;
 	background-color: #fff;
 	padding: 10px 10px 10px 10px;
 	height: 300px;
@@ -1515,6 +1517,10 @@ footer {
 
 .price-photo {
 	margin-top: 30px;
+	width: 30%;
+	height: auto;
+	display: block;
+	margin-left: 110px;
 }
 
 .price-header{
@@ -1822,4 +1828,3 @@ padding-top: 18px;
 
 	max-height:180px;
 	}
-
