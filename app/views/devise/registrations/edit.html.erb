@@ -41,6 +41,9 @@
       <li id="reports_tab"><%= link_to "Reports", "#", id: "show_reports" %></li>
     </ul>
     <ul id="comments_list">
+      <% current_user.reviews.each do |review| %>
+        <h4>"<%= link_to review.desc, review %>"</h4>
+      <% end %>
       <li>Test Comment</li>
       <li>Test Comment</li>
       <li>Test Comment</li>
@@ -48,7 +51,7 @@
     </ul>
     <ul id="reports_list">
       <% Report.all.each do |report| %>
-        <li><%= link_to report.title, report.link %></li>
+      <li><%= link_to report.title, "../#{report.link}" %></li>
       <% end %>
       <li>Test Report</li>
       <li>Test Report</li>
