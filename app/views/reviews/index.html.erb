@@ -132,30 +132,40 @@
       </div>
 
 </div>
-<!--     <table>
-      <tr>
-        <th>User</th>
-        <th>Product</th>
-        <th>Rating</th>
-        <th>Review</th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
 
-    <%# @reviews.each do |review| %>
-      <tr>
-        <td><%# review.user_id %></td>
-        <td><%# review.product_id %></td>
-        <td><%# review.rating %></td>
-        <td><%# review.review %></td>
-        <td><%# link_to 'Show', review %></td>
-        <td><%# link_to 'Edit', edit_review_path(review) %></td>
-        <td><%# link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <%# end %>
-    </table>
+<!-- 
+<h1>Listing reviews</h1>
 
-    <br />
+<table>
+  <tr>
+    <th>User</th>
+    <th>Admin approved</th>
+    <th>Make anonymous</th>
+    <th>User recommended</th>
+    <th>Rating</th>
+    <th>Desc</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-    <%# link_to 'New Review', new_review_path %> -->
+<%# @reviews.each do |review| %>
+  <tr>
+    <td><%# review.user_id %></td>
+    <td><%# review.admin_approved %></td>
+    <td><%# review.make_anonymous %></td>
+    <td><%# review.user_recommended %></td>
+    <td><%# review.rating %></td>
+    <td><%# review.desc %></td>
+    <td><%# link_to 'Show', review %></td>
+    <td><%# link_to 'Edit', edit_review_path(review) %></td>
+    <td><%# link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<%# end %>
+</table>
+
+<br />
+
+<%# link_to 'New Review', new_review_path %>
+
+ -->
