@@ -117,12 +117,21 @@ h5 {
 
  .voices-intro {
    width: 850px;
+   height: 268px;
    margin: 0 auto;
-   padding: 10px 0 30px 0;
+   padding: 70px 0 30px 0;
    margin-bottom: 0px;
    /*background-color: #f1f1f1;*/
-   border: 1px solid #d6d6d6;
+   background: url(/voice_bubble.png);
+   background-repeat: no-repeat;
  }
+
+/*#voice-bubble {
+	position: relative;
+	bottom: 100px;
+
+}*/
+
 
  .voices-intro p {
    	text-align: left;
@@ -648,8 +657,12 @@ h5 {
 	letter-spacing: 1px;
 	padding: 10px 0px 0px 0px;
 	float: left;
+	
+}
+
+#two-evaluation {
 	position: relative;
-	left: -20px;
+	left: 100px;
 }
 
 .evaluation li {
