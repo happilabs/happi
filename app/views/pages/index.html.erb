@@ -30,7 +30,7 @@
 
 </header>
 
-      <div class="hello grid">
+      <div class="sky-background hello">
         <ul>
           <li>Hello</li>
           <li>Ni hao</li>
@@ -43,95 +43,98 @@
         </ul>
       </div>
 
-  <div class="midlevel grid group">
+  <div class="midlevel sky-background group">
 
 
-      <div class="voices-intro">
+      <div class="voices-intro grid">
 
         <h2>Share Your Voice</h2>
-        <p>This is the place to voice <span class="important">your opinion</span> about life in the lab. Warn us about a faulty product, tell us when an experiment works, or complain about a co-worker. We're here to listen.</p>
+        <p>This is the place to voice your opinion, ask for help, or make a suggestion about life in the lab. Warn us about a faulty product, tell us when an experiment works, or complain about a co-worker. <strong>We're here to listen.</strong></p>
 
-        <p><span class="important">Our goal</span> is to identify common sources of happiness and unhappiness in labs. Then we'll celebrate with you or find you a solution, respectively. Submit a comment quickly below or log in to keep track of your comments.</p>
-      </div>
-      <img src="smiley-face-test.png" alt="smiley face" style="margin-left:180px;">
-      <img src="smiley-face-test.png" alt="smiley face" style="margin-left:480px;">
-    <div class="voices-section group">
-      <div class="voicesbox group">
-
-        <div class="voices group">
-          <h5 class="happy">Happy</h5>
-          <p>"My paper was accepted!"</p>
-        </div>
-
-        <div class="voices group">
-          <h5 class="unhappy">Unhappy</h5>
-          <p>"Unmotivational motivational speeches from my PI"</p>
-        </div>
-
-        <div class="voices group">
-          <h5 class="happy">Happy</h5>
-          <p>"Getting brand new syringes that makes our mouse experiments go more smoothly."</p>
-        </div>
-
+        <p><strong>And we will respond.</strong> Our goal is to identify common sources of happiness and unhappiness in labs. Then we'll celebrate with you or find you a solution to your problem or question, respectively. Quickly submit a voice below or log in to keep track of your voices.</p>
       </div>
 
-      <% if user_signed_in? %>
-        <div class= "voices-textbox">
-          <%= form_for @user_voice, :url => user_voices_path do |f| %>
+      <div class="voices-section group">
+        <div class="voicesbox group">
 
-            <%= f.hidden_field :user_id, :value => current_user.id %>
-            <div>
-            <%= f.text_area :message, placeholder: "Share one thing that makes you happy or unhappy in your lab", :rows => 12 %>
-            </div>
-
-            <div>
-              <%= f.submit "Send" %>
-            </div>
-          <% end %>
+        <div class="voices-background">
+          <div class="voices-yellow group">
+            <h5 class="happy">Happy</h5>
+            <p>"My paper was accepted!"</p>
+            <img src="smiley-face-test.png" alt="Happy voices from scientists" class="smiley-image">
+          </div>
         </div>
-      <% else %>
-        <div class="voices-textbox">
-          <%= form_for @message, :url => voices_path do |f| %>
+
+          <div class="voices group">
+            <h5 class="unhappy">Unhappy</h5>
+            <p>"People borrowing your stuff without asking."</p>
+          </div>
+
+          <div class="voices-question group">
+            <h5 class="question">Question</h5>
+            <p>"How do I use twitter to communicate my research?"</p>
+          </div>
+
+        </div>
+
+        <% if user_signed_in? %>
+          <div class= "voices-textbox">
+            <%= form_for @user_voice, :url => user_voices_path do |f| %>
+
+              <%= f.hidden_field :user_id, :value => current_user.id %>
               <div>
-                <%= f.text_field :name, :placeholder => "Name" %>
+              <%= f.text_area :message, placeholder: "Share one thing that makes you happy or unhappy in your lab", :rows => 10, :columns => 8 %>
               </div>
 
               <div>
-                <%= f.text_field :email, :placeholder => "Email" %>
+                <%= f.submit "Send", :class => "submit-btn btn btn-large btn-block-third btn-warning" %>
               </div>
+            <% end %>
+          </div>
+        <% else %>
+          <div class="voices-textbox">
+            <%= form_for @message, :url => voices_path do |f| %>
+                <div>
+                  <%= f.text_field :name, :placeholder => "Name" %>
+                </div>
 
-              <div>
-                <%= f.text_area :body, :placeholder => "Share one thing that makes you happy or unhappy in your lab", :rows => 6 %>
-              </div>
+                <div>
+                  <%= f.text_field :email, :placeholder => "Email" %>
+                </div>
 
-              <div>
-              <%= f.submit "Send", :class => "submit-btn btn btn-large btn-block-third btn-warning" %>
-              </div>
-          <% end %>
+                <div>
+                  <%= f.text_area :body, :placeholder => "Share one thing that makes you happy or unhappy in your lab, or ask us a question", :rows => 6 %>
+                </div>
+
+                <div>
+                <%= f.submit "Send", :class => "voices-btn" %>
+                </div>
+            <% end %>
+          </div>
+        <% end %>
+
+
+        <div class="voicesbox group">
+
+          <div class="voices-question group">
+            <h5 class="question">Question</h5>
+            <p>"Is there an easier way to keep track of my mouse inventory?"</p>
+          </div>
+
+          <div class="voices-yellow group">
+            <h5 class="happy">Happy</h5>
+            <p>"Solid co-workers."</p>
+            <img src="smiley-face-test.png" alt="Happy voices from scientists" class="smiley-image">
+          </div>
+
+          <div class="voices group">
+            <h5 class="unhappy">Unhappy</h5>
+            <p>"My snow boots have a hole in them and sitting here with wet feet sucks."</p>
+          </div>
+
         </div>
-      <% end %>
-
-
-      <div class="voicesbox group">
-
-        <div class="voices group">
-          <h5 class="unhappy">Unhappy</h5>
-          <p>"People borrowing your stuff without asking."</p>
-        </div>
-
-        <div class="voices group">
-          <h5 class="happy">Happy</h5>
-          <p>"Solid co-workers."</p>
-        </div>
-
-        <div class="voices group">
-          <h5 class="unhappy">Unhappy</h5>
-          <p>"My snow boots have a hole in them and sitting here with wet feet sucks."</p>
-        </div>
-
       </div>
-    </div>
-
+  
   </div>
 
 
