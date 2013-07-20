@@ -1,5 +1,5 @@
 <div class="contact-us-container chicago-sky group">
-	
+
 	<div class="contact-us" id="contact-margin">
 		<h2>Contact Us</h2>
 		<p>What's on your mind? We're here to listen.</p>
@@ -14,9 +14,10 @@
 		</div>
 
 		<div class="contact-box group">
-			<img src="e_mail.png" alt="contact us via email" class="contact-img">
+			<%= link_to (image_tag("/e_mail.png", alt: "email us!", class: "contact-image")), "mailto:hello@happilabs.org"	 %>
 			<h4>Email</h4>
-			<p>hello@happilabs.org</p>
+
+			<p><%= link_to 'Say Hello!', "mailto:hello@happilabs.org" %></p>
 		</div>
 
 		<div class="tweet-timeline group">
