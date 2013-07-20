@@ -1099,23 +1099,35 @@ h5 {
 .category-review-images {
 	float: left;
 	margin-left: 20px;
-	width: 700px;
+	width: 420px;
 }
 .category-review-images li a {
 	color: #00Aeef;
 	display: block;
 	float: left;
-	margin: 10px;
+	margin: 5px;
 	text-align: center;
-	width: 130px;
+	width: 120px;
 }
 
 .category-review-images li a:hover {
 
 }
 .category-review-images li a > img {
-	width: 90%;
+	width: 80%;
 }
+
+/********** This is for the mission statement on the category index page *******/
+/********** This is for the mission statement on the category index page *******/
+.category-review-images + aside {
+	border: 1px solid #888;
+	float: left;
+	margin-left: 10px;
+	padding: 10px;
+	width: 240px;
+}
+/********** This is for the mission statement on the category index page *******/
+/********** This is for the mission statement on the category index page *******/
 
 /*----------------------*/
 /*category show page*/
