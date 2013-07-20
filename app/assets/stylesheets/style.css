@@ -36,6 +36,7 @@ h5 {
 	margin: 55px 0px 30px 0px;
 }
 
+
 /*  ************  Home Page  ***********  */
 
 .innerbg {
@@ -107,23 +108,34 @@ h5 {
 }
 
 
+
+
+/* ***********  Voices section **************** */
+
+
+
+
  .voices-intro {
    width: 850px;
    margin: 0 auto;
    padding: 10px 0 30px 0;
    margin-bottom: 0px;
+   /*background-color: #f1f1f1;*/
+   border: 1px solid #d6d6d6;
  }
 
  .voices-intro p {
    	text-align: left;
-   	width: 560px;
+   	width: 600px;
    	padding: 0px 10px;
    	margin: 0 auto;
    	margin-bottom: 20px;
+   	margin-top: 20px;
    	line-height: 26px;
 	font-size: 16px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #757575;
+	font-weight: 300;
  }
 
 
@@ -136,30 +148,59 @@ h5 {
 
  .voices-section {
    width: 85%;
-   display: block;
    margin: 0 auto;
-   padding-bottom: 80px;
+   padding: 0px 0px 80px 130px;
  }
 
  .voicesbox {
   float: left;
-  width: 35%;
+  width: 30%;
   padding: 5px 3px;
-  margin: 5px 3px;
+  
+  text-align: center;
  }
+
+.smiley-image {
+	position: relative;
+	bottom: 47px;
+	right: 90px;
+}
 
 .voices {
-  height: 80px;
+  height: 100px;
   margin: 10px;
   border-radius: 5px;
-  border: 1px solid #00aeef;
   padding: 4px 10px;
   box-shadow: 2px 2px 4px #757575;
-  background-color: #F1F1F1;
+  background-image: url('tiny_grid.png');
  }
 
- .voices p {
+ .voices-yellow	{
+	height: 100px;
+  	margin: 10px;
+  	border-radius: 5px;
+  	padding: 4px 10px;
+  	box-shadow: 2px 2px 4px #757575;
+ 	background-color: #ffff00;
+ 	background-image: url('tiny_grid.png');
+ }
 
+ .voices-question {
+ 	height: 100px;
+  	margin: 10px;
+  	border-radius: 5px;
+  	padding: 4px 10px;
+  	box-shadow: 2px 2px 4px #757575;
+ 	background-image: url('tiny_grid.png');
+ }
+
+ .voices-section p {
+ 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #757575;
+	font-weight: 200;
+	line-height: 16px;
+	font-size: 12px;
+	padding-left: 20px;
  }
 
  .happy {
@@ -168,20 +209,53 @@ h5 {
  	text-shadow: 1px 1px 2px #898989;
  	letter-spacing: .3em;
  	font-weight: 200;
+ 	margin-bottom: 0px;
+ }
+
+ .question {
+ 	text-align: center;
+ 	color: #77cc33;
+ 	text-shadow: 1px 1px 2px #898989;
+ 	letter-spacing: .3em;
+ 	font-weight: 200;
+ 	margin-bottom: 0px;
  }
 
 .unhappy {
-	color: red;
-	text-shadow: 1px 1px 1px #898989;
+	text-shadow: 1px 1px 2px #898989;
+ 	letter-spacing: .3em;
+ 	font-weight: 200;
+ 	margin-bottom: 0px;
 	text-align: center;
+	color: red;
 }
 .voices-textbox {
-	margin: 0px 20px;
+	margin: 15px 0px 0px 25px;
+	height: 300px;
+	width: 23%;
+	float: left;
 }
+
+.voices-btn {
+	width: 200px;
+	background-color: #00AEEF;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #fff;
+	font-weight: 400;
+	line-height: 16px;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+
+
 
 
 
 /*  ************  About Us  ***********  */
+
+
+
 
 
 
@@ -193,7 +267,7 @@ h5 {
 
 .about-us h2 {
 	margin: 10px 0px 20px 0px;
-	text-shadow: 2px 2px 2px #898989;
+	text-shadow: 1px 1px 0px #898989;
 	letter-spacing: .1em;
 }
 
@@ -204,8 +278,28 @@ h5 {
 	/*width: 90%;*/
 }
 
+#mission-center {
+	text-align: center;
+	width: 80%;
+	padding: 0px 20px;
+	margin: 0 auto;
+	
 
+}
 
+#about-mission-highlight {
+	text-shadow: 2px 2px 4px #ffff00;
+	font-size: 16px;
+	color: #00AEEF;
+  	margin: 0 auto;
+  	margin-top: 20px;
+	line-height: 22px;
+	font-family: "open sans", sans-serif;
+	font-weight: 800;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+}
 
 
 /*  ************  Contact Us  ***********  */
@@ -749,6 +843,11 @@ h5 {
   	position: relative;
 }
 
+.why-box:hover {
+	box-shadow: 1px 1px 10px #00AEEF,
+  				-1px -1px 10px #00AEEF;
+}
+
 .why-box h3 {
 	width: 100%;
 	background-color: #898989;
@@ -763,10 +862,17 @@ h5 {
 	font-weight: 400;
 }
 
+.why-box:hover h3 {
+	background-color: #00AEEF;
+	color: #ffff00;
+}
+
 .why-box h4 {
 	padding: 20px;
 	text-align: center;
 	line-height: 20px;
+	color: #757575;
+	font-weight: 400;
 	font-size: 14px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -775,9 +881,15 @@ h5 {
 	padding: 10px;
 }
 
+.img-holder {
+	width: 100%;
+}
 .why-box li {
 	font-size: 12px;
 	list-style: square;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #757575;
+	font-weight: 200;
 }
 
 
@@ -785,11 +897,18 @@ h5 {
 	background-color: #00AEEF;
 	border-bottom-left-radius: 9px;
 	border-bottom-right-radius: 9px;
-	color: #fff;
-	font-weight: 300;
-	letter-spacing: .1em;
 	position: absolute;
 	top: 400px;
+}
+
+.goals h4 {
+	color: #757575;
+	font-weight: 500;
+	letter-spacing: .2em;
+}
+
+.why-box:hover .goals h4 {
+	color: #fff;
 }
 
 .price-box {
@@ -866,10 +985,6 @@ h5 {
 .get-it {
   font-size: 17px;
   text-transform: uppercase;
-}
-
-#mission-highlight {
-	text-shadow: 2px 2px 4px #ffff00;
 }
 
 .page-header h3 {
@@ -1308,7 +1423,7 @@ padding-bottom:4px;
  /******************************************/
 
 footer {
-	padding-top: 30px;
+	padding: 30px 20px;
 	height: 320px;
 	background-color: #00aeef;
 	z-index: 1;
@@ -1326,10 +1441,11 @@ footer {
 	color: #fff;
 	letter-spacing: .1em;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	line-height: 23px;
-	padding: 5px 0px 0px 15px;
+	line-height: 32px;
+	padding: 5px 0px 0px 0px;
 	text-shadow: 2px 2px 2px #898989;
 	list-style: none;
+	width: 228px;
 }
 
 .footer-col {
