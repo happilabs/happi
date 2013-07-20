@@ -28,4 +28,8 @@ Happilabs3::Application.routes.draw do
   get "/user_voices" => "Pages#user_voices", :as => "user_voices"
   post "/user_voices" => "Pages#create_user_voice", :as => 'user_voices'
 
+  #TODO : Delete this RCAV after copying it over to categories show page
+  #temp categories page route
+  get "/category_product_list" => "Categories#product_list", as: "category_product_list"
+
 end
