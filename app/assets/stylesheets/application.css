@@ -15,6 +15,35 @@
 
  /*voices*/
 
+ .center {
+   text-align: center;
+ }
+
+ .left-text {
+   text-align: left;
+ }
+
+ #profile_heading {
+   float: left;
+   width: 400px;
+   margin-left: 70px;
+ }
+
+ #edit_profile_toggle_button {
+   float: left;
+   width: 200px;
+ }
+
+ #user_profile {
+   float: left;
+   width: 300px;
+ }
+
+ .profile_tab_box {
+   float: left;
+   width: 600px
+ }
+
  .voice-container {
    width: 100%;
    margin: 0 auto;
