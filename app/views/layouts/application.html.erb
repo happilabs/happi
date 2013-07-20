@@ -86,31 +86,31 @@
       <div class="footer-col">
         <h5>About HappiLabs</h5>
         <ul>
-          <li>Contact Us</li>
-          <li>People Who Make It Happen</li>
-          <li>What We Do</li>
-          <li>How We Do It</li>
-          <li>Why We Do It</li>
-          <li>Privacy Policy</li>
+          <li><%= link_to "Contact Us", contact_path %></li>
+          <li><%= link_to "People Who Make It Happen", our_people_path   %></li>
+          <li><%= link_to "What We Do", about_us_path %></li>
+          <li><%= link_to "How We Do It", about_us_path(anchor: "how_we_do_it") %></li>
+          <li><%= link_to "Why We Do It", about_us_path(anchor: "why_we_do_it") %></li>
+          <li><%= link_to "Privacy Policy", "#" %></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h5>Reviews</h5>
         <ul>
-          <li>Search Reviews</li>
-          <li>Sign up to Submit Reviews</li>
+          <li><%= link_to "Search Reviews", categories_path %></li>
+          <li><%= link_to "Sign up to Submit Reviews", new_user_registration_path %></li>
         </ul>
       </div>
       <div class="footer-col">
         <h5>Join Us</h5>
         <ul>
-          <li>Receive Our Newsletter</li>
+          <li><%= link_to "Receive Our Newsletter", new_subscriber_path %></li>
           <li>
             <ul><li><h5>Sign Up</h5></li>
-              <li>10 &#181;L - FREE</li>
-              <li>200 &#181;L - Access Data</li>
-              <li>1000 &#181;L - Rent-a-Lab-Manager</li>
+              <li><%= link_to "10 µL - FREE", new_user_registration_path %></li>
+              <li><%= link_to "200 µL - Access Data", sign_up_path %></li>
+              <li><%= link_to "1000 µL - Rent-a-Lab-Manager", sign_up_path %></li>
             </ul>
           </li>
         </ul>
