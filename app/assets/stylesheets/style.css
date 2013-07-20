@@ -1052,6 +1052,7 @@ h5 {
 
 /*********************   REVIEWS   ******************************/
 .category-review-list {
+	background: rgb(222,190,170);
 	border: 1px solid #757575;
 	float: left;
 	width: 218px;
@@ -1080,25 +1081,36 @@ h5 {
 }
 
 .category-review-images {
+	background: yellow;
 	float: left;
 	margin-left: 20px;
-	width: 700px;
+	width: 430px;
 }
 .category-review-images li a {
 	color: #00Aeef;
 	display: block;
 	float: left;
-	margin: 10px;
+	margin: 5px;
 	text-align: center;
-	width: 130px;
+	width: 120px;
 }
 
 .category-review-images li a:hover {
 
 }
 .category-review-images li a > img {
-	width: 90%;
+	width: 80%;
 }
+
+/********** This is for the mission statement on the category index page *******/
+/********** This is for the mission statement on the category index page *******/
+.category-review-images + aside {
+	background: rgb(200,180,250);
+	float: left;
+	width: 220px;
+}
+/********** This is for the mission statement on the category index page *******/
+/********** This is for the mission statement on the category index page *******/
 
 /*----------------------*/
 /*category show page*/
