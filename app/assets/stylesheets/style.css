@@ -84,7 +84,7 @@ h5 {
 	display: inline;
 	list-style: none;
 	font-size: 18px;
-	padding: 4px 8px 6px 10px;
+	padding: 4px 4px 0px 10px;
 }
 
 .hello {
@@ -262,7 +262,7 @@ h5 {
 
 .about-us {
 	margin: auto;
-	padding: 80px 0px 90px 0px;
+	padding: 40px 0px 90px 0px;
 }
 
 .about-us h2 {
@@ -272,28 +272,28 @@ h5 {
 }
 
 .about-us-container {
-	/*margin: auto;*/
-	margin-top: 20px;
-	display: block;
-	/*width: 90%;*/
+	margin: 0 auto;
+	display: inline-block;
+	width: 100%;
 }
 
 #mission-center {
 	text-align: center;
-	width: 80%;
+	width: 100%;
 	padding: 0px 20px;
 	margin: 0 auto;
-	
+	margin-top: 30px;
+	background-color: #00Aeef;
+	opacity: .2;
 
 }
 
 #about-mission-highlight {
-	text-shadow: 2px 2px 4px #ffff00;
-	font-size: 16px;
-	color: #00AEEF;
+	font-size: 22px;
+	color: #fff;
   	margin: 0 auto;
   	margin-top: 20px;
-	line-height: 22px;
+	line-height: 36px;
 	font-family: "open sans", sans-serif;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -641,17 +641,20 @@ h5 {
 	display: block;
 	margin-bottom: 40px;
 }
+
 .evaluation {
-	width: 530px;
-	margin-left: 80px;
+	width: 590px;
+	margin-left: 0px;
 	letter-spacing: 1px;
-	padding: 10px 0px 0px 60px;
+	padding: 10px 0px 0px 0px;
 	float: left;
+	position: relative;
+	left: -20px;
 }
 
 .evaluation li {
 	display: inline;
-	margin: 0px 10px 0px 0px;
+	margin: 0px 10px 0px 40px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -660,13 +663,28 @@ h5 {
 	line-height: 30px;
 	font-size: 25px;
 	text-shadow: 2px 2px 5px #d6d6d6;
-	border-right: 2px solid #d6d6d6;
-	padding-right: 10px;
+	float: left;
+	text-align: center;
+}
+
+.evaluation-category {
+	width: auto;
+	float: left;
+}
+
+.evaluation p {
+	font-size: 14px;
+}
+
+.eval-photo {
+	width: 50px;
+	height: auto;
 }
 
 #green-font {
 	color: #77cc33;
 	border-right: none;
+	padding-top: 6px;
 }
 
 .benefit {
@@ -766,8 +784,7 @@ h5 {
 }
 
 #about-evaluation {
-	margin-left: 0px;
-	padding: 5px 0px 20px 20px;
+	padding: 5px 0px 20px 0px;
 }
 
 /* *********  Sign up Box  **************** */
@@ -2134,3 +2151,7 @@ padding-top: 18px;
 
 }
 
+
+
+
+/* ###########  Product Index Page##############  */
