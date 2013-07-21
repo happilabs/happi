@@ -11,7 +11,6 @@ h2 {
 	font-size: 48px;
 	font-family: "open sans", sans-serif;
 	font-weight: 800;
-	text-transform: uppercase;
 	text-align: center;
 	text-shadow: 2px 2px 2px #898989;
 	letter-spacing: 2px;
@@ -555,7 +554,6 @@ h5 {
 .page-heading-box {
 	width: 870px;
 	padding: 10px 20px;
-	margin-top: 40px;
 	border-radius: 10px;
 	padding-bottom: 30px;
 }
@@ -593,7 +591,7 @@ h5 {
 }
 
 #big-contact-box {
-	width: 28%;
+	width: 23%;
 	height: auto;
 	box-shadow: 3px 3px 10px #757575;
 }
@@ -603,8 +601,10 @@ h5 {
 	height: auto;
 	text-align: center;
 	/*margin-left: 130px;*/
-	margin: 10px 100px 0px 0px;
+	margin: 0px 100px 0px 0px;
 	float: left;
+	border: 12px solid #d6d6d6;
+	box-shadow: 3px 3px 10px #757575;
 }
 
 .year {
@@ -612,7 +612,7 @@ h5 {
 }
 
 .subscribe-list li {
-	list-style: disc;
+	list-style: square;
 	margin-top: 20px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #757575;
@@ -950,6 +950,21 @@ h5 {
   		clear: both;
 }
 
+
+
+
+
+
+
+/* ************ END ABOUT US SECTION ******************/
+
+
+
+
+
+
+
+
 .sky-background {
 	background-color: #CEF3FF;
   	background-size: 100%;
@@ -1048,6 +1063,16 @@ h5 {
 	margin: 0 auto;
 }
 
+
+
+
+
+/* ************* SUBSCRIPTION PAGES ******************/
+
+
+
+
+
 #benefits {
 	margin-top: 20px;
 }
@@ -1080,9 +1105,56 @@ h5 {
 }
 
 
+.thousand-desc {
+	background-color: #CEF3FF;
+	margin: 0 auto;
+	margin-top: 50px;
+	padding: 20px 100px;
+	margin-bottom: 60px
+}
 
+/*.thousand-benefits-bar {
+	border: 1px solid black;
+}*/
 
+.thousand-benefits-bar img {
+	height: 60px;
+	width: 60px;
+	padding: 10px 10px 10px 75px;
+}
+.thous-benefit-box {
+	width: 198px;
+	height: 300px;
+	float: left;
+	border: 1px solid #d6d6d6;
+	margin: 10px;
+	border-radius: 5px;
+	background-color: #fff;
+}
 
+.thous-benefit-box:hover {
+	border: 2px solid #d6d6d6;
+
+	background-color: #FFFFF1;
+}
+
+.thous-benefit-box li {
+	list-style: square;
+	margin-top: 20px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #898989;
+	font-weight: 200;
+	font-size: 14px;
+}
+
+.thous-benefit-box h3 {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 200;
+	font-family: font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #00Aeef;
+	text-shadow: 1px 0px 1px #d6d6d6;
+}
 
 /*********************   REVIEWS   ******************************/
 
