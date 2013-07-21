@@ -31,6 +31,15 @@
 
     <article class='manufacturer-preview'>
       <div class='man-preview-left'>
+
+
+        <% @category.products.each do |prod| %>
+
+          <% render partial: "product", :product => prod %>
+
+        <% end %>
+
+
         <img src="pipette100.png">
         <p class='brand center'>Brand</p>
         <p class='center'>Distributor</p>

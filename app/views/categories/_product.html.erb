@@ -1,0 +1,32 @@
+  <img src="pipette100.png">
+  <p class='brand center'><%#= product.manufacturer_name %></p>
+  <p class='center'><%#= product.distributor_name %></p>
+  <dl class='product-number'>
+    <dt>Product no.</dt>
+    <dd><%#= product.product_num %></dd>
+  </dl>
+  <dl class='name-description'>
+    <dt><%#= product.product_name %></dt>
+    <dd><%#= product.product_desc %></dd>
+  </dl>
+
+<%#prod.reviews.each do |review| %>
+
+  <a href='' class='review-box'>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation </p>
+    </a>
+  </div>
+  <div class='man-preview-right center'>
+    <dl class='rating'>
+      <dt>Rating:</dt>
+      <dd>4.2</dd>
+      <dd class='side-note'>(out of 12 reviews)</dd>
+    </dl>
+    <dl class='quality-price'>
+      <dt>Quality:</dt>
+      <dd>xxxxxxx</dd>
+      <dt>Price:</dt>
+      <dd>xxxxxx</dd>
+    </dl>
+
+<%# end %>
