@@ -34,39 +34,9 @@
 
 
         <% @category.products.each do |prod| %>
-
-          <% render partial: "product", :product => prod %>
-
+          <%= render "product", :product => prod %>
         <% end %>
 
-
-        <img src="pipette100.png">
-        <p class='brand center'>Brand</p>
-        <p class='center'>Distributor</p>
-        <dl class='product-number'>
-          <dt>Product no.</dt>
-          <dd>1234567890</dd>
-        </dl>
-        <dl class='name-description'>
-          <dt>product name</dt>
-          <dd>product description</dd>
-        </dl>
-        <a href='' class='review-box'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation </p>
-        </a>
-      </div>
-      <div class='man-preview-right center'>
-        <dl class='rating'>
-          <dt>Rating:</dt>
-          <dd>4.2</dd>
-          <dd class='side-note'>(out of 12 reviews)</dd>
-        </dl>
-        <dl class='quality-price'>
-          <dt>Quality:</dt>
-          <dd>xxxxxxx</dd>
-          <dt>Price:</dt>
-          <dd>xxxxxx</dd>
-        </dl>
       </div>
     </article>
   </section>
