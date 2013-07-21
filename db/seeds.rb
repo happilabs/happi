@@ -10,6 +10,8 @@
 Report.destroy_all
 Category.destroy_all
 Review.destroy_all
+Product.destroy_all
+UserVoice.destroy_all
 
 reports = Report.create([{title: "May 2013", summary: "Summary of the May 2013 Happilabs product report", link: "may_2013_report.pdf"},
                         {title: "March 2013", summary: "Summary of the March 2013 Happilabs product report", link: "march_2013_report.pdf"}])
@@ -43,3 +45,19 @@ reviews = Review.create([
   ])
 
 puts "There are now #{Review.all.count} reviews in the database."
+
+products = Product.create([
+  {id: 1, category_id: 1, product_name: "Boris Beaker", product_desc: "Vinyl synth Schlitz reprehenderit selfies, meggings flannel Neutra cupidatat.", product_num: "123UUUFM333", photo: "http://0.tqn.com/d/chemistry/1/0/E/1/1/chemistry-glassware.jpg", manufacturer_name: "Boris", distributor_name: "Science LTD", price: "$122", recommended: true, url: "http://www.sciencemag.org/"},
+  {id: 2, category_id: 1, product_name: "Pyrex Pipette", product_desc: "Vinyl synth Schlitz reprehenderit selfies, meggings flannel Neutra cupidatat.", product_num: "32456JGJGJGJ", photo: "http://0.tqn.com/d/chemistry/1/0/E/1/1/chemistry-glassware.jpg", manufacturer_name: "Pyrex", distributor_name: "Dist Plus", price: "$1234", recommended: false, url: "http://www.sciencemag.org/"},
+  {id: 3, category_id: 2, product_name: "Matrix Microtube", product_desc: "Vinyl synth Schlitz reprehenderit selfies, meggings flannel Neutra cupidatat.", product_num: "P3FFf", photo: "http://0.tqn.com/d/chemistry/1/0/E/1/1/chemistry-glassware.jpg", manufacturer_name: "Matrix", distributor_name: "Products'r'us", price: "$9090", recommended: true, url: "http://www.sciencemag.org/"},
+  {id: 4, category_id: 2, product_name: "Griptastic Gloves", product_desc: "Vinyl synth Schlitz reprehenderit selfies, meggings flannel Neutra cupidatat.", product_num: "PPFPFLPL@5443", photo: "http://0.tqn.com/d/chemistry/1/0/E/1/1/chemistry-glassware.jpg", manufacturer_name: "Griptastic", distributor_name: "The Beaker Boys", price: "$909/lb", recommended: false, url: "http://www.sciencemag.org/"}
+])
+
+puts "There are now #{Review.all.count} reviews in the database."
+
+uservoices = UserVoice.create([
+  {user_id: 1, message: "This is a voice"},
+  {user_id: 1, message: "This is a voice"}
+  ])
+
+puts "There are now #{UserVoice.all.count} reviews in the database."
