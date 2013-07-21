@@ -1,5 +1,4 @@
-
-<div class="grid">  
+<div class="grid">
   <div class="page-heading">
     <h2 class='container'>Ratings and Reviews</h2>
     <section class="category-index-intro-box group">
@@ -7,7 +6,7 @@
         <ul>
           <li class="second-p">To rate and review the quality of a product and share with other scientists, <p class="center"><span class="user-text-direction">SIGN UP</span></p></li>
           <li class="second-p">To know which brands scientists like most, <p class="center"><span class="user-text-direction">SELECT A CATEGORY...</span></p></li>
-        </ul> 
+        </ul>
     </section>
   </div>
 
@@ -15,96 +14,86 @@
     <aside class='category-review-list'>
       <h4>Select a Category</h4>
       <ul>
-        <li><a href="">1.5 mL microtube</a></li>
-        <li><a href="">15 mL conical tube</a></li>
-        <li><a href="">50 mL conical tube</a></li>
-        <li><a href="">Nitrile gloves</a></li>
-        <li><a href="">Latex gloves</a></li>
-        <li><a href="">5 mL serological pipet</a></li>
-        <li><a href="">10 mL serological pipet</a></li>
-        <li><a href="">T75 flask</a></li>
-        <li><a href="">100 mm dish</a></li>
-        <li><a href="">10 uL pipette tips</a></li>
-        <li><a href="">200 uL pipette tips</a></li>
-        <li><a href="">1000/1250 uL pipette tips</a></li>
-        <li><a href="">Lab management tools</a></li>
-        <li><a href="">Sustainability</a></li>
+        <% @categories.each do |cat| %>
+          <li><%= link_to "#{cat.name}", category_url(cat.id) %></a></li>
+        <% end %>
       </ul>
     </aside>
+
     <section class='category-review-images'>
-      
+      <% #TODO - add pictures to database & put dynamicness in below %>
       <ul>
         <li>
           <a href="">
             <img src="pipette100.png" alt="conical tube Reviews">
             10 ul tips
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="pipette200.png">
            200 ul tips
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="pipette1000.png">
             1000 ul tips
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="phone.png">
             1.5 mL microtube
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="e_mail.png">
             15 mL conical tube
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="sustainability-happilabs.png">
             Nitrile gloves
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="placeholder.png">
             Latex gloves
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="placeholder.png">
             5 mL serological pipet
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="placeholder.png">
             10 mL serological pipet
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="placeholder.png">
             T75 flask
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="placeholder.png">
             100 mm dish
           </a>
-        </li> 
+        </li>
         <li>
           <a href="">
             <img src="placeholder.png">Category 1
           </a>
-        </li> 
+        </li>
       </ul>
     </section>
     <!-- <aside>

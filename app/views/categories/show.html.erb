@@ -1,37 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @category.name %>
-</p>
 
-<h1 class='container'>Rating's and Reviews</h1>
+<h1 class='container'>Product Ratings and Reviews</h1>
 <div class='container group'>
   <aside class='category-review-list'>
     <h4>Select a Category</h4>
+
     <ul>
-      <li><a href="">Category 1</a></li>
-      <li><a href="">Category 2</a></li>
-      <li><a href="">Category 3</a></li>
-      <li><a href="">Category 4</a></li>
-      <li><a href="">Category 5</a></li>
-      <li><a href="">Category 6</a></li>
-      <li><a href="">Category 7</a></li>
-      <li><a href="">Category 8</a></li>
-      <li><a href="">Category 9</a></li>
-      <li><a href="">Category 10</a></li>
-      <li><a href="">Category 11</a></li>
-      <li><a href="">Category 12</a></li>
+    <% @categories.each do |cat| %>
+      <li><%= link_to "#{cat.name}", category_url(cat.id) %></a></li>
+    <% end %>
     </ul>
   </aside>
   <section class='category-review-show'>
   	<div class='selected-category-frame'>
-  		<%= @product.photo %>
-  		<%= @product.category_id %>
-  		<!-- insert selected category in here -->
-  	</div>
-  	<article class='manufacturer-preview'>
+      <h4><%= @category.name %></h4>
+    </div>
+    <article class='manufacturer-preview'>
   		<!-- insert manufacturer preview in here -->
+      <ul>
+        <li>Product 1 </li>
+        <li>Product 2 </li>
+        <li>Product 3 </li>
+        <li>Product 4 </li>
+        <li>Product 5 </li>
+
+      </ul>
   	</article>
   </section>
 </div>
