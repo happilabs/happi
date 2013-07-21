@@ -27,8 +27,6 @@ categories = Category.create([
   {name: "10 uL Pipette Tips" },
   {name: "200 uL Pipette Tips" },
   {name: "100/1250 uL Pipette Tips" },
-  {name: "1.5 mL Microtube" },
-  {name: "1.5 mL Microtube" },
   ])
 
 puts "There are now #{Category.all.count} reports in the database."

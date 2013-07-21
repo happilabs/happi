@@ -5,7 +5,6 @@
 <div class='container group'>
   <aside class='category-review-list'>
     <h4>Select a Category</h4>
-
     <ul>
     <% @categories.each do |cat| %>
       <li><%= link_to "#{cat.name}", category_url(cat.id) %></a></li>
@@ -14,21 +13,52 @@
   </aside>
   <section class='category-review-show'>
   	<div class='selected-category-frame'>
-      <h4><%= @category.name %></h4>
-    </div>
-    <article class='manufacturer-preview'>
-  		<!-- insert manufacturer preview in here -->
-      <ul>
-        <li>Product 1 </li>
-        <li>Product 2 </li>
-        <li>Product 3 </li>
-        <li>Product 4 </li>
-        <li>Product 5 </li>
+      <% #TODO - switch out static photo for dynamic photos %>
 
+      <h3><%= @category.name %></h3>
+      <%= image_tag "/pipette100.png" %>
+      <dl class='center'>
+        <dt>Fair Price:</dt>
+        <dd>$80.00</dd>
+      </dl>
+
+      <h4>Qualities to look for</h4>
+        <li>attribute 1</li>
+        <li>attribute 2</li>
+        <li>attribute 3</li>
       </ul>
-  	</article>
+    </div>
+
+    <article class='manufacturer-preview'>
+      <div class='man-preview-left'>
+        <img src="pipette100.png">
+        <p class='brand center'>Brand</p>
+        <p class='center'>Distributor</p>
+        <dl class='product-number'>
+          <dt>Product no.</dt>
+          <dd>1234567890</dd>
+        </dl>
+        <dl class='name-description'>
+          <dt>product name</dt>
+          <dd>product description</dd>
+        </dl>
+        <a href='' class='review-box'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation </p>
+        </a>
+      </div>
+      <div class='man-preview-right center'>
+        <dl class='rating'>
+          <dt>Rating:</dt>
+          <dd>4.2</dd>
+          <dd class='side-note'>(out of 12 reviews)</dd>
+        </dl>
+        <dl class='quality-price'>
+          <dt>Quality:</dt>
+          <dd>xxxxxxx</dd>
+          <dt>Price:</dt>
+          <dd>xxxxxx</dd>
+        </dl>
+      </div>
+    </article>
   </section>
 </div>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
