@@ -16,7 +16,9 @@ h2 {
 	text-shadow: 2px 2px 2px #898989;
 	letter-spacing: 2px;
 }
-
+h4 {
+	font-size: 18px;
+}
 h5 {
 	color: #00AEEF;
 	line-height: 28px;
@@ -1135,11 +1137,139 @@ h5 {
 .category-review-show {
 
 }
+
 .selected-category-frame {
+	background: #00AEEF;
+	border: 1px solid #888;
+	float: left;
+	margin-left: 60px;
+	padding: 10px;
+	width: 618px;
+}
+.selected-category-frame img,
+.selected-category-frame h3,
+.selected-category-frame dl,
+.selected-category-frame ul {
+	color: #333;
+	display: block;
+	float: left;
+	padding: 5px;
+}
+.selected-category-frame img {
+	margin-bottom: 50px;
+	width: 100px;
 
 }
-.manufacturer-preview {
+.selected-category-frame h3 {
+	text-align: center;
+	width: 420px;
+}
+.selected-category-frame dl {
+	background: #ff0;
+	border: 2px solid #888;
+	margin-left: 40px;
+	padding: 15px;
+}
+.selected-category-frame dt {
+	font-size: 18px;
+}
+.selected-category-frame dd {
+}
+.selected-category-frame ul {
+	margin-left: 90px;
 
+}
+.selected-category-frame li {
+	position: relative;
+		left: 20px;
+}
+.man-preview-left {
+	width: 420px;
+}
+.man-preview-right {
+	width: 170px;
+}
+/*.manufacturer-preview * {
+	border: 1px solid black;
+}*/
+.manufacturer-preview {
+	border: 1px solid #888;
+	float: left;
+	margin: 20px 0 20px 60px;
+	padding: 10px;
+	width: 618px;
+}
+.review-box:before{
+	background: rgba(0,0,0,.2);
+	color: #fff;
+	content: 'See All Reviews';
+	display: none;
+	font-size: 36px;
+	height: 100%;
+	line-height: 100px;
+	position: absolute;
+		right: 0;
+		top: 0;
+	text-align: center;
+	width: 100%;
+}
+.review-box:hover:before {
+	color: #000;
+	display: block;
+}
+.man-preview-left,
+.man-preview-right,
+.manufacturer-preview img,
+.manufacturer-preview .brand,
+.manufacturer-preview dl,
+.manufacturer-preview ul,
+.manufacturer-preview .review-box {
+	display: block;
+	float: left;
+	margin: 5px;
+}
+.manufacturer-preview img {
+	width: 100px;
+}
+.manufacturer-preview dt,
+.manufacturer-preview dl {
+	margin-bottom: 10px;
+}
+.brand {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 40px;
+	width: 290px;
+}
+.product-number {
+	width: 100px;
+}
+.quality-price {
+	width: 90%;
+}
+.name-description {
+	width: 290px;
+}
+.rating {
+	font-size: 24px;
+	line-height: 40px;
+	width: 90%;
+}
+.rating {
+	border: 1px solid #888;
+	margin-bottom: 20px;
+	padding: 10px 5px;
+}
+.review-box {
+	background: linear-gradient(#fff, #eee);
+	border: 1px solid #ccc;
+	color: #000;
+	padding: 5px;
+	position: relative;
+}
+.side-note {
+	color: #888;
+	font-size: 12px;
 }
 
 /*
