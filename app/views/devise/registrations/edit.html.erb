@@ -1,7 +1,13 @@
 <div class="group about-us">
   <div id="profile_heading">
+    <h3><%= current_user.first_name %><%= current_user.last_name %></h3>
     <h3><%= current_user.email %></h3>
-    <button class="btn" id="edit_profile_toggle_button">Password Settings</button>
+    <br>
+    <button class="btn" id="edit_profile_toggle_button">Complete Your Profile</button>
+    <br>
+    <br>
+    <br>
+
 
     <div id="user_profile">
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
@@ -10,6 +16,26 @@
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
+
+        <div>
+          <%= f.text_field :address, placeholder: "Address" %>
+          <%= f.text_field :zip, placeholder: "ZipCode" %>
+          <%= f.text_field :city, placeholder: "City" %>
+          <%= f.text_field :role, placeholder: "Current Role" %>
+          <%= f.text_field :website_url, placeholder: "Website" %>
+        </div>
+
+        <div><i>(we need your current password to confirm your changes)</i><br />
+        <%= f.password_field :current_password, placeholder: "Current Password" %></div>
+
+        <div><%= f.submit "Update", class: "btn btn-primary" %></div>
+      <% end %>
+    </div>
+
+  <button class="btn" id="edit_password_toggle_button">Edit Password</button>
+    <div id="edit_password">
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+        <%= devise_error_messages! %>
 
         <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
         <%= f.password_field :password, :autocomplete => "off" %></div>
@@ -20,15 +46,17 @@
         <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
         <%= f.password_field :current_password %></div>
 
-        <div><%= f.submit "Update" %></div>
+        <div><%= f.submit "Update", class: "btn btn-primary" %></div>
       <% end %>
 
       <h3>Cancel my account</h3>
 
-      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-warning" %></p>
 
       <%= link_to "Back", :back %>
     </div>
+
+
 
   </div>
 
@@ -55,9 +83,15 @@
 </div>
 
 <script>
+
 $('#user_profile').hide();
 $("#edit_profile_toggle_button").click(function() {
   $("#user_profile").fadeToggle("slow", "linear");
+});
+
+$('#edit_password').hide();
+$("#edit_password_toggle_button").click(function() {
+  $("#edit_password").fadeToggle("slow", "linear");
 });
 
 $("#show_comments").click(function(){
