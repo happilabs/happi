@@ -29,15 +29,13 @@
       </ul>
     </div>
 
-    <article class='manufacturer-preview'>
-      <div class='man-preview-left'>
+
 
 
         <% @category.products.each do |prod| %>
           <%= render "product", :product => prod %>
         <% end %>
 
-      </div>
-    </article>
+
   </section>
 </div>
