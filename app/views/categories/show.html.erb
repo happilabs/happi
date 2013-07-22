@@ -5,7 +5,6 @@
 <div class='container group'>
   <aside class='category-review-list'>
     <h4>Select a Category</h4>
-
     <ul>
     <% @categories.each do |cat| %>
       <li><%= link_to "#{cat.name}", category_url(cat.id) %></a></li>
@@ -14,21 +13,29 @@
   </aside>
   <section class='category-review-show'>
   	<div class='selected-category-frame'>
-      <h4><%= @category.name %></h4>
-    </div>
-    <article class='manufacturer-preview'>
-  		<!-- insert manufacturer preview in here -->
-      <ul>
-        <li>Product 1 </li>
-        <li>Product 2 </li>
-        <li>Product 3 </li>
-        <li>Product 4 </li>
-        <li>Product 5 </li>
+      <% #TODO - switch out static photo for dynamic photos %>
 
+      <h3><%= @category.name %></h3>
+      <%= image_tag "/pipette100.png" %>
+      <dl class='center'>
+        <dt>Fair Price:</dt>
+        <dd>$80.00</dd>
+      </dl>
+
+      <h4>Qualities to look for</h4>
+        <li>attribute 1</li>
+        <li>attribute 2</li>
+        <li>attribute 3</li>
       </ul>
-  	</article>
+    </div>
+
+
+
+
+        <% @category.products.each do |prod| %>
+          <%= render "product", :product => prod %>
+        <% end %>
+
+
   </section>
 </div>
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
