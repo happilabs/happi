@@ -165,7 +165,7 @@ h5 {
   float: left;
   width: 30%;
   padding: 5px 3px;
-  
+
   text-align: center;
  }
 
@@ -658,7 +658,7 @@ h5 {
 	letter-spacing: 1px;
 	padding: 10px 0px 0px 0px;
 	float: left;
-	
+
 }
 
 #two-evaluation {
@@ -805,8 +805,8 @@ h5 {
 
 
 .information {
-	padding: 20px 0px 20px 80px;
-	width: 26%;
+	padding: 20px 20px 20px 20px;
+	width: 300px;
 	margin: auto;
 	margin-bottom: 30px;
 	border-radius: 10px;
@@ -1179,7 +1179,7 @@ h5 {
 	color: #fff;
 	text-shadow: 1px 1px 3px #525252;
 	font-size: 30px;
-	font-weight: bold; 
+	font-weight: bold;
 	padding-top: 20px;
 	margin-bottom: 40px;
 }
@@ -1684,7 +1684,7 @@ i.or {
 	border: none;
 	margin-bottom:100px;
 }
-			
+
 .hero-unit h1,
 .hero-unit h2 {
 	color:#fff;
@@ -1978,7 +1978,7 @@ padding-top: 18px;
 }
 .btn.btn-primary:hover,
 .btn.btn-primary:focus {
-	background-color: #2fe2bf; 
+	background-color: #2fe2bf;
 }
 .btn.btn-primary:active,
 .btn.btn-primary.active {
