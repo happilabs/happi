@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<h1 class='container'>Product Ratings and Reviews</h1>
+<h2 class='page-heading'>Product Ratings and Reviews</h2>
 <div class='container group'>
   <aside class='category-review-list'>
     <h4>Select a Category</h4>
@@ -11,18 +11,24 @@
     <% end %>
     </ul>
   </aside>
+
   <section class='category-review-show'>
   	<div class='selected-category-frame'>
       <% #TODO - switch out static photo for dynamic photos %>
 
+      <!-- This picture is still a placeholder -->
+      <!-- make sure this picture is above the h3 tag -->
+      <img src="../products/pipette100.png">
+      <!-- This picture is still a placeholder -->
+      <!-- make sure this picture is above the h3 tag -->
       <h3><%= @category.name %></h3>
-      <%= image_tag "/pipette100.png" %>
+      <%#= image_tag "../products/pipette100.png" %>
       <dl class='center'>
         <dt>Fair Price:</dt>
         <dd>$80.00</dd>
       </dl>
-
-      <h4>Qualities to look for</h4>
+      <ul>
+        <h4>Qualities to look for</h4>
         <li>attribute 1</li>
         <li>attribute 2</li>
         <li>attribute 3</li>

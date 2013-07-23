@@ -1,57 +1,96 @@
 <div id='header-fix'></div>
 
 <p id="notice"><%= notice %></p>
+<div class='container group'>
+  <aside class='category-review-list'>
+    <h4>Select a Category</h4>
+    <ul>
+      <li><a href="">Category 1</a></li>
+      <li><a href="">Category 2</a></li>
+      <li><a href="">Category 3</a></li>
+      <li><a href="">Category 4</a></li>
+      <li><a href="">Category 5</a></li>
+      <li><a href="">Category 6</a></li>
+      <li><a href="">Category 7</a></li>
+      <li><a href="">Category 8</a></li>
+      <li><a href="">Category 9</a></li>
+      <li><a href="">Category 10</a></li>
+      <li><a href="">Category 11</a></li>
+      <li><a href="">Category 12</a></li>
+    </ul>
+  </aside>
+  <section class='show-page-content'>
+    <article class='product-summary group'>
+      <div>
+        <img src="../products/pipette100.png">
+      <!-- <p>
+        <b>Photo:</b>
+        <%= @product.photo %>
+      </p> -->
+        <p>
+          <b>Recommended:</b>
+          <%= @product.recommended %>
+        </p>
+      </div>
+      <div>
+        <h3><%= @product.manufacturer_name %></h3>
+        <h3>Rating:</h3>
+        <h4><%= @product.reviews.average("rating") %></h4>
+        <p class='side-note'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
+      </div>
+      <div>
+        <p class='side-note'>
+          <b>Product num:</b>
+          <%= @product.product_num %>
+        </p>
+        <h3><%= @product.price %></h3>  
+        <a href="">Quality Documentation</a>
+      </div>
+    </article>
+  </section>
+  <section class='all-reviews-container'>
+    <article class='individual-review-container'>
+      <p>4.0 | 11/11/2011</p>
+      <p><b>Reviewed by:</b> John Smith</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
+    </article>
+    <article class='individual-review-container'>
+      <p>4.0 | 11/11/2011</p>
+      <p><b>Reviewed by:</b> John Smith</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
+    </article>
+    <article class='individual-review-container'>
+      <p>4.0 | 11/11/2011</p>
+      <p><b>Reviewed by:</b> John Smith</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
+    </article>
+    <article class='individual-review-container'>
+      <p>4.0 | 11/11/2011</p>
+      <p><b>Reviewed by:</b> John Smith</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
+    </article>
+  </section>
+</div>
+<div class='container group'>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+</div>
 
-<p>
-  <b>Category:</b>
-  <%= @product.category_id %>
-</p>
-
-<p>
-  <b>Product name:</b>
-  <%= @product.product_name %>
-</p>
-
-<p>
-  <b>Product desc:</b>
-  <%= @product.product_desc %>
-</p>
-
-<p>
-  <b>Product num:</b>
-  <%= @product.product_num %>
-</p>
-
-<p>
-  <b>Photo:</b>
-  <%= @product.photo %>
-</p>
-
-<p>
-  <b>Manufacturer name:</b>
-  <%= @product.manufacturer_name %>
-</p>
-
-<p>
-  <b>distributor name:</b>
-  <%= @product.distributor_name %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @product.price %>
-</p>
-
-<p>
-  <b>Recommended:</b>
-  <%= @product.recommended %>
-</p>
-
-<p>
-  <b>Url:</b>
-  <%= @product.url %>
-</p>
-
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<!-- <b>Url:</b> -->
+          <%#= @product.url %>
+<!-- <p>
+        <b>Category:</b>
+        <%= @product.category_id %>
+      </p> -->
+     <!--  <p>
+        <b>Product name:</b>
+        <%= @product.product_name %>
+      </p> -->
+      <!-- <p>
+        <b>Product desc:</b>
+        <%= @product.product_desc %>
+      </p> -->
+      <!-- <p>
+        <b>distributor name:</b>
+        <%= @product.distributor_name %>
+      </p> -->

@@ -1234,6 +1234,8 @@ h5 {
 .category-review-list {
 	border: 1px solid #757575;
 	float: left;
+	height: 100%;
+	/*margin-bottom: 2000px;*/
 	width: 218px;
 }
 
@@ -1299,8 +1301,10 @@ h5 {
 /*----------------------*/
 /*category show page*/
 /*----------------------*/
-.category-review-show {
-
+.category-review-show,
+.show-page-content {
+	float: left;
+	width: 640px;
 }
 
 .selected-category-frame {
@@ -1435,6 +1439,61 @@ h5 {
 .side-note {
 	color: #888;
 	font-size: 12px;
+}
+
+/********************* PRODUCT SHOW PAGE ****************************/
+.product-summary * {
+	/*border: 1px solid #333;*/
+}
+.product-summary a {
+	background: #00AEEF;
+	color: #fff;
+	padding: 10px;
+	position: relative;
+		top: 10px;
+}
+.product-summary a:hover {
+	color: #ff0;
+	text-decoration: none;
+}
+.product-summary p {
+	padding-bottom: 0px;
+}
+.product-summary {
+	background: #f5f5fa;
+	border-bottom: 1px solid #ccc;
+	margin-left: 30px;
+	padding-top: 20px;
+}
+.product-summary .side-note {
+	display: inline-block;
+	padding: 0 30px;
+}
+
+.product-summary img {
+	width: 100px;
+}
+.product-summary div {
+	float: left;
+	text-align: center;
+}
+.product-summary div:first-child {
+	width: 150px;
+}
+.product-summary div:nth-child(2) {
+	text-align: center;
+	width: 250px;
+}
+.product-summary div:nth-child(3) {
+	width: 200px;
+}
+.all-reviews-container {
+	float: left;
+	margin-left: 30px;
+	width: 640px;
+}
+.individual-review-container {
+	border-bottom: 1px solid #ccc;
 }
 
 
