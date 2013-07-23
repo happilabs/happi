@@ -1031,7 +1031,7 @@ h5 {
 }
 
 .navbar-inverse .navbar-inner{
-	padding:5px 0px;
+	padding:0px 0px;
 }
 
 .yellow {
@@ -1183,6 +1183,10 @@ h5 {
 	color: #00Aeef;
 	text-shadow: 1px 0px 1px #d6d6d6;
 }
+
+
+
+
 
 /*********************   REVIEWS   ******************************/
 
@@ -1633,7 +1637,6 @@ i.fa-icon-large {
 	display:block;
 }
 p {
-	/*text-align:justify;*/
 	padding:10px 0px;
 }
 
@@ -2224,6 +2227,101 @@ padding-top: 18px;
 }
 
 
+/* ***************  DASHBOARD *************** */
 
+.dash-contact-box {
+	padding: 15px 15px 15px 15px;
+	background-color: #77cc33;
+	text-align: center;
+	width: 840px;
+	border-radius: 40px;
+	margin: 0px 0px 40px 68px;
+	opacity: .4;
+	box-shadow: 5px 5px 10px #898989;
+}
+
+.dash-contact-box h3 {
+	font-weight: 200;
+	color: #fff;
+	text-shadow: 0px 1px 3px #000;
+	letter-spacing: 1px;
+}
+
+.dash-name {
+	text-transform: uppercase;
+	font-size: 22px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #ffff00;
+	text-shadow: 1px 1px 1px #898989;
+  	margin-top: 20px;
+	font-weight: 300;
+	text-align: left;
+	border-bottom: 2px solid #d6d6d6;
+	padding-bottom: 10px;
+}
+
+.dash-user {
+	border-bottom: none;
+	font-weight: 400;
+	text-transform: none;
+	color: #fff;
+	font-size: 16px;
+	padding-bottom: 5px;
+	margin-bottom: 0px;
+}
+
+.dash-p {
+	font-size: 12px;
+}
+.dash-profile-box {
+	border-radius: 5px;
+	background-color: #00Aeef;
+	box-shadow: 10px 10px 18px #898989; 
+}
+
+.dash-profile-box h3 {
+	color: #ffff00;
+	font-weight: 300;
+	letter-spacing: 1px;
+	font-size: 17px;
+}
+
+.dash-comm-title {
+	font-size: 20px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	color: #898989
+}
+
+.dash-tabs li{
+	font-size: 20px;
+
+}
+.comments-listing {
+	border-bottom: 2px solid #d6d6d6;
+}
+
+/*REPORTS TAB*/
+
+.profile_tab_box {
+	background-color: #fff;
+}
+
+.margin-up {
+	padding-top: 60px;
+}
+
+.reports-list {
+	list-style: none;
+	color: #757575;
+	padding: 10px 0px 30px;
+}
+
+#suckit {
+	font-size: 50px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	padding: 20px 0px;
+}
 
 /* ###########  Product Index Page##############  */

@@ -25,8 +25,11 @@
 
  #profile_heading {
    float: left;
-   width: 400px;
+   width: 350px;
    margin-left: 70px;
+   margin-right: 50px;
+   padding-bottom: 20px;
+   padding-left: 30px;
  }
 
  #edit_profile_toggle_button {
@@ -41,7 +44,8 @@
 
  .profile_tab_box {
    float: left;
-   width: 600px
+   width: 600px;
+   
  }
 
  .voice-container {

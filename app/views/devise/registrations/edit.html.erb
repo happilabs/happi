@@ -1,6 +1,11 @@
-<div class="group about-us">
-  <div id="profile_heading">
-    <h3><%= current_user.first_name %><%= current_user.last_name %></h3>
+<div class="group about-us grid margin-up">
+  
+  <div class="dash-contact-box">
+    <h3>Questions? Contact us anytime: hello@happilabs.org | 312-569-0161</h3>  
+  </div>
+  <div id="profile_heading" class="dash-profile-box">
+    <h4 class="dash-name"><%= current_user.first_name %> <%= current_user.last_name %> Profile</h4>
+    <p class="dash-name dash-user">Login name:</p>
     <h3><%= current_user.email %></h3>
     <br>
     <button class="btn" id="edit_profile_toggle_button">Complete Your Profile</button>
@@ -61,22 +66,23 @@
   </div>
 
   <div class="profile_tab_box">
-    <ul class="nav nav-tabs">
-      <li class="active" id="comments_tab"><%= link_to "Comments", "#", id: "show_comments" %></li>
-      <li id="reports_tab"><%= link_to "Reports", "#", id: "show_reports" %></li>
+    <ul class="nav nav-tabs dash-tabs">
+      <li class="active" id="comments_tab"><%= link_to "Your Reviews & Voices", "#", id: "show_comments" %></li>
+      <li id="reports_tab"><%= link_to "Your Reports", "#", id: "show_reports" %></li>
     </ul>
-    <ul id="comments_list">
+    <ul id="comments_list" class="comments-listing">
+      <p class="second-p dash-p"><strong>Thank you</strong> for contributing. Your feedback is important to improving the quality of scientific research.</p>
       <% current_user.reviews.each do |review| %>
-
-        <h4><%= review.product.product_name %>:   <%= review.rating %>/5</h4>
-        <h4>"<%= link_to review.desc, review %>"</h4>
+        <h4 class="dash-comm-title"><%= review.product.product_name %>:   <%= review.rating %>/5</h4>
+        <p class="second-p">"<%= link_to review.desc, review %>"</p>
         <hr>
       <% end %>
 
     </ul>
     <ul id="reports_list">
+      <p class="second-p dash-p"><strong>Never get ripped off again!</strong> Use these reports to ensure you are paying a fair price and using good quality products. Enjoy...</p>
       <% Report.all.each do |report| %>
-      <li><h4><%= link_to report.title, "../#{report.link}" %></h4></li>
+      <li class="reports-list"><h4 id="suckit"><%= link_to report.title, "../#{report.link}" %></h4></li>
       <% end %>
     </ul>
   </div>
