@@ -38,7 +38,7 @@ h5 {
 /*  ************  Home Page  ***********  */
 
 .innerbg {
-	background: rgba(44, 62, 80, 0.8) url(cover2.jpg) 50% 0 fixed repeat;
+	background: rgba(44, 62, 80, 0.8) url(cover2_final.jpg) 50% 0 fixed repeat;
 	min-height:650px;
 	width:100%;
 	display:inline-block;
@@ -464,8 +464,8 @@ h5 {
 
 .bio-photo {
 	float: left;
-	height: 20%;
-	width: 20%;
+	height: 200px;
+	width: 200px;
 	margin-top: 35px;
 	border-radius: 50%;
 }
@@ -555,11 +555,11 @@ h5 {
 	margin: 40px 20px 0px 20px;
 }
 
-#stuff {
+#community-graphic {
 	float: left;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		font-weight: 200;
-		font-size: 14px;
+		font-size: 11px;
 		text-align: center;
 		margin: 10px;
 		color: #757575;
@@ -1197,7 +1197,7 @@ h5 {
 	margin: 0 auto;
 	margin-top: 10px;
 	margin-bottom: 40px;
-	background: url(/which_brand.JPG) no-repeat 0 -140px;
+	background: url(/which_brand_final.jpg) no-repeat;
 	background-size: cover;
 }
 
@@ -1280,7 +1280,8 @@ h5 {
 
 }
 .category-review-images li a > img {
-	width: 80%;
+	width: 96px;
+	height: 96px;
 }
 
 /********** This is for the mission statement on the category index page *******/
