@@ -6,6 +6,8 @@ Happilabs3::Application.routes.draw do
   resources :reviews
 
 
+
+  devise_for :users, :controllers => { :registrations => :registrations }
   devise_for :users
   resources :reports
   resources :categories

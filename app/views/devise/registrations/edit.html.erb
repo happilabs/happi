@@ -1,5 +1,12 @@
 <div class="group about-us grid margin-up">
 
+  <% if notice.present? %>
+    <p id="homepage_messages"><%= notice %></p>
+  <% end %>
+  <% if alert.present? %>
+    <p id="homepage_messages"><%= alert %></p>
+  <% end %>
+
   <%= devise_error_messages! %>
   <div class="dash-contact-box">
     <h3>Questions? Contact us anytime: hello@happilabs.org | 312-569-0161</h3>
