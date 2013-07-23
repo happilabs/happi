@@ -1,14 +1,14 @@
 <div class="group about-us grid margin-up">
-  
+
   <div class="dash-contact-box">
-    <h3>Questions? Contact us anytime: hello@happilabs.org | 312-569-0161</h3>  
+    <h3>Questions? Contact us anytime: hello@happilabs.org | 312-569-0161</h3>
   </div>
   <div id="profile_heading" class="dash-profile-box">
     <h4 class="dash-name"><%= current_user.first_name %> <%= current_user.last_name %> Profile</h4>
     <p class="dash-name dash-user">Login name:</p>
     <h3><%= current_user.email %></h3>
     <br>
-    <button class="btn" id="edit_profile_toggle_button">Complete Your Profile</button>
+    <button class="btn btn-danger" id="edit_profile_toggle_button">Complete Your Profile</button>
     <br>
     <br>
     <br>
@@ -30,7 +30,7 @@
           <%= f.text_field :website_url, placeholder: "Website" %>
         </div>
 
-        <div><i>(we need your current password to confirm your changes)</i><br />
+        <div><i>(please enter your current password again to confirm your changes)</i><br />
         <%= f.password_field :current_password, placeholder: "Current Password" %></div>
 
         <div><%= f.submit "Update", class: "btn btn-primary" %></div>

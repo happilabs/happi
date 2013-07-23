@@ -1,5 +1,15 @@
 <div class="about-us grid">
 
+	<div id="notice">
+	  <% if notice.present? %>
+	  <p class="notice"><%= notice %></p>
+	  <% end %>
+
+	  <% if alert.present? %>
+	  <p class="alert"><%= alert %></p>
+	  <% end %>
+	</div>
+
 		<div class="login-page">
 			<h2>Login</h2>
 			<p>Welcome back!</p>
