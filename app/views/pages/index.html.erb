@@ -1,20 +1,26 @@
-
-    <!-- START PARALLAX BG -->
   <div class="innerbg">
     <div class="leftbg">
     </div>
-
 
       <div class="hero-unit">
         <div class="container">
           <div class="row-fluid">
             <div class="text-center">
+                <% if notice.present? %>
+                <p id="homepage_messages"><%= notice %></p>
+                <% end %>
+
+                <% if alert.present? %>
+                <p id="homepage_messages"><%= alert %></p>
+                <% end %>
               <hr class="half">
                 <h1>Our <span class="yellow">Mission</span>:</h1>
                 <h2 class="text-center">
                 <span class="get-it">to improve the happiness of scientists & the quality of their research</span>
                 </h2>
               <hr class="half">
+
+
             </div>
             <div class="camein">
 
@@ -47,7 +53,7 @@
 
 
       <div class="voices-intro">
-        
+
         <h2>Share Your Voice</h2>
         <p class="second-p">This is the place to voice your opinion, ask for help, or make a suggestion about life in the lab. Warn us about a faulty product, tell us when an experiment works, or complain about a co-worker. <strong>We're here to listen.</strong></p>
 
@@ -135,7 +141,7 @@
 
         </div>
       </div>
-  
+
   </div>
 
 
