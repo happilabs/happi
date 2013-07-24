@@ -1,16 +1,17 @@
 <div class="about-us cover2">
 
+
 	<div class="signup">
 		<h2>Sign up</h2>
 		
 	</div>
+			  <h6><%= devise_error_messages! %></h6>
 
 	<div class="center">
 		
 		<div class="information">
 			<p id="register-headline">Start rating and reviewing your lab experience.</p>
 			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-			  <%= devise_error_messages! %>
 
 			  <div><%= f.text_field :first_name, placeholder: "First Name" %></div>
 

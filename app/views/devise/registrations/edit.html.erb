@@ -1,14 +1,22 @@
 <div class="group about-us grid margin-up">
-  
+
+  <% if notice.present? %>
+    <p id="homepage_messages"><%= notice %></p>
+  <% end %>
+  <% if alert.present? %>
+    <p id="homepage_messages"><%= alert %></p>
+  <% end %>
+
+  <%= devise_error_messages! %>
   <div class="dash-contact-box">
-    <h3>Questions? Contact us anytime: hello@happilabs.org | 312-569-0161</h3>  
+    <h3>Questions? Contact us anytime: hello@happilabs.org | 312-569-0161</h3>
   </div>
   <div id="profile_heading" class="dash-profile-box">
     <h4 class="dash-name"><%= current_user.first_name %> <%= current_user.last_name %> Profile</h4>
     <p class="dash-name dash-user">Login name:</p>
     <h3><%= current_user.email %></h3>
     <br>
-    <button class="btn" id="edit_profile_toggle_button">Complete Your Profile</button>
+    <button class="btn btn-danger" id="edit_profile_toggle_button">Complete Your Profile</button>
     <br>
     <br>
     <br>
@@ -16,7 +24,6 @@
 
     <div id="user_profile">
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-        <%= devise_error_messages! %>
 
         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
           <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -30,7 +37,7 @@
           <%= f.text_field :website_url, placeholder: "Website" %>
         </div>
 
-        <div><i>(we need your current password to confirm your changes)</i><br />
+        <div><i>(please enter your current password again to confirm your changes)</i><br />
         <%= f.password_field :current_password, placeholder: "Current Password" %></div>
 
         <div><%= f.submit "Update", class: "btn btn-primary" %></div>
@@ -40,7 +47,6 @@
   <button class="btn" id="edit_password_toggle_button">Edit Password</button>
     <div id="edit_password">
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-        <%= devise_error_messages! %>
 
         <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
         <%= f.password_field :password, :autocomplete => "off" %></div>
@@ -115,5 +121,10 @@ $("#show_reports").click(function() {
   $("#comments_list").hide();
   $("#reports_list").fadeToggle("slow", "linear");
 });
+
+if (<%= devise_error_messages!.present? %> == true){
+  $("#user_profile").show();
+  $("#edit_password").show();
+}
 
 </script>
