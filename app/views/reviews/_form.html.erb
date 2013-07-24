@@ -12,30 +12,50 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
+
   <div class="field">
-    <%= f.label :admin_approved %><br />
-    <%= f.check_box :admin_approved %>
+    <%= f.label :product_id %>
+    <%= f.select :product_id, options_from_collection_for_select(Product.all, :id, :product_name) %>
+
   </div>
+
   <div class="field">
-    <%= f.label :make_anonymous %><br />
-    <%= f.check_box :make_anonymous %>
+    <%= f.label :rating %>
+  <%= f.select :rating, options_for_select([
+    ["1", "1"],
+    ["2", "2"],
+    ["3", "3"],
+    ["4", "4"],
+    ["5", "5"]]) %>
   </div>
+
   <div class="field">
-    <%= f.label :user_recommended %><br />
+    <%= f.label :desc, "Description" %><br />
+    <%= f.text_area :desc, rows: 12 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_recommended, "Recommended?" %>
     <%= f.check_box :user_recommended %>
   </div>
+
   <div class="field">
-    <%= f.label :rating %><br />
-    <%= f.number_field :rating %>
+    <%= f.label :admin_approved, "Admin Approved?" %>
+    <%= f.check_box :admin_approved %>
   </div>
+
   <div class="field">
-    <%= f.label :desc %><br />
-    <%= f.text_area :desc %>
+    <%= f.label :make_anonymous, "Make Anonymous?" %>
+    <%= f.check_box :make_anonymous %>
   </div>
+
+  <br>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn btn-danger" %>
   </div>
+
 <% end %>
+

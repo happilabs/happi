@@ -13,18 +13,19 @@
 
   <div class="field">
     <%= f.label :category_id %><br />
-    <%= f.number_field :category_id %>
+    <%# f.number_field :category_id %>
+    <%= f.select :category_id, options_from_collection_for_select(Category.all, :id, :name) %>
   </div>
   <div class="field">
-    <%= f.label :product_name %><br />
+    <%= f.label :product_name, "Name" %><br />
     <%= f.text_field :product_name %>
   </div>
   <div class="field">
-    <%= f.label :product_desc %><br />
-    <%= f.text_area :product_desc %>
+    <%= f.label :product_desc, "Description" %><br />
+    <%= f.text_area :product_desc, rows: 12 %>
   </div>
   <div class="field">
-    <%= f.label :product_num %><br />
+    <%= f.label :product_num, "Product Number" %><br />
     <%= f.text_field :product_num %>
   </div>
   <div class="field">
@@ -44,14 +45,15 @@
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :recommended %><br />
+    <%= f.label :recommended, "Recommended?" %>
     <%= f.check_box :recommended %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :url %><br />
+    <%= f.label :url %>
     <%= f.text_field :url %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-danger" %>
   </div>
 <% end %>
