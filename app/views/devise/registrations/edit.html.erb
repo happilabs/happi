@@ -15,6 +15,8 @@
     <h4 class="dash-name"><%= current_user.first_name %> <%= current_user.last_name %> Profile</h4>
     <p class="dash-name dash-user">Login name:</p>
     <h3><%= current_user.email %></h3>
+    <p class="dash-name dash-user">Organization:</p>
+    <h3><%= current_user.organization %></h3>
     <br>
     <button class="btn btn-danger" id="edit_profile_toggle_button">Complete Your Profile</button>
     <br>
@@ -30,6 +32,7 @@
         <% end %>
 
         <div>
+          <%= f.text_field :organization, placeholder: "Organization" %>
           <%= f.text_field :address, placeholder: "Address" %>
           <%= f.text_field :zip, placeholder: "ZipCode" %>
           <%= f.text_field :city, placeholder: "City" %>
