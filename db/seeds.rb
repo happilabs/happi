@@ -29,7 +29,7 @@ categories = Category.create([
   {name: "T75 Flask" },
   {name: "10 uL Pipette Tips" },
   {name: "200 uL Pipette Tips" },
-  {name: "100/1250 uL Pipette Tips" },
+  {name: "100/1250 uL Pipette Tips" }
   ])
 
 puts "There are now #{Category.all.count} categories in the database."

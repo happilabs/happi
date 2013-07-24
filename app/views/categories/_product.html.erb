@@ -4,7 +4,7 @@
       <img src="../products/pipette100.png">
       <p class='brand center'><%= product.manufacturer_name %></p>
       <!-- <p class='center'>Distributor: <%= product.distributor_name %></p> -->
-      
+
       <dl class='name-description'>
         <dt><%= product.product_name %></dt>
         <dd><%= product.product_desc %></dd>
@@ -16,9 +16,9 @@
 
     <% product.reviews.each do |review| %>
     <% @reviews = Review.where(product_id: product.id) %>
-      <a href='' class='review-box'>
-          <p> See scientist's reviews </p>
-      </a>
+
+      <%= link_to "See scientist's reviews", product, class: "review-box" %>
+
   </div>
 
     <div class='man-preview-right center'>
