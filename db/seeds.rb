@@ -13,24 +13,25 @@ Review.destroy_all
 Product.destroy_all
 UserVoice.destroy_all
 
+
 reports = Report.create([{title: "May 2013", summary: "Summary of the May 2013 Happilabs product report", link: "may_2013_report.pdf"},
                         {title: "March 2013", summary: "Summary of the March 2013 Happilabs product report", link: "march_2013_report.pdf"}])
 
 puts "There are now #{Report.all.count} reports in the database."
 
 categories = Category.create([
-  {name: "1.5 mL Microtube" },
-  {name: "15 mL Conical Tube" },
-  {name: "50 mL Conical Tube" },
-  {name: "Nitrile Gloves" },
-  {name: "Latex Gloves" },
-  {name: "5 mL Serological Pipet" },
-  {name: "10 mL Serological Pipet" },
-  {name: "T75 Flask" },
-  {name: "10 uL Pipette Tips" },
-  {name: "200 uL Pipette Tips" },
-  {name: "100/1250 uL Pipette Tips" },
-  {name: "100mm Dish" }
+  {name: "1.5 mL Microtube", fair_price: "123", price_quantity: "500", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "15 mL Conical Tube" , fair_price: "12", price_quantity: "50", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "50 mL Conical Tube" , fair_price: "13", price_quantity: "500", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "Nitrile Gloves" , fair_price: "13", price_quantity: "500", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "Latex Gloves" , fair_price: "123", price_quantity: "500", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "5 mL Serological Pipet" , fair_price: "23", price_quantity: "500", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "10 mL Serological Pipet" , fair_price: "123", price_quantity: "50", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "T75 Flask" , fair_price: "13", price_quantity: "500", first_quality: "Program include 6 of measurements made on brain.", second_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "10 uL Pipette Tips" , fair_price: "13", price_quantity: "50", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "200 uL Pipette Tips" , fair_price: "3", price_quantity: "500", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "100/1250 uL Pipette Tips" , fair_price: "12", price_quantity: "500", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
+  {name: "100mm Dish" , fair_price: "400", price_quantity:"12", first_quality: "Program include 6 of measurements made on brain. ", second_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", third_quality: }
   ])
 
 puts "There are now #{Category.all.count} categories in the database."
