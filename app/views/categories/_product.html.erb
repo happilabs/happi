@@ -3,17 +3,18 @@
 
       <img src="../products/pipette100.png">
       <p class='brand center'><%= product.manufacturer_name %></p>
-      <p class='center'>Distributor: <%= product.distributor_name %></p>
-      <dl class='product-number'>
-        <dt>Product no.</dt>
-        <dd><%= product.product_num %></dd>
-      </dl>
+      <!-- <p class='center'>Distributor: <%= product.distributor_name %></p> -->
+      
       <dl class='name-description'>
         <dt><%= product.product_name %></dt>
         <dd><%= product.product_desc %></dd>
       </dl>
+      <dl class='product-number'>
+        <dt>Product no.</dt>
+        <dd><%= product.product_num %></dd>
+      </dl>
 
-  <% product.reviews.each do |review| %>
+    <% product.reviews.each do |review| %>
     <% @reviews = Review.where(product_id: product.id) %>
       <a href='' class='review-box'>
           <p> See scientist's reviews </p>
@@ -23,15 +24,13 @@
     <div class='man-preview-right center'>
       <dl class='rating'>
         <dt>Rating:</dt>
-        <dd><%= @reviews.average("rating") %></dd>
+        <dd class="real-rating"><%= @reviews.average("rating") %></dd>
         <dd class='side-note'>(out of <%= @reviews.count("rating") %> reviews)</dd>
       </dl>
-      <dl class='quality-price'>
+      <!-- <dl class='quality-price'>
         <dt>Quality:</dt>
         <dd>xxxxxxx</dd>
-        <!-- <dt>Price:</dt>
-        <dd>xxxxxx</dd> -->
-      </dl>
+      </dl> -->
     <% end %>
   </div>
 </article>

@@ -164,7 +164,7 @@ h5 {
 
 
  .voices-intro h2 {
-   margin-top: 37px;
+   margin-top: 50px;
  }
 
 
@@ -539,7 +539,7 @@ h5 {
 	list-style: disc;
 	margin-top: 20px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #757575;
+	color: #fff;
 	font-weight: 200;
 	font-size: 14px;	}
 
@@ -653,13 +653,19 @@ h5 {
 	font-size: 14px;
 }
 
+.pricing-table-features ul {
+	padding: 0px 30px;
+}
+
 .subscribe-list li {
 	list-style: square;
 	margin-top: 20px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #757575;
+	color: #898989;
 	font-weight: 200;
 	line-height: 16px;
+	padding: 0px 10px 0px 0px;
+	letter-spacing: 1px;
 }
 
 .reportimg {
@@ -828,7 +834,7 @@ h5 {
 }
 
 .chicago-sky {
-	background: url("/happi_chicago.jpg") no-repeat;
+	background: url("/happy_chicago.jpg") no-repeat;
 	background-size: 100%;
 }
 
@@ -846,13 +852,21 @@ h5 {
 
 .information {
 	padding: 20px 20px 20px 20px;
-	width: 300px;
+	width: 350px;
 	margin: auto;
 	margin-bottom: 30px;
 	border-radius: 10px;
 	border: 2px solid #00AEEF;
+	background-color: #fff;
+	opacity: .9;
 	/*background-color: #F1F1F1;*/
 	}
+
+#register-headline {
+	font-size: 20px;
+	color: #00AEEF;
+	line-height: 28px;
+}
 
 .cover2 {
 	background: url("/which_brand.JPG") no-repeat;
@@ -864,7 +878,7 @@ h5 {
 }
 
 .signup h2 {
-	margin: 10px 0px 10px 0px;
+	margin: 10px 0px 30px 0px;
 	text-shadow: 2px 2px 2px #898989;
 	color: #ffff00;
 	letter-spacing: .1em;
@@ -982,9 +996,6 @@ h5 {
 	color: #fff;
 }
 
-.price-box {
-	height: 510px;
-}
 
 	.group:after {
  		content: "";
@@ -1074,7 +1085,7 @@ h5 {
 }
 
 .get-it {
-  font-size: 17px;
+  font-size: 19px;
   text-transform: uppercase;
 }
 
@@ -1344,7 +1355,7 @@ h5 {
 }
 
 .selected-category-frame {
-	background: #fff;
+	background-color: #fff;
 	float: left;
 	margin-left: 60px;
 	margin-bottom: 60px;
@@ -1353,9 +1364,7 @@ h5 {
 	box-shadow: 4px 4px 10px #d6d6d6;
 	border-left: 2px solid #d6d6d6;
 	border-top: 2px solid #d6d6d6;
-	border-radius: 40px;
-	/*background: url(cover2_final.jpg) no-repeat;
-	background-size: cover;*/
+	border-radius: 6px;
 }
 .selected-category-frame img,
 .selected-category-frame h3,
@@ -1365,6 +1374,11 @@ h5 {
 	display: block;
 	float: left;
 	padding: 5px;
+}
+
+.selected-category-frame h4 {
+	font-weight: 400;
+	padding-bottom: 13px;
 }
 
 .selected-category-frame img {
@@ -1390,7 +1404,6 @@ h5 {
 }
 
 .selected-category-frame dl {
-	background: #77cc33;
 	margin-left: 40px;
 	padding: 15px;
 	margin-top: 10px;
@@ -1399,18 +1412,19 @@ h5 {
 .selected-category-frame dt {
 	font-size: 18px;
 	text-transform: uppercase;
-	color: #fff;
+	color: #898989;
 	letter-spacing: 1px;
 	font-weight: 300;
+	padding-bottom: 12px;
 }
 
 
 .selected-category-frame dd {
-	color: #fff;
+	color: #77cc33;
   	margin: 0 auto;
   	margin-top: 6px;
 	line-height: 34px;
-	font-size: 32px;
+	font-size: 44px;
 	font-family: "open sans", sans-serif;
 	font-weight: 800;
 	text-align: center;
@@ -1428,8 +1442,9 @@ h5 {
 
 .quantity {
 		font-size: 12px;
-		padding: 0px;
+		padding: 10px 0px 0px 0px;
 		margin: 0px;
+		color: #898989;
 }
 
 .selected-category-frame li {
@@ -1463,14 +1478,16 @@ h5 {
 /*.manufacturer-preview * {
 	border: 1px solid black;
 }*/
+
 .manufacturer-preview {
 	border-bottom: 1px solid #d6d6d6;
 	border-right: 1px solid #d6d6d6;
 	background-color: #fff;
 	float: left;
-	margin: 0px 0 0px 60px;
+	margin: 0px 0px 10px 60px;
 	padding: 10px;
 	width: 618px;
+	box-shadow: 4px 4px 10px #d6d6d6;
 }
 .review-box:before{
 	background: rgba(0,0,0,.2);
@@ -1513,6 +1530,12 @@ h5 {
 .man-preview-left dd {
 	color: #898989;
 }
+
+.man-preview-left dt {
+	color: #000;
+	text-align: center;
+}
+
 .brand {
 	font-size: 32px;
 	font-weight: bold;
@@ -1523,13 +1546,18 @@ h5 {
 }
 .product-number {
 	width: 100px;
+	position: relative;
+	bottom: 88px;
 }
 .quality-price {
 	width: 90%;
 }
 .name-description {
 	width: 290px;
+	padding-top: 20px;
+	margin-left: 10px;
 }
+
 .rating {
 	font-size: 24px;
 	line-height: 40px;
@@ -1541,6 +1569,17 @@ h5 {
 	padding: 10px 5px;
 	background-color: #00aeef;
 }
+
+.rating dt {
+	color: #fff;
+	font-weight: 300;
+}
+.real-rating {
+	color: #ffff00;
+	padding: 28px 0px;
+	font-size: 54px;
+	font-weight: bold;
+}
 .review-box {
 	background: linear-gradient(#fff, #eee);
 	border: 1px solid #ccc;
@@ -1549,11 +1588,18 @@ h5 {
 	position: relative;
 }
 .side-note {
-	color: #888;
+	color: #fff;
 	font-size: 12px;
 }
 
+
+
+
 /********************* PRODUCT SHOW PAGE ****************************/
+
+
+
+
 .product-summary * {
 	/*border: 1px solid #333;*/
 }
@@ -2068,15 +2114,33 @@ hr.half {
 }
 
 .price-header{
-	background-size: 16px 16px;
 	border-radius: 6px 6px 0 0;
-	color: #00AEEF;
-	padding: 40px 0px 20px;
+	color: #ffff00;
+	text-shadow: 1px 1px 1px #000;
+	background-color: #00Aeef;
 	width:100%;
-	display:inline;
-	font-size: 28px;
-	line-height: 32px;
-	font-weight: 550;
+	font-size: 38px;
+	line-height: 40px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+#price10 {
+	padding: 10px 0px 10px 0px;
+	margin: 0px 0px 40px 0px;
+}
+
+#price200 {
+	padding: 10px 0px 30px 0px;
+	margin: 0px 0px 20px 0px;
+}
+#price1000 {
+	padding: 10px 0px 40px 0px;
+	margin-bottom: 8px;
+}
+
+#small-price {
+	font-size: 16px;
 }
 
 .price-header-price {
@@ -2095,7 +2159,8 @@ hr.half {
 	padding: 0px 20px;
 }*/
 .feature-box.price-feature-box {
-	padding:0px;
+	padding: 0px;
+	margin-top: 30px;
 	/*border: 2px solid #898989;*/
 	position: relative;
 }
@@ -2106,14 +2171,25 @@ hr.half {
 
 .price-value {
 	font-size: 15px;
-	color: #00AEEF;
+	color: #fff;
 	font-weight: 300;
 	padding-right: 15px;
 }
 
-.ideal {
-	font-size: 13px;
-	color: #898989;
+.price-box {
+	height: 510px;
+	opacity: .5;
+}
+
+.price-box:hover {
+	opacity: 1;
+}
+
+.sub-price {
+	font-weight: 600;
+	color: #77cc33;
+	font-size: 28px;
+	padding-top: 12px
 }
 
 /****************************** BUTTONS **********************************/
