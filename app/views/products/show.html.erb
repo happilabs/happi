@@ -38,39 +38,39 @@
   <section class='all-reviews-container'>
 
     <% if current_user.present? %>
-    <br>
-    <%= button_tag "+ Write a review for #{@product.product_name}", class: "btn btn-info", id: "product_show_review_button" %>
-    <div id="product_show_review">
-      <%= form_for @review do |f| %>
-        <%= f.hidden_field :user_id, :value => current_user.id %>
-        <%= f.hidden_field :product_id, :value => params[:id] %>
-        <div class="field">
-        <%= f.label :rating %>
-        <%= f.select :rating, options_for_select([
-          ["5 Extremely happy (never a problem)", "5"],
-          ["4", "4"],
-          ["3 Neither happy nor unhappy", "3"],
-          ["2", "2"],
-          ["1 Extremely unhappy (frequent problems)", "1"]]) %>
-        </div>
-        <div class="field">
-          <%= f.label :desc, "Description" %><br />
-          <%= f.text_area :desc, rows: 12 %>
-        </div>
-        <div class="field">
-          <%= f.label :user_recommended, "Recommended?" %>
-          <%= f.check_box :user_recommended %>
-        </div>
-        <div class="field">
-          <%= f.label :make_anonymous, "Make Anonymous?" %>
-          <%= f.check_box :make_anonymous %>
-        </div>
-        <br>
-        <div class="actions">
-          <%= f.submit :class => "btn btn-danger" %>
-        </div>
-      <% end %>
-    </div>
+      <br>
+      <%= button_tag "+ Write a review for #{@product.product_name}", class: "btn btn-info", id: "product_show_review_button" %>
+      <div id="product_show_review">
+        <%= form_for @review do |f| %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+          <%= f.hidden_field :product_id, :value => params[:id] %>
+          <div class="field">
+          <%= f.label :rating %>
+          <%= f.select :rating, options_for_select([
+            ["5 Extremely happy (never a problem)", "5"],
+            ["4", "4"],
+            ["3 Neither happy nor unhappy", "3"],
+            ["2", "2"],
+            ["1 Extremely unhappy (frequent problems)", "1"]]) %>
+          </div>
+          <div class="field">
+            <%= f.label :desc, "Description" %><br />
+            <%= f.text_area :desc, rows: 12 %>
+          </div>
+          <div class="field">
+            <%= f.label :user_recommended, "Recommended?" %>
+            <%= f.check_box :user_recommended %>
+          </div>
+          <div class="field">
+            <%= f.label :make_anonymous, "Make Anonymous?" %>
+            <%= f.check_box :make_anonymous %>
+          </div>
+          <br>
+          <div class="actions">
+            <%= f.submit :class => "btn btn-danger" %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
 
     <% @reviews.each do |review| %>
