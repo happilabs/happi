@@ -11,13 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130719230353) do
+ActiveRecord::Schema.define(:version => 20130724204603) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
     t.text     "desc"
+    t.string   "fair_price"
+    t.string   "price_quantity"
+    t.string   "first_quality"
+    t.string   "second_quality"
+    t.string   "third_quality"
   end
 
   create_table "organizations", :force => true do |t|
@@ -105,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20130719230353) do
     t.string   "phone"
     t.string   "website_url"
     t.string   "subcription_level"
+    t.string   "organization"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
