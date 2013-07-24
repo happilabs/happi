@@ -15,8 +15,8 @@
               <div class="pricing-table price-box">
                     <div class="price-header"  id="price10">
                       <span>10 &#181;L</span>
-                      
-                    </div> 
+
+                    </div>
                     <div class="pricing-table-header">
 
                         <img src="happy_community.png" alt="10ul subscription" class="price-photo">
@@ -34,7 +34,7 @@
                         <h5 class="sub-price">FREE</h5>
                     </div>
                     <div class="pricing-table-sign-up">
-                        <%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-large btn-block btn-danger btn-price" %>
+                        <%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-large btn-block btn-danger btn-price", subscription_level: '10'  %>
                     </div>
                   </div>
             </div>
@@ -45,10 +45,10 @@
 
                 <div class="price-header" id="price200">
                       <span>200 &#181;L</span>
-                       
-                </div> 
+
+                </div>
                 <div class="pricing-table-header">
-                  
+
                   <img src="happy_data.png" alt="10ul subscription" class="price-photo">
 
                 </div>
@@ -58,11 +58,11 @@
                           <li>Access to our data about the price and quality of lab supplies</li>
                           <li>Receive in-depth quarterly reports for lab managers</li>
                         </ul>
-                        
+
                     </div>
                     <h5 class="sub-price">$195</h5>
                     <div class="pricing-table-sign-up">
-                        <%= link_to "Learn more!", two_hundred_ml_path, class: "btn btn-large btn-premium btn-block btn-price" %>
+                        <%= link_to "Learn more!", two_hundred_ml_path, class: "btn btn-large btn-premium btn-block btn-price", subcription_level: "200" %>
                     </div>
                   </div>
             </div>
@@ -72,7 +72,7 @@
               <div class="pricing-table price-box">
                   <div class="price-header"  id="price1000">
                       <span>1000 &#181;L</span>
-                  </div> 
+                  </div>
 
                   <div class="pricing-table-header">
                     <img src="happy_lab_organization.png" alt="10ul subscription" class="price-photo">
@@ -87,7 +87,7 @@
                         </ul>
                          <h5 class="sub-price"><span id="small-price">Starting at</span> $1500</h5>
                     </div>
-                   
+
                     <div class="pricing-table-sign-up">
                         <%= link_to "Learn more...", one_thousand_ml_path, class: "btn btn-large btn-premium btn-block btn-price" %>
                     </div>

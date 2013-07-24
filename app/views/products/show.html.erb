@@ -40,6 +40,7 @@
     <% if current_user.present? %>
       <br>
       <%= button_tag "+ Write a review for #{@product.product_name}", class: "btn btn-info", id: "product_show_review_button" %>
+      <br>
       <div id="product_show_review">
         <%= form_for @review do |f| %>
           <%= f.hidden_field :user_id, :value => current_user.id %>
@@ -54,16 +55,16 @@
             ["1 Extremely unhappy (frequent problems)", "1"]]) %>
           </div>
           <div class="field">
-            <%= f.label :desc, "Description" %><br />
+            <%= f.label :desc, "Description" %>
             <%= f.text_area :desc, rows: 12 %>
           </div>
           <div class="field">
-            <%= f.label :user_recommended, "Recommended?" %>
-            <%= f.check_box :user_recommended %>
+            <p><%= f.label :user_recommended, "Recommended?" %>
+            <%= f.check_box :user_recommended %></p>
           </div>
           <div class="field">
-            <%= f.label :make_anonymous, "Make Anonymous?" %>
-            <%= f.check_box :make_anonymous %>
+            <p><%= f.label :make_anonymous, "Make Anonymous?" %>
+            <%= f.check_box :make_anonymous %></p>
           </div>
           <br>
           <div class="actions">
