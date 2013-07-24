@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
-  <div class="nav-top">
+
     <!-- navbar-fixed-top -->
       <div class="navbar navbar-fixed-top navbar-inverse" id="top-nav">
     <!-- INNER-->
@@ -22,7 +22,8 @@
 
                   <!-- LOGO -->
                   <a class="brand" href="/">
-                  <span><span class="yellow">Happi</span>Labs<span style="color:#898989">.org</span></span>
+                    <img src="happi_labs_logo_navbar.png" alt="happilabs logo" title="Welcome to HappiLabs for scientists and lab managers" class="logo-shrink">
+                  <!-- <span><span class="yellow">Happi</span>Labs<span style="color:#898989">.org</span></span> -->
                   </a>
 
          <!-- TOP NAVIGATION-->
@@ -41,7 +42,6 @@
           </div>
         </div>
       </div>
-  </div>
   <div class="whoareyou">
     <ul>
       <li>
@@ -71,6 +71,7 @@
           <a class="twitter-timeline" href="https://twitter.com/HappiLabs_org" data-widget-id="344562470310010880">Tweets by @HappiLabs_org</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
+
         </div>
       <!-- <div class="footer-col">
         <img src="img/cloud.png" alt="HappiLabs community" class="footer-cloud">
@@ -99,6 +100,7 @@
         <ul>
           <li><%= link_to "Receive Our Newsletter", new_subscriber_path %></li>
           <li>
+        </ul>
             <ul><li><h5>Sign Up</h5></li>
               <li><%= link_to "10 µL - FREE", new_user_registration_path %></li>
               <li><%= link_to "200 µL - Access Data", sign_up_path %></li>
