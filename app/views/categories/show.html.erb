@@ -1,7 +1,6 @@
 <div class="grid">
   <p id="notice"><%= notice %></p>
 
-
   <h1 class='page-heading'>PRODUCT SUMMARY</h1>
   <div class='container group'>
     <aside class='category-review-list'>
@@ -39,9 +38,7 @@
         </ul>
       </div>
 
-
       <h3 id="category-brand-title">Individual Brand Summaries</h3>
-
 
           <% @category.products.each do |prod| %>
             <%= render "product", :product => prod %>

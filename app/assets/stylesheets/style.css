@@ -1588,7 +1588,7 @@ h5 {
 	position: relative;
 }
 .side-note {
-	color: #fff;
+	color: #5dade2;
 	font-size: 12px;
 }
 
@@ -2519,7 +2519,7 @@ padding-top: 18px;
 .dash-profile-box {
 	border-radius: 5px;
 	background-color: #00Aeef;
-	box-shadow: 10px 10px 18px #898989; 
+	box-shadow: 10px 10px 18px #898989;
 }
 
 .dash-profile-box h3 {

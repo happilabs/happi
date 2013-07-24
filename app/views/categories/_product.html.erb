@@ -14,13 +14,13 @@
         <dd><%= product.product_num %></dd>
       </dl>
 
-      <% @reviews = Review.where(product_id: product.id) %>
 
       <%# link_to "See scientist's reviews", product, class: "review-box" %>
       <%= button_to "See #{product.product_name} reviews", product, class: "btn btn-info", method: :get %>
 
   </div>
 
+      <% @reviews = Review.where(product_id: product.id) %>
     <div class='man-preview-right center'>
       <dl class='rating'>
         <dt>Rating:</dt>

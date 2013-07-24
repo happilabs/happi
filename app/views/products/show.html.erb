@@ -18,15 +18,11 @@
         <b>Photo:</b>
         <%= @product.photo %>
       </p> -->
-        <p>
-          <b>Recommended:</b>
-          <%= @product.recommended %>
-        </p>
       </div>
       <div>
         <h3><%= @product.manufacturer_name %></h3>
-        <h3>Rating:</h3>
-        <h4><%= @product.reviews.average("rating") %></h4>
+        <h4><%= @product.product_name %></h4>
+        <h1><%= @product.reviews.average("rating") %></h1>
         <p class='side-note'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
       </div>
       <div>
@@ -75,27 +71,20 @@
       <% end %>
     </div>
 
-    <article class='individual-review-container'>
-      <p>4.0 | 11/11/2011</p>
-      <p><b>Reviewed by:</b> John Smith</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
-    </article>
-    <article class='individual-review-container'>
-      <p>4.0 | 11/11/2011</p>
-      <p><b>Reviewed by:</b> John Smith</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
-    </article>
-    <article class='individual-review-container'>
-      <p>4.0 | 11/11/2011</p>
-      <p><b>Reviewed by:</b> John Smith</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
-    </article>
-    <article class='individual-review-container'>
-      <p>4.0 | 11/11/2011</p>
-      <p><b>Reviewed by:</b> John Smith</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
-    </article>
 
+    <% @reviews.each do |review| %>
+    <article class='individual-review-container'>
+      <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %></p>
+      <p><b>Reviewed by: </b><%= review.user.first_name.capitalize %> <%= review.user.last_name.first.capitalize %>.</p>
+      <p><%= review.desc %></p>
+    </article>
+    <% end %>
+
+<!--     <article class='individual-review-container'>
+      <p>4.0 | 11/11/2011</p>
+      <p><b>Reviewed by:</b> John Smith</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
+    </article> -->
 
   </section>
 </div>
