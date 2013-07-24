@@ -31,7 +31,7 @@ categories = Category.create([
   {name: "10 uL Pipette Tips" , fair_price: "13", price_quantity: "50", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
   {name: "200 uL Pipette Tips" , fair_price: "3", price_quantity: "500", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
   {name: "100/1250 uL Pipette Tips" , fair_price: "12", price_quantity: "500", first_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", second_quality: "Variations in state-of-the-art calculations will become.", third_quality: "Program include 6 of measurements made on brain. " },
-  {name: "100mm Dish" , fair_price: "400", price_quantity:"12", first_quality: "Program include 6 of measurements made on brain. ", second_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", third_quality: }
+  {name: "100mm Dish" , fair_price: "400", price_quantity:"12", first_quality: "Program include 6 of measurements made on brain. ", second_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr.", third_quality: "Science ipsum. Extension of large objects such bound is developed the Kerr." }
   ])
 
 puts "There are now #{Category.all.count} categories in the database."

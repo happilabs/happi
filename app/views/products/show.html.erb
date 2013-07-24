@@ -37,6 +37,7 @@
   </section>
   <section class='all-reviews-container'>
 
+    <% if current_user.present? %>
     <br>
     <%= button_tag "+ Write a review for #{@product.product_name}", class: "btn btn-info", id: "product_show_review_button" %>
     <div id="product_show_review">
@@ -70,7 +71,7 @@
         </div>
       <% end %>
     </div>
-
+    <% end %>
 
     <% @reviews.each do |review| %>
     <article class='individual-review-container'>
