@@ -16,7 +16,7 @@
   <% product.reviews.each do |review| %>
     <% @reviews = Review.where(product_id: product.id) %>
       <a href='' class='review-box'>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation </p>
+          <p> See scientist's reviews </p>
       </a>
   </div>
 
@@ -29,8 +29,8 @@
       <dl class='quality-price'>
         <dt>Quality:</dt>
         <dd>xxxxxxx</dd>
-        <dt>Price:</dt>
-        <dd>xxxxxx</dd>
+        <!-- <dt>Price:</dt>
+        <dd>xxxxxx</dd> -->
       </dl>
     <% end %>
   </div>

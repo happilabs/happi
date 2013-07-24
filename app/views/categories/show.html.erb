@@ -1,47 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class="grid">
+  <p id="notice"><%= notice %></p>
 
 
-<h2 class='page-heading'>Product Ratings and Reviews</h2>
-<div class='container group'>
-  <aside class='category-review-list'>
-    <h4>Select a Category</h4>
-    <ul>
-    <% @categories.each do |cat| %>
-      <li><%= link_to "#{cat.name}", category_url(cat.id) %></a></li>
-    <% end %>
-    </ul>
-  </aside>
-
-  <section class='category-review-show'>
-  	<div class='selected-category-frame'>
-      <% #TODO - switch out static photo for dynamic photos %>
-
-      <!-- This picture is still a placeholder -->
-      <!-- make sure this picture is above the h3 tag -->
-      <img src="../products/pipette100.png">
-      <!-- This picture is still a placeholder -->
-      <!-- make sure this picture is above the h3 tag -->
-      <h3><%= @category.name %></h3>
-      <%#= image_tag "../products/pipette100.png" %>
-      <dl class='center'>
-        <dt>Fair Price:</dt>
-        <dd>$80.00</dd>
-      </dl>
+  <h1 class='page-heading'>PRODUCT RATINGS</h1>
+  <div class='container group'>
+    <aside class='category-review-list'>
+      <h4>Select a Category</h4>
       <ul>
-        <h4>Qualities to look for</h4>
-        <li>attribute 1</li>
-        <li>attribute 2</li>
-        <li>attribute 3</li>
+      <% @categories.each do |cat| %>
+        <li><%= link_to "#{cat.name}", category_url(cat.id) %></a></li>
+      <% end %>
       </ul>
-    </div>
+    </aside>
+
+    <section class='category-review-show group'>
+    	<div class='selected-category-frame'>
+        <% #TODO - switch out static photo for dynamic photos %>
+
+        <!-- This picture is still a placeholder -->
+        <!-- make sure this picture is above the h3 tag -->
+        <div id="img-transparent">
+          <img src="../products/pipette100.png">
+        </div>
+        <!-- This picture is still a placeholder -->
+        <!-- make sure this picture is above the h3 tag -->
+        <h3><%= @category.name %> Summary</h3>
+        <%#= image_tag "../products/pipette100.png" %>
+        <dl class='center'>
+          <dt>Fair Price</dt>
+          <dd>$12.00</dd>
+          <p class="quantity">per 500 tubes</p>
+        </dl>
+        <ul>
+          <h4>Qualities to look for when <br>selecting tubes:</h4>
+          <li>Easy-to-open</li>
+          <li>Clear (to see pellets)</li>
+          <li>Spins at high speeds</li>
+        </ul>
+      </div>
 
 
+      <h3 id="category-brand-title">Individual Brand Summaries</h3>
 
 
-        <% @category.products.each do |prod| %>
-          <%= render "product", :product => prod %>
-        <% end %>
+          <% @category.products.each do |prod| %>
+            <%= render "product", :product => prod %>
+          <% end %>
 
 
-  </section>
+    </section>
+  </div>
 </div>
