@@ -5,18 +5,9 @@
   <aside class='category-review-list'>
     <h4>Select a Category</h4>
     <ul>
-      <li><a href="">Category 1</a></li>
-      <li><a href="">Category 2</a></li>
-      <li><a href="">Category 3</a></li>
-      <li><a href="">Category 4</a></li>
-      <li><a href="">Category 5</a></li>
-      <li><a href="">Category 6</a></li>
-      <li><a href="">Category 7</a></li>
-      <li><a href="">Category 8</a></li>
-      <li><a href="">Category 9</a></li>
-      <li><a href="">Category 10</a></li>
-      <li><a href="">Category 11</a></li>
-      <li><a href="">Category 12</a></li>
+      <% @categories.each do |category| %>
+        <li><%= link_to category.name, category %></li>
+      <% end %>
     </ul>
   </aside>
   <section class='show-page-content'>
@@ -27,70 +18,93 @@
         <b>Photo:</b>
         <%= @product.photo %>
       </p> -->
-        <p>
-          <b>Recommended:</b>
-          <%= @product.recommended %>
-        </p>
       </div>
       <div>
         <h3><%= @product.manufacturer_name %></h3>
-        <h3>Rating:</h3>
-        <h4><%= @product.reviews.average("rating") %></h4>
-        <p class='side-note'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
+        <h4><%= @product.product_name %></h4>
+        <h1><%= @product.reviews.average("rating") %></h1>
+        <p class='side-note-dark'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
       </div>
       <div>
-        <p class='side-note'>
+        <p class='side-note-dark'>
           <b>Product num:</b>
           <%= @product.product_num %>
         </p>
-        <h3><%= @product.price %></h3>  
+        <h3><%= @product.price %></h3>
         <a href="">Quality Documentation</a>
       </div>
     </article>
   </section>
   <section class='all-reviews-container'>
+
+    <% if current_user.present? %>
+      <br>
+      <%= button_tag "+ Write a review for #{@product.product_name}", class: "btn btn-info", id: "product_show_review_button" %>
+      <div id="product_show_review">
+        <%= form_for @review do |f| %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+          <%= f.hidden_field :product_id, :value => params[:id] %>
+          <div class="field">
+          <%= f.label :rating %>
+          <%= f.select :rating, options_for_select([
+            ["5 Extremely happy (never a problem)", "5"],
+            ["4", "4"],
+            ["3 Neither happy nor unhappy", "3"],
+            ["2", "2"],
+            ["1 Extremely unhappy (frequent problems)", "1"]]) %>
+          </div>
+          <div class="field">
+            <%= f.label :desc, "Description" %><br />
+            <%= f.text_area :desc, rows: 12 %>
+          </div>
+          <div class="field">
+            <%= f.label :user_recommended, "Recommended?" %>
+            <%= f.check_box :user_recommended %>
+          </div>
+          <div class="field">
+            <%= f.label :make_anonymous, "Make Anonymous?" %>
+            <%= f.check_box :make_anonymous %>
+          </div>
+          <br>
+          <div class="actions">
+            <%= f.submit :class => "btn btn-danger" %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% @reviews.each do |review| %>
     <article class='individual-review-container'>
+      <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %></p>
+      <p><b>Reviewed by: </b><%= review.user.first_name.capitalize %> <%= review.user.last_name.first.capitalize %>.</p>
+      <p><%= review.desc %></p>
+    </article>
+    <% end %>
+
+<!--     <article class='individual-review-container'>
       <p>4.0 | 11/11/2011</p>
       <p><b>Reviewed by:</b> John Smith</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
-    </article>
-    <article class='individual-review-container'>
-      <p>4.0 | 11/11/2011</p>
-      <p><b>Reviewed by:</b> John Smith</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
-    </article>
-    <article class='individual-review-container'>
-      <p>4.0 | 11/11/2011</p>
-      <p><b>Reviewed by:</b> John Smith</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
-    </article>
-    <article class='individual-review-container'>
-      <p>4.0 | 11/11/2011</p>
-      <p><b>Reviewed by:</b> John Smith</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
-    </article>
+    </article> -->
+
   </section>
 </div>
+
+
 <div class='container group'>
   <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
+  <%= link_to 'Back', :back %>
 </div>
 
-<!-- <b>Url:</b> -->
-          <%#= @product.url %>
-<!-- <p>
-        <b>Category:</b>
-        <%= @product.category_id %>
-      </p> -->
-     <!--  <p>
-        <b>Product name:</b>
-        <%= @product.product_name %>
-      </p> -->
-      <!-- <p>
-        <b>Product desc:</b>
-        <%= @product.product_desc %>
-      </p> -->
-      <!-- <p>
-        <b>distributor name:</b>
-        <%= @product.distributor_name %>
-      </p> -->
+
+
+<script>
+
+
+$('#product_show_review').hide();
+$("#product_show_review_button").click(function(){
+  $("#product_show_review").fadeToggle("slow", "linear");
+})
+
+
+</script>

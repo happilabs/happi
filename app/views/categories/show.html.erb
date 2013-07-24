@@ -1,7 +1,6 @@
 <div class="grid">
   <p id="notice"><%= notice %></p>
 
-
   <h1 class='page-heading'>PRODUCT SUMMARY</h1>
   <div class='container group'>
     <aside class='category-review-list'>
@@ -28,20 +27,18 @@
         <%#= image_tag "../products/pipette100.png" %>
         <dl class='center'>
           <dt>Fair Price =</dt>
-          <dd>$12.00</dd>
-          <p class="quantity">per 500 tubes</p>
+          <dd>$<%= @category.fair_price %></dd>
+          <p class="quantity">per <%= @category.price_quantity %> tubes</p>
         </dl>
         <ul>
           <h4>Qualities to look for when <br>selecting tubes:</h4>
-          <li>Easy-to-open</li>
-          <li>Clear (to see pellets)</li>
-          <li>Spins at high speeds</li>
+          <li><%= @category.first_quality %></li>
+          <li><%= @category.second_quality %></li>
+          <li><%= @category.third_quality %></li>
         </ul>
       </div>
 
-
       <h3 id="category-brand-title">Individual Brand Summaries</h3>
-
 
           <% @category.products.each do |prod| %>
             <%= render "product", :product => prod %>
