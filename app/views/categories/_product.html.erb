@@ -14,10 +14,10 @@
         <dd><%= product.product_num %></dd>
       </dl>
 
-    <% product.reviews.each do |review| %>
-    <% @reviews = Review.where(product_id: product.id) %>
+      <% @reviews = Review.where(product_id: product.id) %>
 
-      <%= link_to "See scientist's reviews", product, class: "review-box" %>
+      <%# link_to "See scientist's reviews", product, class: "review-box" %>
+      <%= button_to "See #{product.product_name} reviews", product, class: "btn btn-info", method: :get %>
 
   </div>
 
@@ -27,10 +27,6 @@
         <dd class="real-rating"><%= @reviews.average("rating") %></dd>
         <dd class='side-note'>(out of <%= @reviews.count("rating") %> reviews)</dd>
       </dl>
-      <!-- <dl class='quality-price'>
-        <dt>Quality:</dt>
-        <dd>xxxxxxx</dd>
-      </dl> -->
-    <% end %>
+
   </div>
 </article>
