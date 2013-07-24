@@ -3,7 +3,7 @@
 
       <div class="page-heading">
         <h1>SUBSCRIPTIONS</h1>
-        <h4>We're here to help your lab save money and improve the quality of your research.</h4>
+        <h4>If you focus on your research, we will focus on the <strong>price and quality</strong> of your lab supplies.</h4>
         <h4>What volume of help would you like?</h4>
       </div>
 
@@ -13,84 +13,86 @@
 
             <div class="span4 feature-box price-feature-box">
               <div class="pricing-table price-box">
+                    <div class="price-header"  id="price10">
+                      <span>10 &#181;L</span>
+                      
+                    </div> 
                     <div class="pricing-table-header">
-                      <span class="price-header">10 &#181;L</span> <span class="price-header-price"> (FREE)</span><br>
-                      <br>
-                      <span class="price-value">For All Scientists</span>
-                      <img src="e_mail.png" alt="10ul subscription" class="price-photo">
-                      <p class="ideal"><em></em></p>
-                      <br>
+
+                        <img src="happy_community.png" alt="10ul subscription" class="price-photo">
                     </div>
 
                     <div class="pricing-table-features">
                         <ul class="subscribe-list">
-                          <li>Monthly e-newsletter with useful resources for scientists</li>
-                          <li>Ability to review products, companies, and your lab.</li>
+                          <li>Receive the HL Community e-newsletter</li>
+                          <li>Read and write reviews about lab supplies</li>
                         </ul>
+                        <br>
                         <!-- <p>Monthly newsletter with useful resources for scientists</p>
                         <p>Ability to review products, companies, and your lab.</p>
                         <p></p> -->
-
+                        <h5 class="sub-price">FREE</h5>
                     </div>
                     <div class="pricing-table-sign-up">
-                        <%= link_to "Sign Up Now (FREE)", new_user_registration_path, class: "btn btn-large btn-block btn-danger btn-price" %>
+                        <%= link_to "Sign Up Now", new_user_registration_path, class: "btn btn-large btn-block btn-danger btn-price" %>
                     </div>
                   </div>
             </div>
 
 
             <div class="span4 feature-box price-feature-box ">
-              <div class="pricing-table red price-box">
+              <div class="pricing-table price-box">
+
+                <div class="price-header" id="price200">
+                      <span>200 &#181;L</span>
+                       
+                </div> 
                 <div class="pricing-table-header">
-                  <span class="price-header">200 &#181;L </span><span class="price-header-price">($195.00)</span><br>
-                  <br>
-                   <span class="price-value">Ideal For All Lab Managers</span>
-                  <img src="report.jpg" alt="10ul subscription" class="price-photo">
+                  
+                  <img src="happy_data.png" alt="10ul subscription" class="price-photo">
 
                 </div>
 
                     <div class="pricing-table-features">
                         <ul class="subscribe-list">
-                          <li>Receive quarterly reports about the price and quality of lab supplies</li>
-                          <li>Access to price and quality ratings</li>
-                          <li>Recommedations for which companies to buy from</li>
+                          <li>Access to our data about the price and quality of lab supplies</li>
+                          <li>Receive in-depth quarterly reports for lab managers</li>
                         </ul>
-
+                        
                     </div>
+                    <h5 class="sub-price">$195</h5>
                     <div class="pricing-table-sign-up">
-                        <%= link_to "Learn More", two_hundred_ml_path, class: "btn btn-large btn-premium btn-block btn-price" %>
+                        <%= link_to "Learn more!", two_hundred_ml_path, class: "btn btn-large btn-premium btn-block btn-price" %>
                     </div>
                   </div>
             </div>
 
 
-            <div class="span4 feature-box price-feature-box ">
-              <div class="pricing-table green price-box">
-                    <div class="pricing-table-header">
-                  <span class="price-header">1000 &#181;L </span><span class="price-header-price">(Starting at $1500)</span><br>
-                  <br>
-                  <span class="price-value">For startup labs and labs w/o a manager</span>
-                  <img src="lab-manager.jpg" alt="10ul subscription" class="price-photo">
-                  <p class="ideal"><em></em></p>
+          <div class="span4 feature-box price-feature-box ">
+              <div class="pricing-table price-box">
+                  <div class="price-header"  id="price1000">
+                      <span>1000 &#181;L</span>
+                  </div> 
 
-                </div>
+                  <div class="pricing-table-header">
+                    <img src="happy_lab_organization.png" alt="10ul subscription" class="price-photo">
+                  </div>
+
                   <div class="pricing-table-space"></div>
                     <div class="pricing-table-features">
-                        <h4>Rent-a-lab-manager to</h4>
+                        <!-- <h4>Rent-a-lab-manager to</h4> -->
                         <ul class="subscribe-list">
-                          <li>Analyze your spending habits</li>
-                          <li>Search for supplies and equipment</li>
-                          <li>Negotiate with sales reps</li>
-                          <li>Train new lab managers</li>
-
+                          <li>Rent-a-Lab-Manager to stay organized</li>
+                          <li>Ideal for startup labs and labs without dedicated managers</li>
                         </ul>
-
-                   </div>
-                    <div class="pricing-table-sign-up">
-                        <%= link_to "And More...", one_thousand_ml_path, class: "btn btn-large btn-premium btn-block btn-price" %>
+                         <h5 class="sub-price"><span id="small-price">Starting at</span> $1500</h5>
                     </div>
-                </div>
-            </div>
+                   
+                    <div class="pricing-table-sign-up">
+                        <%= link_to "Learn more...", one_thousand_ml_path, class: "btn btn-large btn-premium btn-block btn-price" %>
+                    </div>
+                  </div>
+              </div>
 
 
           </div>
