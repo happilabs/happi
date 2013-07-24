@@ -15,6 +15,8 @@
     <h4 class="dash-name"><%= current_user.first_name %> <%= current_user.last_name %> Profile</h4>
     <p class="dash-name dash-user">Login name:</p>
     <h3><%= current_user.email %></h3>
+    <p class="dash-name dash-user">Organization:</p>
+    <h3><%= current_user.organization %></h3>
     <br>
     <button class="btn btn-danger" id="edit_profile_toggle_button">Complete Your Profile</button>
     <br>
@@ -30,6 +32,7 @@
         <% end %>
 
         <div>
+          <%= f.text_field :organization, placeholder: "Organization" %>
           <%= f.text_field :address, placeholder: "Address" %>
           <%= f.text_field :zip, placeholder: "ZipCode" %>
           <%= f.text_field :city, placeholder: "City" %>
@@ -78,8 +81,8 @@
     </ul>
     <ul id="comments_list" class="comments-listing">
       <p class="second-p dash-p"><strong>Thank you</strong> for contributing. Your feedback is important to improving the quality of scientific research.</p>
-      <% current_user.reviews.each do |review| %>
-        <h4 class="dash-comm-title"><%= review.product.product_name %>:   <%= review.rating %>/5</h4>
+      <% current_user.reviews.reverse.each do |review| %>
+        <h4 class="dash-comm-title"><%= review.product.product_name %>:   <%= review.rating %>/5 | <%= review.updated_at.strftime("%B %d, %Y") %></h4>
         <p class="second-p">"<%= link_to review.desc, review %>"</p>
         <hr>
       <% end %>
@@ -87,7 +90,7 @@
     </ul>
     <ul id="reports_list">
       <p class="second-p dash-p"><strong>Never get ripped off again!</strong> Use these reports to ensure you are paying a fair price and using good quality products. Enjoy...</p>
-      <% Report.all.each do |report| %>
+      <% Report.all.reverse.each do |report| %>
       <li class="reports-list"><h4 id="suckit"><%= link_to report.title, "../#{report.link}" %></h4></li>
       <% end %>
     </ul>
