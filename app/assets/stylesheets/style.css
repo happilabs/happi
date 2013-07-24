@@ -1588,6 +1588,11 @@ h5 {
 	position: relative;
 }
 .side-note {
+	color: #fff;
+	font-size: 12px;
+}
+
+.side-note-dark {
 	color: #5dade2;
 	font-size: 12px;
 }

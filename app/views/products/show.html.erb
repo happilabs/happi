@@ -23,10 +23,10 @@
         <h3><%= @product.manufacturer_name %></h3>
         <h4><%= @product.product_name %></h4>
         <h1><%= @product.reviews.average("rating") %></h1>
-        <p class='side-note'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
+        <p class='side-note-dark'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
       </div>
       <div>
-        <p class='side-note'>
+        <p class='side-note-dark'>
           <b>Product num:</b>
           <%= @product.product_num %>
         </p>
