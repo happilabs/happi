@@ -46,11 +46,11 @@
         <div class="field">
         <%= f.label :rating %>
         <%= f.select :rating, options_for_select([
-          ["5 (Exceptional Product)", "5"],
+          ["5 Extremely happy (never a problem)", "5"],
           ["4", "4"],
-          ["3", "3"],
+          ["3 Neither happy nor unhappy", "3"],
           ["2", "2"],
-          ["1 (Needs improvement)", "1"]]) %>
+          ["1 Extremely unhappy (frequent problems)", "1"]]) %>
         </div>
         <div class="field">
           <%= f.label :desc, "Description" %><br />
