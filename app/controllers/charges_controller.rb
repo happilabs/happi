@@ -6,10 +6,12 @@ class ChargesController < ApplicationController
   def create
     # Amount in cents
     @amount = 19500
+    @user = User.find(current_user.id)
 
     customer = Stripe::Customer.create(
-      :email => 'example@stripe.com',
-      :card  => params[:stripeToken]
+      :email => 'happidevelopers@gmail.com',
+      :card  => params[:stripeToken],
+      # :api_key => Stripe.api_key
     )
 
     charge = Stripe::Charge.create(
@@ -18,6 +20,12 @@ class ChargesController < ApplicationController
       :description => '200 ul Annual Subscription',
       :currency    => 'usd'
     )
+
+    # TODO - build in logic if the user cancels their account
+    # TODO - build in stripe logic to bill them recurring
+    # TODO -
+    @user.subcription_level = "200 microliter"
+    @user.save
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
