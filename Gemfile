@@ -3,12 +3,14 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'active_attr', '0.8.2'
 gem 'devise', '2.2.4'
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
   gem 'sqlite3', '1.3.7'
 end
+
 group :production do
 	gem 'pg'
 end

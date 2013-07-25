@@ -17,7 +17,40 @@
     <h3><%= current_user.email %></h3>
     <p class="dash-name dash-user">Organization:</p>
     <h3><%= current_user.organization %></h3>
+    <p class="dash-name dash-user">Subscription Level:</p>
+    <h3><%= current_user.subcription_level %></h3>
     <br>
+
+    <% if current_user.subcription_level == "10 microliter" %>
+      <%= link_to "Upgrade Your Subscription", "#", class: "btn btn-danger" %>
+
+      <div>
+          <p>jQuery event loads form for them to select the next level and pay right there & if payment goes through, it
+        switches their subscription level in the database</p>
+          <%= form_tag charges_path do %>
+            <article>
+                <label class="amount">
+                  <h6>200ul Annual Subscription: $195</h6>
+                  <p>For information on your upgrade benefits: <%= link_to "About 200ul", two_hundred_ml_url %></p>
+                </label>
+            </article>
+
+              <script src="https://checkout.stripe.com/v2/checkout.js"
+                      class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                      data-description="200 ul Annual Subscription"
+                      data-amount="19500">
+              </script>
+          <% end %>
+      </div>
+
+      <br>
+      <br>
+      <br>
+
+    <% end %>
+
+
     <button class="btn btn-danger" id="edit_profile_toggle_button">Complete Your Profile</button>
     <br>
     <br>
@@ -96,6 +129,10 @@
     </ul>
   </div>
 </div>
+
+<script type="text/javascript" src="https://js.stripe.com/v2/">
+  Stripe.setPublishableKey(<%= Rails.configuration.stripe[:publishable_key]  %>);
+</script>
 
 <script>
 
