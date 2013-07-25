@@ -1,0 +1,16 @@
+ <%= form_tag charges_path do %>
+    <article>
+        <label class="amount">
+          <h4>200ul Annual Subscription: $195</h4>
+          <p>For information on your upgrade benefits: <%= link_to "About 200ul", two_hundred_ml_url %></p>
+        </label>
+    </article>
+
+      <script src="https://checkout.stripe.com/v2/checkout.js"
+              class="stripe-button"
+              data-key="pk_test_9PskHUu23luHHqu6pwVYSDEt"
+              data-description="200 ul Annual Subscription"
+              data-amount="19500">
+      </script>
+
+<% end %>
