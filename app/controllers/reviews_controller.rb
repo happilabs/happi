@@ -1,7 +1,6 @@
 class ReviewsController < ApplicationController
 
   before_filter :authenticate_user!, :except => [:index, :show]
-  before_filter :validate_admin, :except => [:create, :update, :destroy, :edit]
 
   # GET /reviews
   # GET /reviews.json
