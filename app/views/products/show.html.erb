@@ -35,7 +35,7 @@
           <h4><%= @product.product_name %></h4> -->
           <div class="rating2">
             <h4>Rating</h4>
-            <h1 class="real-rating2"><%= @product.reviews.average("rating") %><span class="year"> /5.0</span></h1>
+            <h1 class="real-rating2"><%= @product.reviews.average("rating").round(1) %><span class="year"> /5.0</span></h1>
             <p class='side-note-dark'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
           </div>
         </div>
