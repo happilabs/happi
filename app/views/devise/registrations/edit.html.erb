@@ -18,7 +18,11 @@
     <p class="dash-name dash-user">Organization:</p>
     <h3><%= current_user.organization %></h3>
     <p class="dash-name dash-user">Subscription Level:</p>
-    <h3><%= current_user.subcription_level %>µl</h3>
+    <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
+      <h3><%= current_user.subcription_level %>µl</h3>
+    <% else %>
+      <h3>10µl</h3>
+    <% end %>
     <br>
 
     <% if current_user.subcription_level != "1000 microliter" %>
