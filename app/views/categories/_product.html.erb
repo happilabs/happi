@@ -1,21 +1,22 @@
 <article class='manufacturer-preview'>
   <div class='man-preview-left'>
 
-      <img src="../products/pipette100.png">
+      <!-- <img src="../products/pipette100.png"> -->
       <p class='brand center'><%= product.manufacturer_name %></p>
       <!-- <p class='center'>Distributor: <%= product.distributor_name %></p> -->
 
       <dl class='name-description'>
-        <dt><%= product.product_name %></dt>
+        <!-- <dt><%= product.product_name %></dt> -->
         <dd><%= product.product_desc %></dd>
+        <dd>Product #: <%= product.product_num %></dd>
       </dl>
-      <dl class='product-number'>
+      <!-- <dl class='product-number'>
         <dt>Product no.</dt>
         <dd><%= product.product_num %></dd>
-      </dl>
+      </dl> -->
 
       <%# link_to "See scientist's reviews", product, class: "review-box" %>
-      <%= button_to "See #{product.product_name} reviews", product, class: "btn btn-info", method: :get %>
+      
 
   </div>
 
@@ -23,9 +24,12 @@
     <div class='man-preview-right center'>
       <dl class='rating'>
         <dt>Rating:</dt>
-        <dd class="real-rating"><%= @reviews.average("rating") %></dd>
+        <dd class="real-rating"><%= @reviews.average("rating") %><span class="year"> /5.0</span></dd>
         <dd class='side-note'>(out of <%= @reviews.count("rating") %> reviews)</dd>
       </dl>
 
+      <div class="see-reviews-btn">
+        <%= button_to "See #{product.product_name} reviews", product, class: "see-reviews-btn btn btn-info", method: :get %>
+      </div>
   </div>
 </article>
