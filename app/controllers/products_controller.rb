@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+  before_filter :validate_admin, :except => [:index, :show]
+
   # GET /products
   # GET /products.json
   def index

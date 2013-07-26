@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
 
+
+  before_filter :validate_admin, :except => [:index, :show]
   before_filter :authenticate_user!, :except => [:index, :show]
 
   # GET /reviews

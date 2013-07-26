@@ -5,4 +5,10 @@ class ApplicationController < ActionController::Base
     edit_user_registration_path(resource_or_scope)
   end
 
+  def validate_admin
+    unless current_user.try(:admin) == true
+      redirect_to root_url, notice: 'You must be an admin to do that'
+    end
+  end
+
 end
