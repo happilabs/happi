@@ -41,11 +41,13 @@
     <%= f.check_box :user_recommended %>
   </div>
 
+  <% if current_user.try(:admin) %>
+
   <div class="field">
     <%= f.label :admin_approved, "Admin Approved?" %>
     <%= f.check_box :admin_approved %>
   </div>
-
+  <% end %>
   <div class="field">
     <%= f.label :make_anonymous, "Make Anonymous?" %>
     <%= f.check_box :make_anonymous %>
