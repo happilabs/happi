@@ -3,9 +3,9 @@
 
   <h2><%= @product.manufacturer_name %> Reviews</h2>
   <p id="notice"><%= notice %></p>
-  
+
   <div class='container group'>
-    
+
     <aside class='category-review-list'>
       <h4>Select a Product</h4>
       <ul>
@@ -16,7 +16,7 @@
     </aside>
 
     <section class='show-page-content'>
-      
+
       <article class='product-summary group'>
         <div>
           <img src="../products/pipette100.png">
@@ -45,8 +45,12 @@
             <b>Product num:</b>
             <%= @product.product_num %>
           </p> -->
-          <h5>Fair Price for academia:</h5>
-          <h3><%= @product.price %></h3>
+          <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
+            <h5>Fair Price for academia:</h5>
+            <h3><%= @product.price %></h3>
+          <% else %>
+            <p>Pricing Information currently available for 200µl or 1000µl customers only</p>
+          <% end %>
           <a href="http://www.corning.com/lifesciences/us_canada/en/technical_resources/doc_library/properties_plastic.aspx">See Quality Documentation</a>
         </div>
 
@@ -59,7 +63,7 @@
 
       <% if current_user.present? %>
         <br>
-        
+
         <div id="write-review-btn">
           <%= button_tag "+ Write a review #{@product.product_name}", class: "btn btn-info see-reviews-btn", id: "product_show_review_button" %>
         </div>
@@ -100,7 +104,11 @@
 
       <% @reviews.each do |review| %>
       <article class='individual-review-container'>
+        <% if current_user.id == review.user.id %>
+        <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %> (<%= link_to "edit", edit_review_url(review) %>/<%= link_to "delete", review , method: :delete, confirm: "Are you sure ou want to delete this review?" %>)</p>
+        <% else %>
         <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %></p>
+        <% end %>
         <p><b>Reviewed by: </b><%= review.user.first_name.capitalize %> <%= review.user.last_name.first.capitalize %>.</p>
         <p><%= review.desc %></p>
       </article>
@@ -115,11 +123,12 @@
     </section>
   </div>
 
-
+  <% if current_user.try(:admin) == true %>
   <div class='container group'>
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', :back %>
   </div>
+  <% end %>
 
 
 

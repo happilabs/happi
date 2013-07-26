@@ -7,7 +7,7 @@
           <p>The scientific community has problems that need solving.</p>
         </div>
       </div> -->
-  
+
 
   <div class='container group'>
     <aside class='category-review-list'>
@@ -32,11 +32,17 @@
         <!-- make sure this picture is above the h3 tag -->
         <h3><%= @category.name %> Summary</h3>
         <%#= image_tag "../products/pipette100.png" %>
+        <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
+          <dl class='center'>
+            <dt>Fair Price <br>for Academia =</dt>
+            <dd>$<%= @category.fair_price %></dd>
+            <p class="quantity">per <%= @category.price_quantity %> tubes</p>
+          </dl>
+        <% else %>
         <dl class='center'>
-          <dt>Fair Price <br>for Academia =</dt>
-          <dd>$<%= @category.fair_price %></dd>
-          <p class="quantity">per <%= @category.price_quantity %> tubes</p>
+          <p>Pricing Information <br> currently available <br>for 200µl or 1000µl <br> customers only</p>
         </dl>
+        <% end %>
         <ul>
           <h4>Qualities to look for when selecting tubes:</h4>
           <li><%= @category.first_quality %></li>
