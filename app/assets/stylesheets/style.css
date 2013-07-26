@@ -29,11 +29,7 @@ h2 {
 	text-shadow: 2px 2px 2px #898989;
 	letter-spacing: 2px;
 }
-.about-us h2 {
-	margin: 10px 0px 20px 0px;
-	text-shadow: 1px 1px 0px #898989;
-	letter-spacing: .1em;
-}
+
 .login-page h2 {
 	margin: 50px 0px 10px 0px;
 	text-shadow: 2px 2px 2px #898989;
@@ -434,8 +430,8 @@ h5 {
 
 
 .about-us {
-	margin: auto;
-	padding: 40px 0px 90px 0px;
+	/*margin: auto;*/
+	padding: 140px 0px 90px 0px;
 }
 .about-us-container {
 	margin: 0 auto;
@@ -505,8 +501,8 @@ h5 {
 	display: block;
 	width: 90%;
 }
-.contact-us-container {
-	padding-top: 50px;
+.content-container {
+	padding-top: 100px;
 }
 .contact-img {
 	width: 20%;
