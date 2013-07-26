@@ -834,6 +834,7 @@ h5 {
 }
 .top-padded {
   padding-top: 90px;
+  padding-bottom: 90px;
 }
 #about-evaluation {
 	padding: 5px 0px 20px 0px;
@@ -1028,7 +1029,7 @@ h5 {
 	font-weight: 300;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #757575;
-	list-style: none;
+	list-style: square;
 }
 
 
@@ -1037,12 +1038,18 @@ h5 {
 	margin: auto;
 	border-radius: 5px;
 	border: 2px solid #00AEEF;
-	padding: 25px;
+	padding: 25px 0px 10px 90px;
 	margin-top: 20px;
 	margin-bottom: 30px;
+	float: left;
+	background-image:url(cover2_final.jpg);
+	background-size: cover;
+	box-shadow: 5px 5px 10px #898989;
 }
 
-
+.top-padded h1 {
+	margin-bottom: 30px;
+}
 
 .thousand-desc {
 	background-color: #CEF3FF;
@@ -1102,116 +1109,6 @@ h5 {
 	letter-spacing: 1px;
 	border-radius: 9px;
 }
-/*
-.pricing-table-header {
-	padding: 20px 0px;
-}
-
-.price-photo {
-	margin-top: 30px;
-	width: 30%;
-	height: auto;
-	display: block;
-	margin-left: 110px;
-}
-
-.price-header{
-	border-radius: 6px 6px 0 0;
-	color: #ffff00;
-	text-shadow: 1px 1px 1px #000;
-	background-color: #00Aeef;
-	width:100%;
-	font-size: 38px;
-	line-height: 40px;
-	font-weight: bold;
-	letter-spacing: 2px;
-}
-
-#price10 {
-	padding: 10px 0px 10px 0px;
-	margin: 0px 0px 40px 0px;
-}
-
-#price200 {
-	padding: 10px 0px 30px 0px;
-	margin: 0px 0px 20px 0px;
-}
-#price1000 {
-	padding: 10px 0px 40px 0px;
-	margin-bottom: 8px;
-}
-
-#small-price {
-	font-size: 16px;
-}
-
-.price-header-price {
-	background-size: 16px 16px;
-	border-radius: 6px 6px 0 0;
-	color: green;
-	padding: 19px 0px 20px;
-	width:100%;
-	display:inline;
-	line-height: 20px;
-	font-weight: 550;
-	font-size: 14px;
-}
-
-.feature-box.price-feature-box {
-	padding: 0px;
-	margin-top: 30px;
-	position: relative;
-}
-
-.pricing-table-sign-up{
-	padding:20px;
-}
-
-.price-value {
-	font-size: 15px;
-	color: #fff;
-	font-weight: 300;
-	padding-right: 15px;
-}
-
-.price-box {
-	height: 510px;
-	opacity: .5;
-}
-
-.price-box:hover {
-	opacity: 1;
-}
-
-.sub-price {
-	font-weight: 600;
-	color: #77cc33;
-	font-size: 28px;
-	padding-top: 12px
-}
-*/
-
-/*.feature-box {
-  background-color: #FFF;
-  border-radius: 9px;
-  padding: 14px;
-  position: relative;
-  text-align: center;
-  -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.5);
-	-moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.5);
-	box-shadow:         0px 0px 10px rgba(50, 50, 50, 0.5);
-	}
-
-  .feature-box.feature-box-hot:before {
-    background: url("../../images/feature-box/ribbon.png") 0 0 no-repeat;
-    background-size: 82px 82px;
-    content: "";
-    height: 82px;
-    position: absolute;
-    right: -4px;
-    top: -4px;
-    width: 82px; }
-*/
 
 /*********************   REVIEWS   ******************************/
 
