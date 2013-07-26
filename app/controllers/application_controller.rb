@@ -6,8 +6,14 @@ class ApplicationController < ActionController::Base
   end
 
   def validate_admin
-    unless current_user.try(:admin) == true
+    unless current_user.try(:admin)
       redirect_to root_url, notice: 'You must be an admin to do that'
+    end
+  end
+
+  def validate_200_or_1000_account
+    unless current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000"
+      redirect_to :back, notice: 'You must be a paying customer to do that'
     end
   end
 

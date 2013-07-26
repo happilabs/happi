@@ -3,9 +3,9 @@
 
   <h2><%= @product.manufacturer_name %> Reviews</h2>
   <p id="notice"><%= notice %></p>
-  
+
   <div class='container group'>
-    
+
     <aside class='category-review-list'>
       <h4>Select a Product</h4>
       <ul>
@@ -16,7 +16,7 @@
     </aside>
 
     <section class='show-page-content'>
-      
+
       <article class='product-summary group'>
         <div>
           <img src="../products/pipette100.png">
@@ -45,8 +45,12 @@
             <b>Product num:</b>
             <%= @product.product_num %>
           </p> -->
-          <h5>Fair Price for academia:</h5>
-          <h3><%= @product.price %></h3>
+          <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
+            <h5>Fair Price for academia:</h5>
+            <h3><%= @product.price %></h3>
+          <% else %>
+            <p>Pricing Information currently available for 200µl or 1000µl customers only</p>
+          <% end %>
           <a href="">Quality Documentation</a>
         </div>
 
@@ -111,11 +115,12 @@
     </section>
   </div>
 
-
+  <% if current_user.try(:admin) == true %>
   <div class='container group'>
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', :back %>
   </div>
+  <% end %>
 
 
 
