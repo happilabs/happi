@@ -3502,7 +3502,7 @@ input[type="button"].btn-block {
 .btn-info.active,
 .btn-info.disabled,
 .btn-info[disabled] {
-  color: #ffffff;
+  color: #898989;
   background-color: #2f96b4;
   *background-color: #2a85a0;
 }
