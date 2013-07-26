@@ -104,7 +104,7 @@
 
       <% @reviews.each do |review| %>
       <article class='individual-review-container'>
-        <% if current_user.id == review.user.id %>
+        <% if current_user.try(:id) == review.user.id %>
         <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %> (<%= link_to "edit", edit_review_url(review) %>/<%= link_to "delete", review , method: :delete, confirm: "Are you sure ou want to delete this review?" %>)</p>
         <% else %>
         <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %></p>
