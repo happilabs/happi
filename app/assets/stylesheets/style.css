@@ -129,7 +129,11 @@ h5 {
 /* ***********  Voices section **************** */
 
 
-
+.pipette-tip {
+	background: url(/pipettetip.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
 
  .voices-intro {
    width: 850px;
@@ -628,9 +632,10 @@ h5 {
 	margin: 0px;
 	font-size: 40px;
 	line-height: 46px;
-	font-weight: 400;
+	font-weight: 600;
 	text-shadow: 1px 1px 1px #898989;
 	color: #ffff00;
+	padding-bottom: 0px;
 }
 
 .contact-box-nopadding {
@@ -665,8 +670,11 @@ h5 {
 }
 
 #startingat {
-	font-size: 18px;
+	font-size: 22px;
 	color: #fff;
+	font-weight: 500;
+	padding-bottom: 0px;
+	padding-top: 10px;
 }
 
 .year {
@@ -677,6 +685,9 @@ h5 {
 	padding: 0px 30px;
 }
 
+.subscribe-list {
+	margin-bottom: 27px;
+}
 .subscribe-list li {
 	list-style: square;
 	margin-top: 20px;
@@ -1186,17 +1197,9 @@ h5 {
 	list-style: none;
 }
 
-.signup-box h4 {
-	font-weight: 300;
-
-}
-
-#fiftyfive {
-	font-size: 34px;
-}
 
 .signup-box {
-	width: 550px;
+	width: 350px;
 	margin: auto;
 	border-radius: 5px;
 	border: 2px solid #00AEEF;
@@ -1204,6 +1207,7 @@ h5 {
 	margin-top: 20px;
 	margin-bottom: 30px;
 }
+
 
 
 .thousand-desc {
