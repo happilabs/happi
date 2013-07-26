@@ -1,6 +1,7 @@
 class ReviewsController < ApplicationController
 
   before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :validate_admin, :except => [:create, :update, :destroy, :edit]
 
   # GET /reviews
   # GET /reviews.json
@@ -63,7 +64,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.update_attributes(params[:review])
-        format.html { redirect_to @review, notice: 'Review was successfully updated.' }
+        format.html { redirect_to edit_user_registration_path, notice: 'Review was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -79,7 +80,7 @@ class ReviewsController < ApplicationController
     @review.destroy
 
     respond_to do |format|
-      format.html { redirect_to reviews_url }
+      format.html { redirect_to edit_user_registration_path }
       format.json { head :no_content }
     end
   end
