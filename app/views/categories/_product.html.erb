@@ -16,7 +16,7 @@
       </dl> -->
 
       <%# link_to "See scientist's reviews", product, class: "review-box" %>
-      
+
 
   </div>
 
@@ -24,7 +24,7 @@
     <div class='man-preview-right center'>
       <dl class='rating'>
         <dt>Rating</dt>
-        <dd class="real-rating"><%= @reviews.average("rating") %><span class="year"> /5.0</span></dd>
+        <dd class="real-rating"><%= @reviews.average("rating").round(1) %><span class="year"> /5.0</span></dd>
         <dd class='side-note'>(out of <%= @reviews.count("rating") %> reviews)</dd>
       </dl>
 
