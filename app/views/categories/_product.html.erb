@@ -23,7 +23,7 @@
       <% @reviews = Review.where(product_id: product.id) %>
     <div class='man-preview-right center'>
       <dl class='rating'>
-        <dt>Rating:</dt>
+        <dt>Rating</dt>
         <dd class="real-rating"><%= @reviews.average("rating") %><span class="year"> /5.0</span></dd>
         <dd class='side-note'>(out of <%= @reviews.count("rating") %> reviews)</dd>
       </dl>
