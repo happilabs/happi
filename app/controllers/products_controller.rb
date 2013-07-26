@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
-  before_filter :validate_admin, :except => [:index, :show]
+  before_filter :validate_admin, :except => [:show]
+  before_filter :authenticate_user!, :only => [:show]
 
   # GET /products
   # GET /products.json
