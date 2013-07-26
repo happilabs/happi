@@ -103,7 +103,7 @@
     <ul id="comments_list" class="comments-listing">
       <p class="second-p dash-p"><strong>Thank you</strong> for contributing. Your feedback is important to improving the quality of scientific research.</p>
       <% current_user.reviews.reverse.each do |review| %>
-        <h4 class="dash-comm-title"><%= review.product.product_name %>:   <%= review.rating %>/5 | <%= review.updated_at.strftime("%B %d, %Y") %></h4>
+        <h4 class="dash-comm-title"><%= review.product.product_name %>:   <%= review.rating %>/5 | <%= review.updated_at.strftime("%B %d, %Y") %> (<%= link_to "edit", edit_review_url(review) %>/<%= link_to "delete", review , method: :delete, confirm: "Are you sure ou want to delete this review?" %>)</h4>
         <p class="second-p">"<%= link_to review.desc, review %>"</p>
         <hr>
       <% end %>
@@ -114,10 +114,10 @@
         <% Report.all.reverse.each do |report| %>
         <li class="reports-list"><h4 id="suckit"><%= link_to report.title, "../#{report.link}" %></h4></li>
         <% end %>
-      </ul>
     <% else %>
       <h5>Reports are only available to 200µl or 1000µl customers</h5>
     <% end %>
+      </ul>
   </div>
 </div>
 
