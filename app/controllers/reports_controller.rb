@@ -1,4 +1,7 @@
 class ReportsController < ApplicationController
+
+  before_filter :validate_admin
+
   # GET /reports
   # GET /reports.json
   def index
