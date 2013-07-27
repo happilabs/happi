@@ -1,10 +1,22 @@
 <div class="grid">
-  <div class="subscribe-us group">
+  <div class="content-container subscribe-us group">
 
+
+            <div class="page-heading page-heading-box">
+                  <center>
+                    <div>
+                          <h1><span class="ul">200 &#181;</span>L SUBSCRIPTION</h1>
+                      <h4>You focus on your research, we will focus on your products</h4>
+                      <h4>Receive 1-year access to our price and quality data about laboratory supplies.</h4>
+                    </div>
+                  </center>
+            </div>
+
+      <center>
         <%= form_tag charges_path do %>
           <article>
               <label class="amount">
-                <span>Amount: $195</span>
+                <h4>Amount: $195</h4>
               </label>
           </article>
 
@@ -15,6 +27,12 @@
                     data-amount="19500">
             </script>
         <% end %>
+        <div>
+          <%= link_to "Contact for Purchase Order", "#", class: "btn btn-large btn-block btn-danger" %>
+        </div>
+      </center>
+
+
 
   </div>
 </div>
