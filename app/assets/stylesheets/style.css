@@ -129,8 +129,8 @@ h4 {
 	text-align: center;
 	line-height: 20px;
 	color: #757575;
-	font-weight: 400;
-	font-size: 14px;
+	font-weight: 600;
+	font-size: 17px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .why-box:hover .goals h4 {
@@ -320,9 +320,9 @@ h5 {
 
  .voices-intro {
    width: 850px;
-   height: 268px;
+   height: 300px;
    margin: 0 auto;
-   padding: 15px 0 105px 0;
+   padding: 60px 0 25px 0;
    margin-bottom: 0px;
    /*background-color: #f1f1f1;*/
    background: url(/voice_bubble.png);
@@ -931,6 +931,12 @@ input[class="voices-btn"]:hover {
 	box-shadow: 2px 2px 2px #898989;
 }
 
+.btn-how {
+	margin: 10px 120px 20px 100px;
+	font-size: 14px;
+	background-color: #77cc33;
+}
+
 /*.important {
 	font-weight: 300;
 	letter-spacing: 1px;
@@ -1007,7 +1013,7 @@ input[class="voices-btn"]:hover {
 .center-box {
 	display: block;
 	float: left;
-	width: 500px;
+	width: 430px;
 }
 
 
@@ -1044,7 +1050,7 @@ input[class="voices-btn"]:hover {
 	margin-bottom: 30px;
 	margin-top: 20px;
 	padding: 25px 0px 10px 90px;
-	width: 350px;
+	width: 320px;
 }
 
 .top-padded h1 {
@@ -1164,7 +1170,8 @@ input[class="voices-btn"]:hover {
 	background-color: #77cc33;
 	padding: 6px 10px 6px 10px;
 	border-radius: 10px;
-	box-shadow: 1px 1px 3px #757575
+	box-shadow: 1px 1px 3px #757575;
+	margin-left: 30px;
 
 }
 
@@ -1504,6 +1511,7 @@ input[class="voices-btn"]:hover {
 	color: #898989;
 	font-weight: 300;
 	letter-spacing: 1px;
+	font-size: 16px;
 }
 .real-rating {
 	color: #00Aeef;
@@ -1532,7 +1540,7 @@ input[class="voices-btn"]:hover {
 .rating2 h4 {
 	color: #898989;
 	font-weight: 300;
-	font-size: 24px;
+	font-size: 16px;
 	padding: 10px 0px;
 }
 
