@@ -3,9 +3,9 @@
 
   <h2><%= @product.manufacturer_name %> Reviews</h2>
   <p id="notice"><%= notice %></p>
-  
+
   <div class='container group'>
-    
+
     <aside class='category-review-list'>
       <h4>Select a Product</h4>
       <ul>
@@ -16,12 +16,12 @@
     </aside>
 
     <section class='show-page-content'>
-      
+
       <article class='product-summary group'>
         <div>
           <img src="../products/pipette100.png">
-          <p class='side-note-dark'>
-            <b>Product num:</b>
+          <p class='circle-note'>
+            <b>Product #:</b>
             <%= @product.product_num %>
           </p>
         <!-- <p>
@@ -34,8 +34,8 @@
           <!-- <h3><%= @product.manufacturer_name %></h3>
           <h4><%= @product.product_name %></h4> -->
           <div class="rating2">
-            <h5>Rating:</h5>
-            <h1 class="real-rating2"><%= @product.reviews.average("rating") %></h1>
+            <h4>Rating</h4>
+            <h1 class="real-rating2"><%= @product.reviews.average("rating").round(1) %><span class="year"> /5.0</span></h1>
             <p class='side-note-dark'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
           </div>
         </div>
@@ -45,9 +45,13 @@
             <b>Product num:</b>
             <%= @product.product_num %>
           </p> -->
-          <h5>Fair Price for academia:</h5>
-          <h3><%= @product.price %></h3>
-          <a href="">Quality Documentation</a>
+          <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
+            <h5>Fair Price for academia:</h5>
+            <h3><%= @product.price %></h3>
+          <% else %>
+            <p>Pricing Information currently available for 200µl or 1000µl customers only</p>
+          <% end %>
+          <a href="http://www.corning.com/lifesciences/us_canada/en/technical_resources/doc_library/properties_plastic.aspx">See Quality Documentation</a>
         </div>
 
       </article>
@@ -59,7 +63,11 @@
 
       <% if current_user.present? %>
         <br>
-        <%= button_tag "+ Write a review for #{@product.product_name}", class: "btn btn-info", id: "product_show_review_button" %>
+
+        <div id="write-review-btn">
+          <%= button_tag "+ Write a review #{@product.product_name}", class: "btn btn-info see-reviews-btn", id: "product_show_review_button" %>
+        </div>
+
         <br>
         <div id="product_show_review">
           <%= form_for @review do |f| %>
@@ -76,7 +84,7 @@
             </div>
             <div class="field">
               <%= f.label :desc, "Description" %>
-              <%= f.text_area :desc, rows: 12 %>
+              <%= f.text_area :desc, rows: 6 %>
             </div>
             <div class="field">
               <p><%= f.label :user_recommended, "Recommended?" %>
@@ -96,7 +104,11 @@
 
       <% @reviews.each do |review| %>
       <article class='individual-review-container'>
+        <% if current_user.try(:id) == review.user.id %>
+        <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %> (<%= link_to "edit", edit_review_url(review) %>/<%= link_to "delete", review , method: :delete, confirm: "Are you sure ou want to delete this review?" %>)</p>
+        <% else %>
         <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %></p>
+        <% end %>
         <p><b>Reviewed by: </b><%= review.user.first_name.capitalize %> <%= review.user.last_name.first.capitalize %>.</p>
         <p><%= review.desc %></p>
       </article>
@@ -111,11 +123,12 @@
     </section>
   </div>
 
-
+  <% if current_user.try(:admin) == true %>
   <div class='container group'>
     <%= link_to 'Edit', edit_product_path(@product) %> |
     <%= link_to 'Back', :back %>
   </div>
+  <% end %>
 
 
 

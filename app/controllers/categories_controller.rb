@@ -1,6 +1,11 @@
 class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
+
+  before_filter :validate_admin, :except => [:index, :show, :product_list]
+  before_filter :authenticate_user!, :only => [:show]
+
+
   def index
     @categories = Category.order("name ASC")
 
