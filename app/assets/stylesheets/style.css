@@ -134,7 +134,7 @@ h4 {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .why-box:hover .goals h4 {
-	color: #fff;
+	color: #ffff00;
 }
 h5 {
 	color: #00AEEF;
@@ -500,7 +500,7 @@ input[class="voices-btn"]:hover {
 
 .contact-box {
 	width: 175px;
-	height: auto;
+	height: 150px;
 	border: 2px;
 	float: left;
 	border-radius: 5px;
@@ -630,6 +630,7 @@ input[class="voices-btn"]:hover {
 	padding: 10px 20px;
 	border-radius: 10px;
 	padding-bottom: 30px;
+	margin: 0 auto;
 }
 .sub-data-box {
 	width: 960px;
@@ -660,19 +661,37 @@ input[class="voices-btn"]:hover {
 .contact-box-nopadding {
 	padding: 0px;
 }
+
+
 #price-graph {
 	width: 300px;
 	height: auto;
 	text-align: center;
-	margin: 10px 100px 0px 0px;
+	margin: 10px 100px 0px 95px;
 	float: left;
 }
+
+#price-graph1000 {
+	width: 300px;
+	height: auto;
+	text-align: center;
+	margin: 10px 100px 30px 10px;
+}
+
+#big-contact-box1000 {
+	width: 290px;
+	height: auto;
+	box-shadow: 3px 3px 10px #757575;
+	margin-left: 20px;
+}
+
 #big-contact-box {
 	width: 290px;
 	height: auto;
 	box-shadow: 3px 3px 10px #757575;
-	opacity: 1;
+	margin-left: 50px;
 }
+
 #labmanager {
 	width: 240px;
 	height: auto;
@@ -682,6 +701,8 @@ input[class="voices-btn"]:hover {
 	border: 12px solid #d6d6d6;
 	box-shadow: 3px 3px 10px #757575;
 }
+
+
 #startingat {
 	font-size: 22px;
 	color: #fff;
@@ -692,6 +713,16 @@ input[class="voices-btn"]:hover {
 .year {
 	font-size: 14px;
 }
+
+.why-proof {
+	float: left;
+	width: 450px;
+}
+
+#text-right-img-thin {
+	width: 468px;
+}
+
 .pricing-table-features ul {
 	padding: 0px 30px;
 }
@@ -711,11 +742,12 @@ input[class="voices-btn"]:hover {
 }
 .reportimg {
 	float: left;
-	margin: 50px 0px 0px 40px;
+	margin: 80px 0px 0px 105px;
 	border: 1px solid #F1F1F1;
 }
 .report-right {
-	margin-top: 40px;
+	margin-top: 68px;
+	margin-left: 50px;
 	float: left;
 	width: 600px;
 }
@@ -1106,7 +1138,7 @@ input[class="voices-btn"]:hover {
 	background-color: #CEF3FF;
 	margin: 0 auto;
 	margin-top: 50px;
-	padding: 20px 100px;
+	padding: 20px 50px;
 	margin-bottom: 60px;
 }
 
