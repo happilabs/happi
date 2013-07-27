@@ -44,7 +44,7 @@ class SubscribersController < ApplicationController
 
     respond_to do |format|
       if @subscriber.save
-        format.html { redirect_to @subscriber, notice: 'Subscriber was successfully created.' }
+        format.html { redirect_to :back, notice: 'Thank you for signing up to receive the Happilabs newsletter.' }
         format.json { render json: @subscriber, status: :created, location: @subscriber }
 
         #sends the subscriber a welcome email
