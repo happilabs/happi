@@ -198,6 +198,7 @@ h5 {
 	font-weight: 200;
 }
 .report-right p {
+	margin-left: 30px;
 	margin-top: 5px;
 }
 .section-intro p {
@@ -727,11 +728,10 @@ input[class="voices-btn"]:hover {
 }
 #two-evaluation {
 	position: relative;
-	left: 100px;
 }
 .evaluation li {
 	display: inline;
-	margin: 0px 10px 0px 40px;
+	margin: 0px 25px 0px 25px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	letter-spacing: 1px;
@@ -758,7 +758,7 @@ input[class="voices-btn"]:hover {
 }
 .benefit {
 	width: 400px;
-	margin: 50px 0px 0px 80px;
+	margin: 50px 0px 0px 20px;
 	padding: 20px 20px;
 	border-radius: 10px;
 	float: left;
@@ -775,9 +775,10 @@ input[class="voices-btn"]:hover {
 }
 #holding-signup-box {
 	width: 415px;
-	margin: auto;
 	background-color: #00AEEF;
 	height: auto;
+	float: left;
+	margin-left: 40px;
 	margin-top: 30px;
 	border-radius: 10px;
 	padding: 20px 20px 0px 20px;
@@ -799,16 +800,16 @@ input[class="voices-btn"]:hover {
 /* ################ About Us page ##############  */
 
 .text-right-img {
-	float: left;
-	width: 510px;
-	padding-left: 60px;
-	margin: 20px 0 0px 10px;
-	line-height: 24px;
-	font-size: 18px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #757575;
+	float: left;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 18px;
 	font-weight: 200;
+	margin: 20px 0 0px 10px;
 	letter-spacing: 1px;
+	line-height: 24px;
+	padding-left: 40px;
+	width: 490px;
 }
 .text-left-img {
 	float: left;
@@ -1004,8 +1005,9 @@ input[class="voices-btn"]:hover {
 
 
 .center-box {
+	display: block;
+	float: left;
 	width: 500px;
-	margin: 0 auto;
 }
 
 
@@ -1032,17 +1034,17 @@ input[class="voices-btn"]:hover {
 
 
 .signup-box {
-	width: 350px;
-	margin: auto;
-	border-radius: 5px;
-	border: 2px solid #00AEEF;
-	padding: 25px 0px 10px 90px;
-	margin-top: 20px;
-	margin-bottom: 30px;
-	float: left;
 	background-image:url(cover2_final.jpg);
 	background-size: cover;
+	border: 2px solid #00AEEF;
+	border-radius: 5px;
 	box-shadow: 5px 5px 10px #898989;
+	display: block;
+	float: left;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	padding: 25px 0px 10px 90px;
+	width: 350px;
 }
 
 .top-padded h1 {
