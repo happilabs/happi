@@ -34,6 +34,8 @@ class ChargesController < ApplicationController
     redirect_to charges_path
   end
 
+  redirect_to edit_user_registration_path(current_user.id)
+
 
 
 end
