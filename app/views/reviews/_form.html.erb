@@ -36,10 +36,10 @@
     <%= f.text_area :desc, rows: 12 %>
   </div>
 
-  <div class="field">
-    <%= f.label :user_recommended, "Recommended?" %>
-    <%= f.check_box :user_recommended %>
-  </div>
+<!--   <div class="field">
+    <%# f.label :user_recommended, "Recommended?" %>
+    <%# f.check_box :user_recommended %>
+  </div> -->
 
   <% if current_user.try(:admin) %>
 
@@ -48,10 +48,11 @@
     <%= f.check_box :admin_approved %>
   </div>
   <% end %>
-  <div class="field">
-    <%= f.label :make_anonymous, "Make Anonymous?" %>
-    <%= f.check_box :make_anonymous %>
-  </div>
+
+<!--   <div class="field">
+    <%# f.label :make_anonymous, "Make Anonymous?" %>
+    <%# f.check_box :make_anonymous %>
+  </div> -->
 
   <br>
 
