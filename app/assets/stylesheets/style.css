@@ -1,7 +1,7 @@
 h1 {
   color: #00AEEF;
   margin: 0 auto;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 	line-height: 60px;
 	font-size: 48px;
 	font-family: "open sans", sans-serif;
@@ -11,20 +11,21 @@ h1 {
 	letter-spacing: 2px;
 }
 .contact-us h1 {
-	margin: 0px 0px 10px 0px;
+	/*margin: 0 0px 10px 0px;*/
 	text-shadow: 2px 2px 2px #898989;
 	letter-spacing: .1em;
-	line-height: 30px;
 	color: #ffff00;
+	padding-top: 60px;
 }
 h2 {
   color: #00AEEF;
   margin: 0 auto;
-  margin-top: 20px;
+  /*margin-top: 20px;*/
 	line-height: 60px;
 	font-size: 48px;
 	font-family: "open sans", sans-serif;
 	font-weight: 800;
+	/*padding-top: 60px;*/
 	text-align: center;
 	text-shadow: 2px 2px 2px #898989;
 	letter-spacing: 2px;
@@ -44,11 +45,8 @@ h2 {
 	letter-spacing: .1em;
 	line-height: 30px;
 }
-.subscribe-us h2 {
-	margin: 0px 0px 0px 0px;
-}
 .voices-intro h2 {
-   margin-top: 50px;
+   margin-top: -10px;
  }
  #holding-signup-box h3 {
 	font-size: 25px;
@@ -237,7 +235,7 @@ h5 {
 	padding-left: 20px;
  }
 .page-heading {
-	padding: 25px 0px 30px 0px;
+	padding: 0px 0px 30px 0px;
 }
 
 /*  ************  Home Page  ***********  */
@@ -344,14 +342,14 @@ h5 {
 }
 .voices-section {
    margin: 0 auto;
-   padding: 0px 0px 80px 130px;
-   width: 85%;
+   /*padding: 0px 0px 80px 130px;*/
+   width: 960px;
 }
 .voicesbox {
   float: left;
   padding: 5px 3px;
   text-align: center;
-  width: 30%;
+  width: 300px;
 }
 .smiley-image {
 	position: relative;
@@ -415,23 +413,30 @@ h5 {
 	width: 23%;
 }
 
-.voices-btn {
-	width: 200px;
+input[class="voices-btn"] {
 	background-color: #00AEEF;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	border-radius: 5px;
 	color: #fff;
-	font-weight: 400;
-	line-height: 16px;
+	display: block;
 	font-size: 16px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	line-height: 24px;
 	letter-spacing: 1px;
+	margin-left: 10px;
+	width: 200px;
+	
 }
-
+input[class="voices-btn"]:hover {
+	background-color: #009EdF;
+	color: #ff0;
+}
 /*  ************  About Us  ***********  */
 
 
 .about-us {
 	/*margin: auto;*/
-	padding: 140px 0px 90px 0px;
+	padding: 40px 0px 90px 0px;
 }
 .about-us-container {
 	margin: 0 auto;
@@ -462,7 +467,7 @@ h5 {
 /*  ************  Contact Us  ***********  */
 
 .contact-us {
-	padding: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 0px;
 }
 
 
@@ -499,10 +504,11 @@ h5 {
 	margin: 0 auto;
 	height: auto;
 	display: block;
-	width: 90%;
+	width: 1000px;
 }
 .content-container {
-	padding-top: 100px;
+	margin: 0 auto;
+	padding-top: 60px;
 }
 .contact-img {
 	width: 20%;
@@ -527,8 +533,8 @@ h5 {
 }
 
 .human-bio {
-	width: 90%;
-	margin: 0 auto;
+	/*width: 90%;*/
+	/*margin: 0 auto;*/
 	padding-bottom: 20px;
 }
 .bio-photo {
@@ -556,7 +562,6 @@ h5 {
 
 /*  ************  Sign Up/Subscribe  ***********  */
 
-
 .pricing-table-features li {
 	list-style: disc;
 	margin-top: 20px;
@@ -568,10 +573,7 @@ h5 {
 .subscribe-us {
 	width: 1100px;
 	margin: 0 auto;
-	/*height: 300px;*/
-	/*margin-top: 20px;*/
 	padding-bottom: 100px;
-	padding-top: 50px;
 }
 
 
@@ -579,13 +581,13 @@ h5 {
 	float: left;
 	height: 330px;
 	width: 300px;
-	padding: 10px;
-	margin: 70px 20px 0px 120px;
+	/*padding: 10px;*/
+	margin: 20px 20px 0px 20px;
 }
 
 .about-image {
 	float: left;
-	padding: 10px 0px 0px 20px;
+	/*padding: 10px 0px 0px 20px;*/
 	margin: 40px 20px 0px 20px;
 }
 
@@ -797,23 +799,23 @@ h5 {
 /* ################ About Us page ##############  */
 
 .text-right-img {
-		float: left;
-		width: 510px;
-		padding-left: 60px;
-		margin: 25px 0 0px 50px;
-		line-height: 24px;
-		font-size: 18px;
-		font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		color: #757575;
-		font-weight: 200;
-		letter-spacing: 1px;
+	float: left;
+	width: 510px;
+	padding-left: 60px;
+	margin: 20px 0 0px 10px;
+	line-height: 24px;
+	font-size: 18px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #757575;
+	font-weight: 200;
+	letter-spacing: 1px;
 }
 .text-left-img {
 	float: left;
 	width: 490px;
 	padding-left: 20px;
 	padding-right: 20px;
-	margin: 25px 0 0px 50px;
+	margin: 20px 0 0 10px;
 	line-height: 24px;
 	font-size: 18px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
