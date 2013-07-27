@@ -39,7 +39,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @user_voice.save
-        format.html { redirect_to root_path, notice: 'Voice was successfully created. Thank you for your input' }
+        format.html { redirect_to root_path, notice: 'Voice was recorded. Nice job!' }
         format.json { render json: @user_voice, status: :created, location: @user_voice}
       else
         format.html { render 'index', notice: "Voice did not save, please try again" }
