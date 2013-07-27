@@ -268,24 +268,45 @@ h5 {
   bottom:0px;
   z-index:1;
 }
-.whoareyou {
+
+
+/*.whoareyou {
 	width: 200px;
 	background-color: #77cc33;
 	position: fixed;
 	right: 20px;
 	z-index: 3;
 	margin: 30px 0px 0px 0px;
-	/*float: right;*/
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	box-shadow: 3px 3px 8px #898989;
+}*/
+
+.whoareyou {
+	height: 20px;
+	padding-top: 10px;
 }
-.whoareyou li {
+
+.whoareyou li{
 	display: inline;
 	list-style: none;
-	font-size: 18px;
-	padding: 4px 4px 0px 10px;
+	font-size: 16px;
+	font-weight: 200;
+	padding: 4px;
+	color: #fff;
+	background-color: #77cc33;
+	border-radius: 5px;
 }
+
+.whoareyou li:hover {
+}
+
+/*.whoareyou {
+	color: #00AEEF;
+	display: inline;
+}*/
+
+
 .hello {
 	height: 38px;
 	padding: 20px 0px;
@@ -465,20 +486,21 @@ input[class="voices-btn"]:hover {
 
 .contact-us {
 	padding: 0px 0px 0px 0px;
+	width: auto;
+	margin: 0 auto;
 }
 
 
 .contact-wrap {
-	margin-top: 20px;
 	width: 100%;
-	float: right;
-	padding-bottom: 120px;
+	margin: 0 auto;
+	padding: 80px 0px 20px 10px;
 }
 
 
 .contact-box {
-	width: 200px;
-	height: 166px;
+	width: 175px;
+	height: auto;
 	border: 2px;
 	float: left;
 	border-radius: 5px;
@@ -486,22 +508,19 @@ input[class="voices-btn"]:hover {
   	padding: 4px 10px;
   	background-color: #fff;
   	margin: 0px 20px 15px 10px;
-  	opacity: .9;
+  	
 }
-/*.address h4 {
-	padding: 6px 0px 20px 0px;
-	text-align: center;
-	line-height: 28px;
-	font-size: 26px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #00AEEF;
-	font-weight: 500;
-}*/
+
+.address p {
+	font-size: 12px;
+}
+
 .contact-info {
 	margin: 0 auto;
 	height: auto;
 	display: block;
-	width: 1000px;
+	width: 80%;
+	margin-bottom: 40px;
 }
 .content-container {
 	margin: 0 auto;
@@ -512,10 +531,7 @@ input[class="voices-btn"]:hover {
 	height: auto;
 	padding: 10px 0px 10px 70px;
 }
-.tweet-timeline {
-	width: 225px;
-	float: right;
-}
+
 
 /* ***********  END OF CONTACT US PAGE ************ */
 
@@ -853,6 +869,7 @@ input[class="voices-btn"]:hover {
 .chicago-sky {
 	background: url("/happy_chicago.jpg") no-repeat;
 	background-size: 100%;
+	padding-bottom: 50px;
 }
 .top-padded {
   padding-top: 90px;
@@ -1712,7 +1729,7 @@ input[class="voices-btn"]:hover {
 
 
 	.navbar {
-  font-size: 20px; }
+  font-size: 18px; }
 
 	.navbar-inner {
   border: none;

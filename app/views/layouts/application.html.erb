@@ -31,10 +31,27 @@
           <nav class="nav-collapse collapse" >
             <ul class="nav pull-right" id="nav">
               <!-- #TODO: make active page highlighted- can use class="active" but needs to be dynamic -->
-            <li><%= link_to "About", about_us_path %></li>
-            <li><%= link_to "Subscriptions", sign_up_path %></li>
-            <li><%= link_to "Reviews", categories_path %></li>
-            <li><%= link_to "Contact", contact_path %></li>
+              <li><%= link_to "About", about_us_path %></li>
+              <li><%= link_to "Subscriptions", sign_up_path %></li>
+              <li><%= link_to "Reviews", categories_path %></li>
+              <li><%= link_to "Contact", contact_path %></li>
+             
+              <li>
+                  <div>
+                    <div id="user_nav">
+                      <ul class="whoareyou">
+                        <% if user_signed_in? %>
+                        <li><%= link_to 'Profile', edit_user_registration_path %></li>
+                        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                        <% else %>
+                        <li><%= link_to "Sign up", sign_up_path %></li>
+                        <li><%= link_to "Login", new_user_session_path %></li>
+                        <% end %>
+                      </ul>
+                    </div>
+                  </div>
+              </li>
+
             </ul>
           </nav>
           </div>
@@ -42,7 +59,7 @@
           </div>
         </div>
       </div>
-  <div class="whoareyou">
+  <!-- <div class="whoareyou">
     <ul>
       <li>
           <div id="user_nav">
@@ -56,7 +73,7 @@
           </div>
       </li>
     </ul>
-  </div>
+  </div> -->
 </head>
 <body>
 
