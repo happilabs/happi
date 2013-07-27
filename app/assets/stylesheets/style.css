@@ -63,9 +63,9 @@ h2 {
 	text-align: center;
 }
 .human-bio h3 {
-	margin-bottom: 20px;
 	font-size: 18px;
-	margin: 10px 0px 10px 0px;
+	margin: 0px 0px 20px 0px;
+	padding-top: 30px;
 	letter-spacing: .1em;
 	line-height: 30px;
 	color: #898989;
