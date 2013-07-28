@@ -48,9 +48,13 @@
           <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
             <h5>Fair Price for academia:</h5>
             <h3><%= @product.price %></h3>
+          <div class="noprice-summary-text">
           <% else %>
-            <p>Pricing Information currently available for 200µl or 1000µl customers only</p>
+            
+              <p><span id="fair-price-topay">What is a fair price?</span><br>Pricing Information currently available for 200µl or 1000µl customers only</p>
+           
           <% end %>
+          </div>
           <a href="http://www.corning.com/lifesciences/us_canada/en/technical_resources/doc_library/properties_plastic.aspx">See Quality Documentation</a>
         </div>
 
