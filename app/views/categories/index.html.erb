@@ -4,7 +4,7 @@
     <h4 class="heading-liner">where scientists help scientists make informed decisions about lab supplies</h4>
   </div>
 
-  <% unless current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
+  <% unless user_signed_in? %>
     <section class="category-index-intro-box group">
       <h5>How to read or write a review</h5>
         <ul>
