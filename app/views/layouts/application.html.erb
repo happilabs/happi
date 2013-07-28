@@ -32,8 +32,8 @@
             <ul class="nav pull-right" id="nav">
               <!-- #TODO: make active page highlighted- can use class="active" but needs to be dynamic -->
               <li><%= link_to "About", about_us_path %></li>
-              <li><%= link_to "Services", sign_up_path %></li>
               <li><%= link_to "Reviews", categories_path %></li>
+              <li><%= link_to "Services", sign_up_path %></li>
               <li><%= link_to "Contact", contact_path %></li>
              
               <li>
@@ -44,7 +44,7 @@
                         <li><%= link_to 'Profile', edit_user_registration_path %></li>
                         <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                         <% else %>
-                        <!-- <li><%= link_to "Sign up", sign_up_path %></li> -->
+                        <li><%= link_to "Sign up", new_user_registration_path %></li>
                         <li><%= link_to "Login", new_user_session_path %></li>
                         <% end %>
                       </ul>
@@ -95,19 +95,19 @@
         <h5>About HappiLabs</h5>
         <ul>
           <li><%= link_to "Contact Us", contact_path %></li>
-          <li><%= link_to "People Who Make It Happen", our_people_path   %></li>
           <li><%= link_to "What We Do", about_us_path %></li>
           <li><%= link_to "How We Do It", about_us_path(anchor: "how_we_do_it") %></li>
           <li><%= link_to "Why We Do It", about_us_path(anchor: "why_we_do_it") %></li>
+          <li><%= link_to "People Who Make It Happen", our_people_path   %></li>
           <!-- <li><%= link_to "Privacy Policy", "#" %></li> -->
         </ul>
       </div>
 
       <div class="footer-col">
-        <h5>Sharing</h5>
+        <h5>Reviews</h5>
         <ul>
-          <li><%= link_to "Search & Write Reviews", categories_path %></li>
           <li><%= link_to "Sign up to Submit Reviews", new_user_registration_path %></li>
+          <li><%= link_to "Search & Write Reviews", categories_path %></li>
           <li><%= link_to "Share Your Voice", index_path(anchor: "share_your_voice") %></li>
         </ul>
       </div>

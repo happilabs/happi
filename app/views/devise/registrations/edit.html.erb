@@ -25,23 +25,7 @@
     <% end %>
     <br>
 
-    <% if current_user.subcription_level != "1000 microliter" %>
-      <button class="btn btn-danger" id="upgrade_account_toggle_button">Upgrade Your Subscription Level</button>
-      <br>
-      <br>
-      <div id="upgrade_account">
-
-        <% if current_user.subcription_level == "10 microliter" %>
-          <%= render 'upgrade200' %>
-        <% else  %>
-          <%= render 'upgrade1000' %>
-        <% end %>
-
-      </div>
-    <% end %>
-
-
-    <button class="btn btn-danger" id="edit_profile_toggle_button">Complete Your Profile</button>
+    <button class="btn btn-success" id="edit_profile_toggle_button">Complete Your Profile</button>
     <br>
     <br>
 
@@ -68,7 +52,24 @@
       <% end %>
     </div>
 
-  <button class="btn" id="edit_password_toggle_button">Edit Password</button>
+    <!-- For now, comment this section -->
+    <% if current_user.subcription_level != "1000 microliter" %>
+      <button class="btn btn-danger" id="upgrade_account_toggle_button">Upgrade Your Subscription Level</button>
+      <br>
+      <br>
+      <div id="upgrade_account">
+
+        <% if current_user.subcription_level == "10 microliter" %>
+          <%= render 'upgrade200' %>
+        <% else  %>
+          <%= render 'upgrade1000' %>
+        <% end %>
+
+      </div>
+    <% end %>
+<!-- Comment above section -->
+
+  <button class="btn btn-warning" id="edit_password_toggle_button">Edit Password</button>
     <div id="edit_password">
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
 
@@ -84,16 +85,17 @@
         <div><%= f.submit "Update", class: "btn btn-primary" %></div>
       <% end %>
 
-      <h3>Cancel my account</h3>
-
-      <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-warning" %></p>
+      
 
       <%= link_to "Back", :back %>
     </div>
 
-
-
+      <p> <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-warning" %></p>
   </div>
+
+
+<!-- REVIEWS AND REPORTS SECTIONS OF DASHBOARD -->
+
 
   <div class="profile_tab_box">
     <ul class="nav nav-tabs dash-tabs">
@@ -101,7 +103,14 @@
       <li id="reports_tab"><%= link_to "Your Reports", "#", id: "show_reports" %></li>
     </ul>
     <ul id="comments_list" class="comments-listing">
-      <p class="second-p dash-p"><strong>Thank you</strong> for contributing. Your feedback is important to improving the quality of scientific research. <br> <%= link_to "Add a new review?", new_review_url %></p>
+      
+      <div id="more-margin-bottom">
+        <%= link_to "Write a new review", categories_path, class: "btn btn-warning" %>
+      </div>
+      <p class="second-p dash-p"><strong>Thank you</strong> for contributing. Your feedback is important to improving the quality of scientific research.</p> 
+
+
+
       <% current_user.reviews.reverse.each do |review| %>
         <h4 class="dash-comm-title"><%= review.product.product_name %>:   <%= review.rating %>/5 | <%= review.updated_at.strftime("%B %d, %Y") %> (<%= link_to "edit", edit_review_url(review) %>/<%= link_to "delete", review , method: :delete, confirm: "Are you sure ou want to delete this review?" %>)</h4>
         <p class="second-p">"<%= link_to review.desc, review.product %>"</p>
