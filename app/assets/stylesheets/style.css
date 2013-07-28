@@ -834,7 +834,7 @@ input[class="voices-btn"]:hover {
 	background-color: #00AEEF;
 	height: auto;
 	float: left;
-	margin-left: 40px;
+	margin-left: 100px;
 	margin-top: 30px;
 	border-radius: 10px;
 	padding: 20px 20px 0px 20px;
@@ -2400,12 +2400,14 @@ padding-top: 18px;
     .btn.btn-success:active, .btn.btn-success.active {
       background-color: #27ad60; }
   .btn.btn-warning {
-    background-color: #898989; }
+    background-color: #898989;
+    letter-spacing: 1px; }
     .btn.btn-warning:hover, .btn.btn-warning:focus {
       background-color: #ffff00;
       color: #00AEEF; }
     .btn.btn-warning:active, .btn.btn-warning.active {
       background-color: #cea70c; }
+
 
 	 .btn.btn-large.btn-demo{
 		background:none;
@@ -2662,6 +2664,11 @@ padding-top: 18px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	padding: 20px 0px;
+}
+
+.more-margin-bottom {
+	margin-bottom: 20px;
+	height: 30px;
 }
 
 /* ###########  Product Index Page##############  */
