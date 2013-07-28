@@ -570,9 +570,9 @@ input[class="voices-btn"]:hover {
 }
 .text-right-img-people {
 	float: left;
-	width: 610px;
+	width: 500px;
 	padding-left: 20px;
-	margin: 15px 0 0px 20px;
+	margin: 15px 0 0px 60px;
 	line-height: 20px;
 	font-size: 14px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
