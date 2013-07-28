@@ -4077,7 +4077,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
   color: #00aeef;
-  font-weight: 
+  font-weight:
   cursor: default;
   background-color: #fff;
   border: 4px solid #ddd;
@@ -5166,7 +5166,7 @@ input[type="submit"].btn.btn-mini {
 .pager .disabled > a:focus,
 .pager .disabled > span {
   color: #999999;
-  cursor: default;
+  /*cursor: default;*/
   background-color: #fff;
 }
 
