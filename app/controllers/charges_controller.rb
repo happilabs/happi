@@ -6,7 +6,7 @@ class ChargesController < ApplicationController
   def create
     # Amount in cents
     @amount = 19500
-    @user = User.find(current_user.id)
+    @user = User.find(current_user)
 
     customer = Stripe::Customer.create(
       :email => 'happidevelopers@gmail.com',
@@ -34,7 +34,7 @@ class ChargesController < ApplicationController
     redirect_to charges_path
   end
 
-  redirect_to edit_user_registration_path
+  redirect_to edit_user_registration_path(resource)
 
 
 
