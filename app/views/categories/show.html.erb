@@ -11,7 +11,7 @@
 
   <div class='container group'>
     <aside class='category-review-list'>
-      <h4>Select a Category</h4>
+      <h4>Select a Product to Review</h4>
       <ul>
       <% @categories.each do |cat| %>
         <li><%= link_to "#{cat.name}", category_url(cat.id) %></a></li>
@@ -51,7 +51,7 @@
         </ul>
       </div>
 
-      <h3 id="category-brand-title">Individual Brand Ratings</h3>
+      <h3 id="category-brand-title">Brand Ratings & Reviews</h3>
 
           <% @category.products.each do |prod| %>
             <%= render "product", :product => prod %>
