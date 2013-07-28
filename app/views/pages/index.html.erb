@@ -5,7 +5,7 @@
       <div class="hero-unit">
         <div class="container">
           <div class="row-fluid">
-            <div class="text-center">
+            <div class="">
                 <% if notice.present? %>
                 <p id="homepage_messages"><%= notice %></p>
                 <% end %>
@@ -24,10 +24,19 @@
             </div>
             <div class="camein">
 
-                  <%= link_to "LEARN MORE", about_us_url, class: "btn btn-large btn-danger btn-block-third" %>
+                  <%= link_to "Read & Write a product review", categories_path, class: "btn btn-large btn-block-third btn-danger" %>
 
-                  <i class="or">- or -</i>
-                  <%= link_to "RECEIVE OUR NEWSLETTER", new_subscriber_path, class: "btn btn-large btn-block-third btn-warning" %>
+                  <i class="or">-  -</i>
+                  <%= link_to "Rent-a-Lab-Manager", one_thousand_ml_path, class: "btn btn-large btn-block-third btn-warning" %>
+            </div>
+            <div class="camein">
+
+                  <%= link_to "Subscribe to our data", two_hundred_ml_path, class: "btn btn-large btn-warning btn-block-third" %>
+
+                  <i class="or">- -</i>
+                  
+                  <%= link_to "Learn More", about_us_url, class: "btn btn-large btn-danger btn-block-third" %>
+
             </div>
           </div>
         </div>
@@ -35,19 +44,6 @@
   </div>
 
 </header>
-
-      <!-- <div class="sky-background hello">
-        <ul>
-          <li>Hello</li>
-          <li>Ni hao</li>
-          <li>Guten tag</li>
-          <li>Konichiwah</li>
-          <li>Privet</li>
-          <li>Namaste</li>
-          <li>Guten tag</li>
-          <li>Konichiwah</li>
-        </ul>
-      </div> -->
 
   <div class="sky-background content-container group" id="share_your_voice">
 
