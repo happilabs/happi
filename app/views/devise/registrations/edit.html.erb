@@ -53,13 +53,13 @@
     </div>
 
     <!-- For now, comment this section -->
-    <% if current_user.subcription_level != "1000 microliter" %>
+    <% if current_user.subcription_level != "1000" %>
       <button class="btn btn-danger" id="upgrade_account_toggle_button">Upgrade Your Subscription Level</button>
       <br>
       <br>
       <div id="upgrade_account">
 
-        <% if current_user.subcription_level == "10 microliter" %>
+        <% if current_user.subcription_level == "10" %>
           <%= render 'upgrade200' %>
         <% else  %>
           <%= render 'upgrade1000' %>
@@ -85,7 +85,7 @@
         <div><%= f.submit "Update", class: "btn btn-primary" %></div>
       <% end %>
 
-      
+
 
       <%= link_to "Back", :back %>
     </div>
@@ -103,11 +103,11 @@
       <li id="reports_tab"><%= link_to "Your Reports", "#", id: "show_reports" %></li>
     </ul>
     <ul id="comments_list" class="comments-listing">
-      
+
       <div id="more-margin-bottom">
         <%= link_to "Write a new review", categories_path, class: "btn btn-warning" %>
       </div>
-      <p class="second-p dash-p"><strong>Thank you</strong> for contributing. Your feedback is important to improving the quality of scientific research.</p> 
+      <p class="second-p dash-p"><strong>Thank you</strong> for contributing. Your feedback is important to improving the quality of scientific research.</p>
 
 
 
