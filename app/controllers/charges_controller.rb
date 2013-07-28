@@ -29,12 +29,15 @@ class ChargesController < ApplicationController
     # TODO - Stripe: add Stripe Webhooks
     # TODO - Controller Action: create variable for price vs. having hardcoded
 
+  redirect_to edit_user_registration_path(resource)
+
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to charges_path
   end
 
-  redirect_to edit_user_registration_path(resource)
+
+
 
 
 
