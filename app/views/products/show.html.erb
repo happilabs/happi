@@ -30,17 +30,20 @@
         </p> -->
         </div>
 
-        <% if @product.reviews.present? %>
         <div>
           <!-- <h3><%= @product.manufacturer_name %></h3>
           <h4><%= @product.product_name %></h4> -->
           <div class="rating2">
             <h4>RATING</h4>
+        <% if @product.reviews.present? %>
             <h1 class="real-rating2"><%= @product.reviews.average("rating").round(1) %><span class="year"> /5.0</span></h1>
             <p class='side-note-dark'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
+        <% else %>
+            <h1 class="real-rating2">0.0<span class="year"> /5.0</span></h1>
+            <p class='side-note-dark'>(out of 0 reviews)</p>
+        <% end %>
           </div>
         </div>
-        <% end %>
         <div>
           <!-- <p class='side-note-dark'>
             <b>Product num:</b>
