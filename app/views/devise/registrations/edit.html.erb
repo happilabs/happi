@@ -59,7 +59,7 @@
       <br>
       <div id="upgrade_account">
 
-        <% if current_user.subcription_level == "10" %>
+        <% if current_user.subcription_level != ("200" || "1000")   %>
           <%= render 'upgrade200' %>
         <% else  %>
           <%= render 'upgrade1000' %>
