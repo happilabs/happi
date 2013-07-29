@@ -457,7 +457,7 @@ input[class="voices-btn"] {
 	letter-spacing: 1px;
 	margin-left: 10px;
 	width: 200px;
-	
+
 }
 input[class="voices-btn"]:hover {
 	background-color: #009EdF;
@@ -525,7 +525,7 @@ input[class="voices-btn"]:hover {
   	padding: 4px 10px;
   	background-color: #fff;
   	margin: 0px 20px 15px 30px;
-  	
+
 }
 
 .address p {

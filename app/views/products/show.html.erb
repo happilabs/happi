@@ -16,7 +16,6 @@
     </aside>
 
     <section class='show-page-content'>
-
       <article class='product-summary group'>
         <div>
           <img src="../products/pipette100.png">
@@ -54,16 +53,12 @@
             <h3><%= @product.price %></h3>
           <div class="noprice-summary-text">
           <% else %>
-
-              <p><span id="fair-price-topay">What is a fair price?</span><br>Pricing Information currently available for 200µl or 1000µl customers only</p>
-
+            <p><span id="fair-price-topay">What is a fair price?</span><br>Pricing Information currently available for 200µl or 1000µl customers only</p>
           <% end %>
           </div>
           <a href="http://www.corning.com/lifesciences/us_canada/en/technical_resources/doc_library/properties_plastic.aspx">See Quality Documentation</a>
         </div>
-
       </article>
-
     </section>
 
 
@@ -121,13 +116,6 @@
         <p><%= review.desc %></p>
       </article>
       <% end %>
-
-  <!--     <article class='individual-review-container'>
-        <p>4.0 | 11/11/2011</p>
-        <p><b>Reviewed by:</b> John Smith</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad  minim veniam, quis nostrud exercitation</p>
-      </article> -->
-
     </section>
   </div>
 
@@ -138,10 +126,14 @@
   </div>
   <% end %>
 
+</div>
 
 
   <script>
 
+  $(document).ready(function() {
+   $('#nav_reviews').addClass('active');
+  });
 
   $('#product_show_review').hide();
   $("#product_show_review_button").click(function(){
@@ -150,4 +142,3 @@
 
 
   </script>
-</div>
