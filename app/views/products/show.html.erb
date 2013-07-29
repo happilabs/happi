@@ -30,6 +30,7 @@
         </p> -->
         </div>
 
+        <% if @product.reviews.present? %>
         <div>
           <!-- <h3><%= @product.manufacturer_name %></h3>
           <h4><%= @product.product_name %></h4> -->
@@ -39,7 +40,7 @@
             <p class='side-note-dark'>(out of <%= @product.reviews.count("rating")  %> reviews)</p>
           </div>
         </div>
-
+        <% end %>
         <div>
           <!-- <p class='side-note-dark'>
             <b>Product num:</b>
@@ -50,9 +51,9 @@
             <h3><%= @product.price %></h3>
           <div class="noprice-summary-text">
           <% else %>
-            
+
               <p><span id="fair-price-topay">What is a fair price?</span><br>Pricing Information currently available for 200µl or 1000µl customers only</p>
-           
+
           <% end %>
           </div>
           <a href="http://www.corning.com/lifesciences/us_canada/en/technical_resources/doc_library/properties_plastic.aspx">See Quality Documentation</a>
