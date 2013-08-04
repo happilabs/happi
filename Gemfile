@@ -5,6 +5,7 @@ gem 'active_attr', '0.8.2'
 gem 'devise', '2.2.4'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'heroku'
+gem 'newrelic_rpm'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
