@@ -26,7 +26,9 @@
         <!-- This picture is still a placeholder -->
         <!-- make sure this picture is above the h3 tag -->
         <div id="img-transparent">
-          <img src="">
+          <% if @category.products.first.photo.present? %>
+          <img src=<%= @category.products.first.photo %>>
+          <% end %>
         </div>
         <!-- This picture is still a placeholder -->
         <!-- make sure this picture is above the h3 tag -->

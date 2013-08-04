@@ -19,7 +19,9 @@
       <article class='product-summary group'>
         <div>
           <!-- Alex, place that Ruby code right here :) -->
-          <img src="">
+          <% if @product.photo.present? %>
+            <img src="<%= @product.photo %>">
+          <% end %>
           <p class='circle-note'>
             <b>Product #:</b>
             <%= @product.product_num %>
