@@ -59,7 +59,7 @@
             <p><span id="fair-price-topay">What is a fair price?</span><br>Pricing Information currently available for 200µl or 1000µl customers only</p>
           <% end %>
          <!--  Alex, the new product URL goes right here :) -->
-          <a href="">Quality Documentation (n/a)</a>
+          <a href="<%= @product.url if @product.url %>">Quality Documentation</a>
         </div>
       </article>
     </section>
