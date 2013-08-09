@@ -64,4 +64,20 @@ class PagesController < ApplicationController
 
   end
 
+  def jobs
+
+  end
+
+  def privacy_policy
+
+  end
+
+  def user_agreement
+
+  end
+
+  def lab_sustainability
+
+  end
+
 end

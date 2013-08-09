@@ -22,6 +22,11 @@ Happilabs3::Application.routes.draw do
   get "/1000ml" => "Pages#one_thousand_ml", as: "one_thousand_ml"
   get "/our_people" => "Pages#our_people", as: "our_people"
 
+  get "/jobs" => "Pages#jobs", as: "privacy_policy"
+  get "/privacy_policy" => "Pages#privacy_policy", as: "privacy_policy"
+  get "/user_agreement" => "Pages#user_agreement", as: "user_agreement"
+  get "/lab_sustainability" => "Pages#lab_sustainability", as: "lab_sustainability"
+
   get "/index" => "Pages#index"
   get "/about_us" => "Pages#about_us", as: "about_us"
   get "/sign_up" => "Pages#sign_up", as: "sign_up"
