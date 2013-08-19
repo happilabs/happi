@@ -1,5 +1,7 @@
 class PagesController < ApplicationController
 
+  before_filter :validate_admin, :only => [:user_index]
+
   def index
     @message = Message.new
     @user_voice = UserVoice.new
@@ -46,6 +48,14 @@ class PagesController < ApplicationController
         format.json { render json: @user_voice.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def user_index
+    @users = User.all
+  end
+
+  def delete_user
+
   end
 
   def contact
