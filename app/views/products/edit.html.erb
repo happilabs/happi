@@ -18,7 +18,7 @@
       <%# f.label :category_id %><br />
       <%# f.number_field :category_id %>
       <%# f.select :category_id, options_from_collection_for_select(Category.all, :id, :name) %>
-      <% f.hidden_field :category_id, value: @product.category_id %>
+      <%= f.hidden_field :category_id, value: @product.category_id %>
     </div>
     <div class="field">
       <%= f.label :product_name, "Name" %><br />
