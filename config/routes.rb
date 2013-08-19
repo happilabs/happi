@@ -1,18 +1,13 @@
 Happilabs3::Application.routes.draw do
 
   resources :products
-
-
   resources :reviews
-
   resources :charges
-
 
   devise_for :users, :controllers => { :registrations => :registrations }
   devise_for :users
   resources :reports
   resources :categories
-
   resources :subscribers
 
   root to: "Pages#index"
@@ -35,6 +30,7 @@ Happilabs3::Application.routes.draw do
   match '/voices' => 'Pages#create_voice', :as => 'voices', :via => :post
   get "/user_voices" => "Pages#user_voices", :as => "user_voices"
   post "/user_voices" => "Pages#create_user_voice", :as => 'user_voices'
+  get "/user_index" => "Pages#user_index", :as => "user_index"
 
   #TODO : Delete this RCAV after copying it over to categories show page
   #temp categories page route
