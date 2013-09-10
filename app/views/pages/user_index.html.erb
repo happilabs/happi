@@ -9,6 +9,8 @@
         <th>Subscription Level</th>
         <th>Organization</th>
         <th>Sign-in Count</th>
+        <th>Last Sign In</th>
+        <th>Delete?</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +22,8 @@
         <td><%= user.subcription_level %></td>
         <td><%= user.organization %></td>
         <td><%= user.sign_in_count %></td>
+        <td><%= user.last_sign_in_at.strftime("%b %d, %Y %l:%M%p ") %></td>
+        <td><%= button_to 'Delete?', delete_user_path(user.id), :method => 'delete', class: "btn",  :confirm => 'Are you sure?' %></td>
       </tr>
     <% end %>
     </tbody>
