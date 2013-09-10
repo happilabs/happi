@@ -54,8 +54,9 @@
       </div>
 
       <h3 id="category-brand-title">Brand Ratings & Reviews</h3>
+<!-- @users.collect(&:score).sum.to_f/@users.length if @users.length > 0 -->
 
-          <% @category.products.each do |prod| %>
+          <% @category.products_sorted_by_average_product_rating.each do |prod| %>
             <%= render "product", :product => prod %>
           <% end %>
 

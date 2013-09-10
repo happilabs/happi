@@ -4,4 +4,10 @@ class Review < ActiveRecord::Base
   belongs_to :product
   belongs_to :user
 
+  # def self.sorted_by_rating
+  #   Review.all.each do |review|
+
+  #   end
+  # end
+
 end

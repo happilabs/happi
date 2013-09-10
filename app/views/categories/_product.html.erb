@@ -3,28 +3,20 @@
 
       <!-- <img src="../products/pipette100.png"> -->
       <p class='brand center'><%= product.manufacturer_name %></p>
-      <!-- <p class='center'>Distributor: <%= product.distributor_name %></p> -->
 
       <dl class='name-description'>
         <!-- <dt><%= product.product_name %></dt> -->
         <dd><%= product.product_desc %></dd>
         <dd>Product #: <%= product.product_num %></dd>
       </dl>
-      <!-- <dl class='product-number'>
-        <dt>Product no.</dt>
-        <dd><%= product.product_num %></dd>
-      </dl> -->
-
-      <%# link_to "See scientist's reviews", product, class: "review-box" %>
   </div>
 
   <div class='man-preview-right center'>
       <dl class='rating'>
         <dt>RATING</dt>
-      <% @reviews = Review.where(product_id: product.id) %>
-      <% if @reviews.present? %>
-        <dd class="real-rating"><%= @reviews.average("rating").round(1) %><span class="year"> /5.0</span></dd>
-        <dd class='side-note'>(out of <%= @reviews.count("rating") %> reviews)</dd>
+      <% if product.reviews.present? %>
+        <dd class="real-rating"><%= product.reviews.average("rating").round(1) %><span class="year"> /5.0</span></dd>
+        <dd class='side-note'>(out of <%= product.reviews.count("rating") %> reviews)</dd>
       <% else %>
         <dd class="real-rating">0.0<span class="year"> /5.0</span></dd>
         <dd class='side-note'>(out of 0 reviews)</dd>
