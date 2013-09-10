@@ -9,6 +9,7 @@
         <th>Subscription Level</th>
         <th>Organization</th>
         <th>Sign-in Count</th>
+        <th>Delete?</th>
       </tr>
     </thead>
     <tbody>
@@ -20,6 +21,7 @@
         <td><%= user.subcription_level %></td>
         <td><%= user.organization %></td>
         <td><%= user.sign_in_count %></td>
+        <td><%= button_to 'Delete?', delete_user_path(user.id), :method => 'delete',  :confirm => 'Are you sure?' %></td>
       </tr>
     <% end %>
     </tbody>
