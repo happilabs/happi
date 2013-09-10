@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :validate_admin, :only => [:user_index]
+  before_filter :validate_admin, :only => [:user_index, :delete_user]
 
   def index
     @message = Message.new
@@ -55,7 +55,10 @@ class PagesController < ApplicationController
   end
 
   def delete_user
+    user = User.find_by_id(params[:user_id])
+    user.destroy
 
+    redirect_to user_index_url
   end
 
   def contact
