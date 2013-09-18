@@ -70,7 +70,7 @@
       <% if current_user.present? %>
         <br>
 
-        <div id="write-review-btn">
+        <div class="write-review-btn">
           <%= button_tag "+ Write a review for #{@product.product_name}", class: "btn btn-info see-reviews-btn", id: "product_show_review_button" %>
         </div>
 
@@ -106,11 +106,15 @@
             </div>
           <% end %>
         </div>
+      <% else %>
+        <div class="write-review-btn">
+        <%= link_to "Sign up to Write a Review", new_user_registration_path, class: "btn btn-info see-reviews-btn" %>
+        </div>
       <% end %>
 
       <% @reviews.reverse.each do |review| %>
       <article class='individual-review-container'>
-        <% if current_user.try(:id) == review.user.id %>
+        <% if current_user && current_user.try(:id) == review.user.id %>
         <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %> (<%= link_to "edit", edit_review_url(review) %>/<%= link_to "delete", review , method: :delete, confirm: "Are you sure ou want to delete this review?" %>)</p>
         <% else %>
         <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %></p>
