@@ -23,9 +23,10 @@ Happilabs3::Application.configure do
       :address            => 'smtp.gmail.com',
       :port               => 587,
       :domain             => 'gmail.com', #you can also use google.com
-      :authentication     => :plain,
+      :authentication     => 'plain',
       :user_name          => 'happidevelopers@gmail.com',
-      :password           => 'happiness2013'
+      :password           => 'Happi2013Ness',
+      :enable_starttls_auto => true
     }
 
   # Print deprecation notices to the Rails logger
