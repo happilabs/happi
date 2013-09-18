@@ -70,7 +70,7 @@
       <% if current_user.present? %>
         <br>
 
-        <div id="write-review-btn">
+        <div class="write-review-btn">
           <%= button_tag "+ Write a review for #{@product.product_name}", class: "btn btn-info see-reviews-btn", id: "product_show_review_button" %>
         </div>
 
@@ -107,7 +107,7 @@
           <% end %>
         </div>
       <% else %>
-        <div id="write-review-btn">
+        <div class="write-review-btn">
         <%= link_to "Sign up to Write a Review", new_user_registration_path, class: "btn btn-info see-reviews-btn" %>
         </div>
       <% end %>
