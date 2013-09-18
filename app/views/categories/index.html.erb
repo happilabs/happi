@@ -6,7 +6,7 @@
 
   <% unless user_signed_in? %>
     <section class="category-index-intro-box group">
-      <h5>How to read or write a review</h5>
+      <h5>How to write a review</h5>
         <ul>
           <li>
               <span class="yellow-bold">Step 1: </span><span class="user-text-direction"><%= link_to "LOGIN", new_user_session_path %></span> OR <span class="user-text-direction"><%= link_to "SIGN UP", new_user_registration_path %></span>
@@ -18,7 +18,7 @@
               <li><p class="center"><span class="user-text-direction">SIGN UP</span></p></li>
             </ul> -->
           <li class="second-p"><span class="yellow-bold">Step 2:</span> Select a Product</li>
-          <li class="second-p"><span class="yellow-bold">Step 3:</span> Read or Write ratings and reviews</li>
+          <li class="second-p"><span class="yellow-bold">Step 3:</span> Write ratings and reviews</li>
           <!-- <li class="second-p">To know which brands scientists like most, <p class="center">SELECT A CATEGORY...</span></p></li> -->
         </ul>
     </section>
@@ -68,7 +68,7 @@
             15 mL conical tube
           </a>
         </li>
-        
+
         <li>
           <a href="<%= category_url(8) %>">
             <img src="products/latex-glove_review.png">
