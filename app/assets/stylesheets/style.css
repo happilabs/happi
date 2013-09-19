@@ -349,6 +349,10 @@ h5 {
 
 /* ***********  Voices section **************** */
 
+#share_your_voice {
+	display: none;
+}
+
 
 .pipette-tip {
 	background: url(/pipettetip.jpg);
