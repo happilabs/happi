@@ -1,6 +1,8 @@
 class SubscribersController < ApplicationController
   # GET /subscribers
   # GET /subscribers.json
+  before_filter :validate_admin, :except => [:new, :create]
+
   def index
     @subscribers = Subscriber.all
 
