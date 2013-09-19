@@ -36,7 +36,7 @@ Happilabs3::Application.configure do
    }
 
    #devise
-   config.action_mailer.default_url_options = { :host => 'hltesting.heroku.com' }
+   config.action_mailer.default_url_options = { :host => 'happilabsapp.heroku.com' }
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
