@@ -2312,7 +2312,14 @@ hr.half {
 	font-size: 28px;
 }
 
+
+
+
 /****************************** BUTTONS **********************************/
+
+
+
+
 .btn.btn-large {
 padding-bottom: 16px;
 padding-top: 18px;
@@ -2701,4 +2708,31 @@ padding-top: 18px;
 	height: 30px;
 }
 
-/* ###########  Product Index Page##############  */
+/* ###########  Testimonial   ##############  */
+
+.testimonial {
+	width: 800px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 4px 4px 4px #898989;
+}
+
+.testimonial
+.second-p {
+	font-size: 15px;
+}
+
+#home-testimonial {
+	width: 700px;
+	margin: 0 auto;
+}
+
+#home-testimonial
+.second-p {
+	width: 425px;
+}
+
+.testimonial-img {
+	margin-right: 20px;
+	float: left;
+}
