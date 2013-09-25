@@ -119,7 +119,8 @@
         <% else %>
         <p><%= review.rating %> / 5 | <%= review.updated_at.strftime("%B %d, %Y") %></p>
         <% end %>
-        <p><b>Reviewed by: </b><%= review.user.first_name.capitalize %> <%= review.user.last_name.first.capitalize %>. <%= review.user.try(:organization) %></p>
+        <p><b>Reviewed by: </b><%= review.user.first_name.capitalize %> <%= review.user.last_name.first.capitalize %>. <%= "from #{review.user.organization}" if review.user.organization != "" %>
+        </p>
         <p><%= review.desc %></p>
       </article>
       <% end %>
