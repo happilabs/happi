@@ -9,7 +9,7 @@ class ChargesController < ApplicationController
     @user = User.find(current_user)
 
     customer = Stripe::Customer.create(
-      :email => 'happidevelopers@gmail.com',
+      :email => @user.email,
       :card  => params[:stripeToken]
       # :api_key => Stripe.api_key
     )
