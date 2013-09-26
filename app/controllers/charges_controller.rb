@@ -11,6 +11,7 @@ class ChargesController < ApplicationController
     customer = Stripe::Customer.create(
       :email => 'happidevelopers@gmail.com',
       :card  => params[:stripeToken]
+      # :api_key => Stripe.api_key
     )
 
   charge = Stripe::Charge.create(
@@ -20,24 +21,16 @@ class ChargesController < ApplicationController
       :currency    => 'usd'
     )
 
-  @user.subcription_level = "200 microliter"
+  @user.subcription_level = "200"
   @user.save
 
     # TODO - Stripe: build in logic if the user cancels their account
     # TODO - Stripe: build in stripe logic to bill them recurring
     # TODO - Stripe: add Stripe Webhooks
-    # TODO - Controller Action: create variable for price vs. having hardcoded
-
-  redirect_to edit_user_registration_path(resource)
+    # TODO - Controller Action: create vsariable for price vs. having hardcoded
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to charges_path
   end
-
-
-
-
-
-
 end
