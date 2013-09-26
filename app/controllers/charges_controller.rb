@@ -10,8 +10,7 @@ class ChargesController < ApplicationController
 
     customer = Stripe::Customer.create(
       :email => 'happidevelopers@gmail.com',
-      :card  => params[:stripeToken],
-      :api_key => "sk_live_ymd3OmzBg67gdd1UHEgVrV2F"
+      :card  => params[:stripeToken]
     )
 
   charge = Stripe::Charge.create(
