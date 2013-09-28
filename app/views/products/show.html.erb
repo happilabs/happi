@@ -1,4 +1,4 @@
-<div class="grid">
+<div class="small-grid">
 <div id='header-fix'></div>
 
   <h2><%= @product.manufacturer_name %> Reviews</h2>
@@ -56,7 +56,7 @@
             <h3><%= @product.price %></h3>
           <div class="noprice-summary-text">
           <% else %>
-            <p><span id="fair-price-topay">What is a fair price?</span><br>Pricing Information currently available for 200µl or 1000µl customers only</p>
+            <p><span id="fair-price-topay">What is a fair price?</span><br>Pricing Information currently available for 200µl or 1000µl services only</p>
           <% end %>
          <!--  Alex, the new product URL goes right here :) -->
           <a href="<%= @product.url if @product.url %>">Quality Documentation</a>
