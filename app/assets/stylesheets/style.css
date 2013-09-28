@@ -1322,6 +1322,13 @@ input[class="voices-btn"]:hover {
 	text-decoration: none;
 }
 
+.category-review-list-selected {
+	background-color: #ffff00;
+	border-top-right-radius: 18px;
+	border-bottom-right-radius: 18px;
+	text-decoration: none;
+}
+
 .category-review-list > h4{
 	background: #00AEEF;
 	color: #ffff00;
