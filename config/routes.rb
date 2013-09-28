@@ -33,7 +33,6 @@ Happilabs3::Application.routes.draw do
   get "/user_index" => "Pages#user_index", :as => "user_index"
   delete "/user_index/:user_id" => "Pages#delete_user", :as => "delete_user"
 
-  #TODO : Delete this RCAV after copying it over to categories show page
-  #temp categories page route
+  get "/categories/:id/sorted_alphabetically" => "Categories#sorted_alphabetically", :as => "categories_sorted_alphabetically"
 
 end
