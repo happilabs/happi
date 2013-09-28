@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
 
-  before_filter :validate_admin, :except => [:index, :show, :product_list]
+  before_filter :validate_admin, :except => [:index, :show, :product_list, :sorted_alphabetically]
   # before_filter :authenticate_user!, :only => [:show]
 
 
@@ -20,10 +20,21 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @categories = Category.order("name ASC")
+    @product_list = @category.products_sorted_by_average_product_rating
 
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @category }
+    end
+  end
+
+  def sorted_alphabetically
+    @category = Category.find(params[:id])
+    @categories = Category.order("name ASC")
+    @product_list = @category.products_sorted_alphabetically
+
+    respond_to do |format|
+      format.html { render :template => "categories/show" }
     end
   end
 

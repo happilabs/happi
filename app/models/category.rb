@@ -8,4 +8,8 @@ class Category < ActiveRecord::Base
     product_array.sort_by {|product| product.reviews.average("rating").to_f}.reverse
   end
 
+  def products_sorted_alphabetically
+    product_array = self.products.map! { |product| product }
+    product_array.sort_by {|product| product.manufacturer_name}
+  end
 end
