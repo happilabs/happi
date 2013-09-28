@@ -114,7 +114,7 @@
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
-          
+
           <li><%= link_to "Free - Search Reviews", categories_path %></li>
           <li><%= link_to "10 µL - Write Reviews", new_user_registration_path %></li>
           <li><%= link_to "200 µL - Access to Price & Quality Data", two_hundred_ml_path %></li>
@@ -125,7 +125,34 @@
         <h5>Be Informed</h5>
 
             <ul>
-              <li>Newsletter signup goes here</li>
+              <li>Sign-up for our newsletter</li>
+              <% @subscriber = Subscriber.new %>
+              <%= form_for(@subscriber) do |f| %>
+                <% if @subscriber.errors.any? %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+
+                    <ul>
+                    <% @subscriber.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+
+                <div class="field">
+
+                  <%= f.text_field :first_name, placeholder: "Name" %>
+                </div>
+
+                <div class="field">
+                  <%= f.text_field :email, placeholder: "Email" %>
+                </div>
+
+                <div class="actions">
+                  <%= f.submit "Subscribe", :class => "btn btn-success" %>
+                </div>
+              <% end %>
             </ul>
           </li>
         </ul>
