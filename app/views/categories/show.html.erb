@@ -14,7 +14,11 @@
       <h4>Select a Product to Review</h4>
       <ul>
       <% @categories.each do |cat| %>
-        <li><%= link_to "#{cat.name}", category_url(cat.id) %></a></li>
+        <% if cat.id == params[:id].to_i %>
+        <li><%= link_to "#{cat.name}", category_url(cat.id), class: "category-review-list-selected" %></li>
+        <% else %>
+        <li><%= link_to "#{cat.name}", category_url(cat.id) %></li>
+        <% end %>
       <% end %>
       </ul>
     </aside>
@@ -54,9 +58,15 @@
       </div>
 
       <h3 id="category-brand-title">Brand Ratings & Reviews</h3>
-<!-- @users.collect(&:score).sum.to_f/@users.length if @users.length > 0 -->
+          <% if request.fullpath.include?("sorted_alphabetically") %>
+            <p class="sorted_products"><%= link_to "Sort by Rating", category_path %></p>
+          <% else %>
+            <p class="sorted_products"><%= link_to "Sort Alphabetically", categories_sorted_alphabetically_path %></p>
+          <% end %>
 
-          <% @category.products_sorted_by_average_product_rating.each do |prod| %>
+
+
+          <% @product_list.each do |prod| %>
             <%= render "product", :product => prod %>
           <% end %>
 

@@ -1327,6 +1327,13 @@ input[class="voices-btn"]:hover {
 	text-decoration: none;
 }
 
+.category-review-list-selected {
+	background-color: #ffff00;
+	border-top-right-radius: 18px;
+	border-bottom-right-radius: 18px;
+	text-decoration: none;
+}
+
 .category-review-list > h4{
 	background: #00AEEF;
 	color: #ffff00;
@@ -2784,6 +2791,7 @@ padding-top: 18px;
 	padding: 15px 0px 30px 0px;
 	font-size: 17px;
 }
+<<<<<<< HEAD
 
 .jobs-img-right {
 	float: left;
@@ -2809,3 +2817,5 @@ padding-top: 18px;
 	margin: 0 auto;
 	padding-top: 30px;
 }
+=======
+>>>>>>> 968a9219c0c562ee1bf4078322b15713515bfdc9
