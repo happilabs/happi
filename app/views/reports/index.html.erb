@@ -1,12 +1,13 @@
-<section class="about-us group">
-    <h1>Listing reports</h1>
+<div class="sky-background">
+  <div class="container content-container grid group">
 
-    <table>
+    <h1>Reports Index <%= link_to '+ Add a Report', new_report_path, class: "btn btn-success" %></h1>
+
+    <table class="table table-striped">
       <tr>
         <th>Title</th>
         <th>Summary</th>
         <th>Link</th>
-        <th>Html link</th>
         <th></th>
         <th></th>
         <th></th>
@@ -18,7 +19,6 @@
         <td><%= link_to report.title, report.link %></td>
         <td><%= report.summary %></td>
         <td><%= report.link %></td>
-        <td><%= report.html_link %></td>
         <td><%= link_to 'Show', report %></td>
         <td><%= link_to 'Edit', edit_report_path(report) %></td>
         <td><%= link_to 'Destroy', report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,5 +27,8 @@
     </table>
 
     <br />
-    <%= link_to 'New Report', new_report_path %>
+
 </section>
+
+</div>
+</div>
