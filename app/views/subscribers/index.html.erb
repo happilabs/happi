@@ -1,29 +1,32 @@
-<h1>Listing subscribers</h1>
+<div class="sky-background">
+  <div class="container content-container grid group">
 
-<table>
-  <tr>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email</th>
-    <th>Active</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <h1>Subscribers Index</h1>
 
-<% @subscribers.each do |subscriber| %>
-  <tr>
-    <td><%= subscriber.first_name %></td>
-    <td><%= subscriber.last_name %></td>
-    <td><%= subscriber.email %></td>
-    <td><%= subscriber.active %></td>
-    <td><%= link_to 'Show', subscriber %></td>
-    <td><%= link_to 'Edit', edit_subscriber_path(subscriber) %></td>
-    <td><%= link_to 'Destroy', subscriber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <table class="table table-striped">
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>Active</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<br />
+    <% @subscribers.each do |subscriber| %>
+      <tr>
+        <td><%= subscriber.first_name %></td>
+        <td><%= subscriber.last_name %></td>
+        <td><%= subscriber.email %></td>
+        <td><%= subscriber.active %></td>
+        <td><%= link_to 'Show', subscriber %></td>
+        <td><%= link_to 'Edit', edit_subscriber_path(subscriber) %></td>
+        <td><%= link_to 'Destroy', subscriber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+    </table>
 
-<%= link_to 'New Subscriber', new_subscriber_path %>
+    <br />
+</div>
+</div>

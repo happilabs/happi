@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
   # GET /reviews
   # GET /reviews.json
   def index
-    @reviews = Review.all
+    @reviews = Review.all.sort_by {|review| review.created_at}.reverse
 
     respond_to do |format|
       format.html # index.html.erb
