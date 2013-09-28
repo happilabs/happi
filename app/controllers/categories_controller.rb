@@ -87,7 +87,4 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def product_list
-
-  end
 end

@@ -35,6 +35,5 @@ Happilabs3::Application.routes.draw do
 
   #TODO : Delete this RCAV after copying it over to categories show page
   #temp categories page route
-  get "/category_product_list" => "Categories#product_list", as: "category_product_list"
 
 end
