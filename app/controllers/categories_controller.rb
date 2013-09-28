@@ -34,7 +34,7 @@ class CategoriesController < ApplicationController
     @product_list = @category.products_sorted_alphabetically
 
     respond_to do |format|
-      format.html { render :template => "categories/show" }
+      format.html { render "show" }
     end
   end
 
