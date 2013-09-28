@@ -1,170 +1,33 @@
-<div class="content-container grid group ">
-    <h2>Ratings and Reviews</h2>
+<div class="sky-background">
+  <div class="container content-container grid group">
 
-       <!--  <div class="search-box group">
-          <h5>Select a category</h5>
-          <ul class="search-bar">
-            <li><h4>1.5 mL tube</h4></li>
-            <li><h4>15 mL tubes</h4></li>
-            <li><h4>50 mL tubes</h4></li>
-            <li><h4>Nitrile gloves</h4></li>
-            <li><h4>Latex gloves</h4></li>
-            <li><h4>T75 flask</h4></li>
-            <li><h4>10 cm cell culture dishes</h4></li>
-            <li><h4>5 mL serological pipet</h4></li>
-            <li><h4>10 mL serological pipet</h4></li>
-            <li><h4>T75 flask</h4></li>
-            <li><h4>Lab Management Services</h4></li>
-            <li id="green-bkg"><h4>Sustainability</h4></li>
-            <li><h4>Customer Service</h4></li>
-          </ul>
-        </div>
+      <h1>Review Index</h1>
 
-      <div class="product_summary">
-        <h3 class="darktitle">50 mL Conical Tubes Summary</h3>
-        <img src="/conical_tube.jpg" alt="conical tube image" title="conical tube rating and review" class="summ_img">
+      <table class="table table-striped">
+        <tr>
+          <th>User</th>
+          <th>Rating</th>
+          <th>Created At</th>
+          <th>Description</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
 
-        <div class="rating-box">
-          <h4>Overall Rating</h4>
-          <p class="rating-score">4.0</p>
-          <p class="rating-sub">(rated by 52 scientists)</p>
-        </div>
+      <% @reviews.each do |review| %>
+        <tr>
+          <td><%= review.user.first_name %> <%= review.user.last_name %></td>
+          <td><%= review.rating %> / 5</td>
+          <td><%= review.created_at.strftime("%b %d, %Y") %></td>
+          <td><%= review.desc %></td>
+          <td><%= link_to 'Show', review %></td>
+          <td><%= link_to 'Edit', edit_review_path(review) %></td>
+          <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </table>
 
-        <div class="review-sub">
-            <h4>What is a fair price to pay?</h4>
-
-            <div class="pricing-table-sign-up">
-              <a href="200ul.html" class="btn btn-large btn-premium btn-block">Subscribe to find out</a>
-            </div>
-
-            <h4>Share your voice with other scientists</h4>
-            <div class="pricing-table-sign-up">
-              <a href="200ul.html" class="btn btn-large btn-premium btn-block">Submit a Review</a>
-            </div>
-
-
-        </div>
-
-      </div>
-
-      <br>
-      <br>
-      <br>
-      <h4>Individual Ratings & Reviews</h4>
-
-      <div class="review-btn-row">
-        <h4 class="review-rank">Not Logged In</h4>
-      </div>
-
-      <div class="review_summary">
-        <div class="group">
-          <img src="conical_tube.jpg" alt="conical tube image" title="conical tube rating and review" class="review_img">
-
-          <div class="vendor-brand">
-            <ul>
-              <li class="review-heading">Brand:</li>
-              <li class="brand_name">BD Falcon</li>
-              <li class="review-heading">Recommended Distributor:</li>
-              <li>Not available</li>
-            </ul>
-          </div>
-
-          <div class="rating-box review-box">
-            <h4>Rating</h4>
-            <p class="rating-score">4.3</p>
-
-            <p class="rating-sub">(out of 12 ratings)</p>
-          </div>
-        </div>
-
-        <div class="top-review">
-            <h5>Most Useful Review</h5>
-            <p>"These tubes have always been good to me. They don’t crack in the centrifuge and the packaging is recyclable."</p>
-        </div>
-        <a href="#"><p style="text-align:left">See more reviews (5 more reviews appear)</p></a>
-      </div>
-
-      <div class="review-btn-row">
-        <h4 class="review-rank">Logged In</h4>
-      </div>
-
-
-
-      <div class="review_summary">
-        <div class="group">
-          <img src="conical_tube.jpg" alt="conical tube image" title="conical tube rating and review" class="review_img">
-
-          <div class="vendor-brand">
-            <ul>
-              <li class="review-heading">Brand:</li>
-              <li class="brand_name">Denville</li>
-              <li class="review-heading">Recommended Distributor:</li>
-              <li>Not available</li>
-            </ul>
-          </div>
-
-          <div class="rating-box review-box">
-            <h4>Rating</h4>
-            <p class="rating-score">4.3</p>
-            <p class="rating-sub">(out of 12 ratings)</p>
-          </div>
-
-          <div class="qual-price-rev">
-            <div class="review-price">
-              <h4>Price</h4>
-              <p>$8.50/500 tubes</p>
-            </div>
-
-            <div class="review-qual">
-              <h4>Quality Documentation</h4>
-              <p>ISO Certified</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="top-review">
-            <h5>Most Useful Review</h5>
-            <p>"These tubes have always been good to me. They don’t crack in the centrifuge and the packaging is recyclable."</p>
-
-        <a href="#"><p style="text-align:left">See more reviews (5 more reviews appear)</p></a>
-        </div>
-      </div> -->
-
+      <br />
+  </div>
 </div>
-
-
-<h1>Listing reviews</h1>
-
-<table>
-  <tr>
-    <th>User</th>
-    <th>Admin approved</th>
-    <th>Make anonymous</th>
-    <th>User recommended</th>
-    <th>Rating</th>
-    <th>Desc</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @reviews.each do |review| %>
-  <tr>
-    <td><%= review.user_id %></td>
-    <td><%= review.admin_approved %></td>
-    <td><%= review.make_anonymous %></td>
-    <td><%= review.user_recommended %></td>
-    <td><%= review.rating %></td>
-    <td><%= review.desc %></td>
-    <td><%= link_to 'Show', review %></td>
-    <td><%= link_to 'Edit', edit_review_path(review) %></td>
-    <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%# link_to 'New Review', new_review_path %>
 

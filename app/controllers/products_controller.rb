@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all.sort_by {|product| product.category_id}
 
     respond_to do |format|
       format.html # index.html.erb

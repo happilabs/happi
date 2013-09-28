@@ -1,42 +1,41 @@
-<div id='header-fix'></div>
-<h1>Listing products</h1>
+<div class="sky-background">
+  <div class="content-container grid group">
+    <h1>Product Index</h1>
+        <table class="table table-striped">
+          <tr>
+            <th>Category</th>
+            <th>Product name</th>
+            <th>Product desc</th>
+            <th>Product num</th>
+            <th>Photo</th>
+            <th>Manufacturer name</th>
+            <th>distributor name</th>
+            <th>Price</th>
+            <th>Recommended</th>
+            <th>Url</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
 
-<table>
-  <tr>
-    <th>Category</th>
-    <th>Product name</th>
-    <th>Product desc</th>
-    <th>Product num</th>
-    <th>Photo</th>
-    <th>Manufacturer name</th>
-    <th>distributor name</th>
-    <th>Price</th>
-    <th>Recommended</th>
-    <th>Url</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @products.each do |product| %>
-  <tr>
-    <td><%= product.category_id %></td>
-    <td><%= product.product_name %></td>
-    <td><%= product.product_desc %></td>
-    <td><%= product.product_num %></td>
-    <td><%= product.photo %></td>
-    <td><%= product.manufacturer_name %></td>
-    <td><%= product.distributor_name %></td>
-    <td><%= product.price %></td>
-    <td><%= product.recommended %></td>
-    <td><%= product.url %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Product', new_product_path %>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.category.name %></td>
+            <td><%= product.product_name %></td>
+            <td><%= product.product_desc %></td>
+            <td><%= product.product_num %></td>
+            <td><%= link_to "photo", product.photo %></td>
+            <td><%= product.manufacturer_name %></td>
+            <td><%= product.distributor_name %></td>
+            <td><%= product.price %></td>
+            <td><%= product.recommended %></td>
+            <td><%= product.url %></td>
+            <td><%= link_to 'Show', product %></td>
+            <td><%= link_to 'Edit', edit_product_path(product) %></td>
+            <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </table>
+        <br />
+    </div>
+</div>

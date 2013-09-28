@@ -51,7 +51,7 @@ class PagesController < ApplicationController
   end
 
   def user_index
-    @users = User.all
+    @users = User.all.sort_by {|user| user.id }
   end
 
   def delete_user
