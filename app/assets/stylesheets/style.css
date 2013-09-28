@@ -1350,9 +1350,12 @@ input[class="voices-btn"]:hover {
 }
 
 .category-review-images {
-	float: left;
-	margin-left: 20px;
+	float: none;
+	margin: 0 auto;
 	width: 690px;
+	background-color: #fff;
+	margin-bottom: 40px;
+	border-radius: 30px;
 }
 .category-review-images li a {
 	color: #00Aeef;
@@ -1374,6 +1377,10 @@ input[class="voices-btn"]:hover {
 .category-review-images li a > img {
 	width: 96px;
 	height: 96px;
+}
+
+.category-review-images h2 {
+	
 }
 
 /********** This is for the mission statement on the category index page *******/

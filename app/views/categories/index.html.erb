@@ -25,16 +25,10 @@
   <% end %>
 
   <div class='container group'>
-    <aside class='category-review-list'>
-      <h4>Select a Product to Review</h4>
-      <ul>
-        <% @categories.each do |cat| %>
-          <li><%= link_to "#{cat.name}", category_url(cat.id) %></a></li>
-        <% end %>
-      </ul>
-    </aside>
+    
 
-    <section class='category-review-images'>
+    <section class='category-review-images group'>
+      <h2>Select A Product</h2>
       <% #TODO - add pictures to database & put dynamicness in below %>
       <ul>
         <li>
