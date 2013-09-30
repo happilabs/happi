@@ -1228,7 +1228,19 @@ input[class="voices-btn"]:hover {
 
 /*********************   REVIEWS   ******************************/
 
-
+#review-intro {
+	width: 500px;
+	padding: 10px 30px;
+	margin: 0 auto;
+	line-height: 20px;
+	font-size: 12px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #757575;
+	text-align: left;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 2px 2px 2px #898989;
+}
 
 .noprice-summary-text p {
 	font-size: 12px;
@@ -1354,7 +1366,7 @@ input[class="voices-btn"]:hover {
 	float: none;
 	margin: 0 auto;
 	width: 690px;
-	background-color: #fff;
+	background-color: ;
 	margin-bottom: 40px;
 	border-radius: 30px;
 }
