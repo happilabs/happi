@@ -1229,17 +1229,18 @@ input[class="voices-btn"]:hover {
 /*********************   REVIEWS   ******************************/
 
 #review-intro {
-	width: 500px;
+	width: 650px;
 	padding: 10px 30px;
 	margin: 0 auto;
-	line-height: 20px;
-	font-size: 12px;
+	line-height: 23px;
+	font-size: 16px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #757575;
 	text-align: left;
 	background-color: #fff;
 	border-radius: 10px;
-	box-shadow: 2px 2px 2px #898989;
+	box-shadow: 5px 5px 5px #898989;
+	margin-bottom: 30px;
 }
 
 .noprice-summary-text p {
