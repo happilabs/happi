@@ -1342,7 +1342,7 @@ input[class="voices-btn"]:hover {
 }
 
 .category-review-list-selected {
-	background-color: #ffff00;
+	background-color: #fff;
 	border-top-right-radius: 18px;
 	border-bottom-right-radius: 18px;
 	text-decoration: none;
@@ -1651,7 +1651,7 @@ input[class="voices-btn"]:hover {
 	border-right: 3px solid #d6d6d6;
 	margin-bottom: 20px;
 	padding: 10px 5px;
-	background-color: #ffff00;
+	background-color: #fff;
 	border-radius: 9px;
 }
 
@@ -1671,7 +1671,7 @@ input[class="voices-btn"]:hover {
 
 .rating2 {
 	margin-left: 40px;
-	background-color: #ffff00;
+	background-color: #fff;
 	border-radius: 9px;
 	border-left: 3px solid #d6d6d6;
 	border-right: 3px solid #d6d6d6;
@@ -1742,17 +1742,19 @@ input[class="voices-btn"]:hover {
 	/*border: 1px solid #333;*/
 }
 .product-summary a {
-	background: #d6d6d6;
-	color: #00AEEF;
+	background: #00AEEF;
+	color: #fff;
 	padding: 10px;
 	position: relative;
 	top: 19px;
 	border-radius: 9px;
+	box-shadow: 2px 2px 2px #898989;
 }
 
 .product-summary a:hover {
 	text-decoration: none;
-	box-shadow: 2px 2px 2px #898989;
+	box-shadow: 4px 4px 4px #898989;
+	color: #ffff00;
 }
 .product-summary p {
 	padding-bottom: 0px;
@@ -2418,12 +2420,14 @@ padding-top: 18px;
 	background-color: #16a085;
 }
 .btn.btn-info {
-	background-color: #00AEEF;
+	background-color: #ffff00;
+	color: #00Aeef;
+	box-shadow: 2px 2px 2px #00Aeef;
 }
 .btn.btn-info:hover,
 .btn.btn-info:focus {
-	background-color: #77cc33;
-	box-shadow: 2px 2px 8px #898989;
+	background-color: #00Aeef;
+	color: #ffff00;
 }
 .btn.btn-info:active,
 .btn.btn-info.active {
