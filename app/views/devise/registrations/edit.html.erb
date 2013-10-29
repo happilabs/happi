@@ -25,7 +25,7 @@
     <% end %>
     <br>
 
-    <button class="btn btn-success" id="edit_profile_toggle_button">Complete Your Profile</button>
+    <button class="btn btn-warning" id="edit_profile_toggle_button">Complete Your Profile</button>
     <br>
     <br>
 
@@ -54,7 +54,7 @@
     <br>
     <!-- For now, comment this section -->
     <% if current_user.subcription_level != "1000" %>
-      <button class="btn btn-danger" id="upgrade_account_toggle_button">Upgrade Your Subscription Level</button>
+      <button class="btn btn-success" id="upgrade_account_toggle_button">Subscribe Here!</button>
       <br>
       <br>
       <div id="upgrade_account">
@@ -69,7 +69,7 @@
     <% end %>
 <!-- Comment above section -->
   <br>
-  <button class="btn btn-warning" id="edit_password_toggle_button">Edit Password</button>
+  <button class="btn btn-danger" id="edit_password_toggle_button">Edit Password</button>
     <div class="yellow" id="edit_password">
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
 
@@ -90,7 +90,7 @@
       <%= link_to "Back", :back %>
     </div>
 
-      <p> <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-warning" %></p>
+      <p> <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, class: "btn btn-danger" %></p>
   </div>
 
 

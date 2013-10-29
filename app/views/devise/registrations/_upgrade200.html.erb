@@ -2,7 +2,6 @@
     <article>
         <label class="amount">
           <h4>200ul Annual Subscription: $195</h4>
-          <p>For information on your upgrade benefits: <%= link_to "About 200ul", two_hundred_ml_url %></p>
         </label>
     </article>
 
@@ -12,5 +11,8 @@
               data-description="200 ul Annual Subscription"
               data-amount="19500">
       </script>
+      <label class="amount">
+          <h4>No credit card? <%= link_to "RECEIVE A QUOTE", two_hundred_ml_path(anchor: "quote_report") %></h4>
+      </label>
 
 <% end %>
