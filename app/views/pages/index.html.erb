@@ -29,7 +29,7 @@
                   <i class="or">-  -</i>
                   <%= link_to "Learn More About Us", about_us_url, class: "btn btn-large btn-success btn-block-third" %>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -45,7 +45,7 @@
       </div>
 
       <div class="testimonial thousand-desc group" id="home-testimonial">
-           
+
             <img class="testimonial-img" src="ourpeople/happy_happilabs_customer_uic.jpg" alt="happy happilabs customer testimonial" title="Scientists are happy about HappiLabs">
             <div style="float:left" >
               <p class="second-p"><strong>"HappiLabs has been extremely helpful. I am happy that a service (1000 &#181;L) like this exists; it makes my job easier."</strong></p>
@@ -73,7 +73,7 @@
                           <li>Sign up to write <strong>reviews</strong> about lab supplies</li>
                           <li>Receive our Community newsletter</li>
                         </ul>
-                        
+
                         <!-- <p>Monthly newsletter with useful resources for scientists</p>
                         <p>Ability to review products, companies, and your lab.</p>
                         <p></p> -->
@@ -147,7 +147,7 @@
 </div>
 
 
-
+<!--
   <div class="sky-background content-container group" id="share_your_voice">
 
 
@@ -158,7 +158,6 @@
         <p class="second-p">Our goal is to identify common sources of happiness and unhappiness in labs. Then we'll celebrate with you or find you a solution, respectively. Share your voice with other scientists and let's make life in the lab a happier place!</p>
 
       </div>
-      <!-- <img src="voice_bubble.png" alt="voice bubble" id="voice-bubble"> -->
 
       <div class="voices-section group">
         <div class="voicesbox group">
@@ -183,41 +182,41 @@
 
         </div>
 
-        <% if user_signed_in? %>
+        <%# if user_signed_in? %>
           <div class= "voices-textbox">
-            <%= form_for @user_voice, :url => user_voices_path do |f| %>
+            <%# form_for @user_voice, :url => user_voices_path do |f| %>
 
-              <%= f.hidden_field :user_id, :value => current_user.id %>
+              <%# f.hidden_field :user_id, :value => current_user.id %>
               <div>
-              <%= f.text_area :message, placeholder: "Share one thing that makes you happy or unhappy in your lab", :rows => 10, :columns => 8 %>
+              <%# f.text_area :message, placeholder: "Share one thing that makes you happy or unhappy in your lab", :rows => 10, :columns => 8 %>
               </div>
 
               <div>
-                <%= f.submit "Send", :class => "voices-btn" %>
+                <%# f.submit "Send", :class => "voices-btn" %>
               </div>
-            <% end %>
+            <%# end %>
           </div>
-        <% else %>
+        <%# else %>
           <div class="voices-textbox">
-            <%= form_for @message, :url => voices_path do |f| %>
+            <%# form_for @message, :url => voices_path do |f| %>
                 <div>
-                  <%= f.text_field :name, :placeholder => "Name" %>
+                  <%# f.text_field :name, :placeholder => "Name" %>
                 </div>
 
                 <div>
-                  <%= f.text_field :email, :placeholder => "Email" %>
+                  <%# f.text_field :email, :placeholder => "Email" %>
                 </div>
 
                 <div>
-                  <%= f.text_area :body, :placeholder => "Share one thing that makes you happy or unhappy in your lab, or ask us a question", :rows => 6 %>
+                  <%# f.text_area :body, :placeholder => "Share one thing that makes you happy or unhappy in your lab, or ask us a question", :rows => 6 %>
                 </div>
 
                 <div>
-                <%= f.submit "Send", :class => "voices-btn" %>
+                <%# f.submit "Send", :class => "voices-btn" %>
                 </div>
-            <% end %>
+            <%# end %>
           </div>
-        <% end %>
+        <%# end %>
 
 
         <div class="voicesbox group">
@@ -243,3 +242,4 @@
 
   </div>
 
+ -->
