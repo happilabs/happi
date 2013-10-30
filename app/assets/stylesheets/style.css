@@ -1367,7 +1367,7 @@ input[class="voices-btn"]:hover {
 	float: none;
 	margin: 0 auto;
 	width: 690px;
-	background-color: ;
+	/*background-color: none;*/
 	margin-bottom: 40px;
 	border-radius: 30px;
 }
