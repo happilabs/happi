@@ -10,6 +10,7 @@
         <th>Name</th>
         <th>Fair Price ($)</th>
         <th>Edit</th>
+				<th>Delete?</th>
       </tr>
     </thead>
     <tbody>
@@ -17,8 +18,9 @@
       <tr>
         <td><%= cat.id %></td>
         <td><%= link_to cat.name, category_path(cat.id) %></td>
-        <td>$<%= cat.fair_price %></td>
+        <td>$<%= cat.fair_price %> for <%= cat.price_quantity %> units</td>
         <td><%= link_to "Edit ##{cat.id}", edit_category_path(cat.id) %></td>
+        <td><%= link_to "Delete?", category_path(cat.id), method: :delete, confirm: "Are you sure?" %></td>
       </tr>
     <% end %>
     </tbody>
