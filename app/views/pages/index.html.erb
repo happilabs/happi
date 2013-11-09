@@ -36,6 +36,126 @@
   </div>
 
 <div class="small-grid">
+  <div class="page-heading">
+    <h2 class='container content-container'>RATINGS AND REVIEWS</h2>
+    <h4 class="container heading-liner">where scientists help scientists make informed decisions about lab supplies</h4>
+  </div>
+  <div id="review-intro" class="group">
+          
+    <p>Why is this important? Read the report in <em>Science</em>: <a href="http://www.sciencemag.org/content/322/5903/917.short">Bioactive Contaminants Leach from Laboratory Plasticware.</a></p>
+  </div>
+
+  <% unless user_signed_in? %>
+    <section class="category-index-intro-box group">
+      <h5>How to write a review</h5>
+        <ul>
+          <li>
+              <span class="yellow-bold">Step 1: </span><span class="user-text-direction"><%= link_to "LOGIN", new_user_session_path %></span> OR <span class="user-text-direction"><%= link_to "SIGN UP", new_user_registration_path %></span>
+          </li>
+            <!-- <ul class="category-parent-li">
+
+              <li><p class="center"><span class="user-text-direction">LOGIN</span></p></li>
+              <li><p>OR</p></li>
+              <li><p class="center"><span class="user-text-direction">SIGN UP</span></p></li>
+            </ul> -->
+          <li class="second-p"><span class="yellow-bold">Step 2:</span> Select a product</li>
+          <li class="second-p"><span class="yellow-bold">Step 3:</span> Rate and review the product</li>
+          <!-- <li class="second-p">To know which brands scientists like most, <p class="center">SELECT A CATEGORY...</span></p></li> -->
+        </ul>
+    </section>
+  <% end %>
+
+  <div class='container group'>
+    
+
+    <section class='category-review-images'>
+
+      <h2 class="people-name">SELECT A PRODUCT</h2>
+      <% #TODO - add pictures to database & put dynamicness in below %>
+      <ul>
+        <li>
+          <a href="<%= category_url(1) %>">
+            <img src="products/pipette100.png" alt="conical tube Reviews">
+            10 ul tips
+          </a>
+
+        </li>
+        <li>
+          <a href="<%= category_url(2) %>">
+            <img src="products/pipette200.png">
+           200 ul tips
+          </a>
+        </li>
+        <li>
+          <a href="<%= category_url(3) %>">
+            <img src="products/pipette1000.png">
+            1000 ul tips
+          </a>
+        </li>
+        <li>
+          <a href="<%= category_url(4) %>">
+            <img src="products/1.5ml_tube.png">
+            1.5 mL microtube
+          </a>
+        </li>
+        <li>
+          <a href="<%= category_url(5) %>">
+            <img src="products/15ml_conical_tube.png">
+            15 mL conical tube
+          </a>
+        </li>
+
+        <li>
+          <a href="<%= category_url(8) %>">
+            <img src="products/latex-glove_review.png">
+            Latex gloves
+          </a>
+        </li>
+        <li>
+          <a href="<%= category_url(7) %>">
+            <img src="products/nitrile_glove_review.png">
+            Nitrile gloves
+          </a>
+        </li>
+        <li>
+          <a href="<%= category_url(9) %>">
+            <img src="products/5ml_serological_pipet.png">
+            5 mL serological pipet
+          </a>
+        </li>
+        <li>
+          <a href="<%= category_url(10) %>">
+            <img src="products/10ml_serological_pipet.png">
+            10 mL serological pipet
+          </a>
+        </li>
+        <li>
+          <a href="<%= category_url(11) %>">
+            <img src="products/t75_flask2_review.png">
+            T75 flask
+          </a>
+        </li>
+        <li>
+          <a href="<%= category_url(12) %>">
+            <img src="products/cell_culture_dish_review.png">
+            100 mm dish
+          </a>
+        </li>
+        <li>
+          <a href="<%= category_url(6) %>">
+            <img src="products/50ml_conical_tube.png">50 mL conical tube
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- <aside>
+      <h3 class='center'>OUR MISSION</h3>
+      <p>To improve the happiness of scientists &amp; the quality of theit research</p>
+    </aside> -->
+  </div>
+</div>
+
+<div class="small-grid">
   <div class="container content-container subscribe-us group">
 
       <div class="page-heading">

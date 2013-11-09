@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   def index
     @message = Message.new
     @user_voice = UserVoice.new
+		@categories = Category.order("name ASC")
   end
 
   def about_us
