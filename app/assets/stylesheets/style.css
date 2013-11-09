@@ -1237,9 +1237,8 @@ input[class="voices-btn"]:hover {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #757575;
 	text-align: left;
-	background-color: #fff;
+	background-color: #EAEAEA;
 	border-radius: 10px;
-	box-shadow: 5px 5px 5px #898989;
 	margin-bottom: 30px;
 }
 
@@ -2762,7 +2761,6 @@ padding-top: 18px;
 	width: 800px;
 	background-color: #fff;
 	border-radius: 10px;
-	box-shadow: 4px 4px 4px #898989;
 }
 
 .testimonial
