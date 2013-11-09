@@ -1027,6 +1027,10 @@ input[class="voices-btn"]:hover {
 	background-color: #CEF3FF;
   	background-size: 100%;
 }
+
+.blue-background {
+	background-color: #00Aeef;
+}
 .btn-price {
 	width: 270px;
 	position: absolute;
