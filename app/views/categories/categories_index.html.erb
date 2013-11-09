@@ -1,0 +1,27 @@
+<div class="sky-background">
+  <div class="container content-container grid group">
+
+  <h1>Categories Index <%= link_to "Add a Category", new_category_path, class: "btn btn-primary" %></h1>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Fair Price ($)</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @categories.each do |cat| %>
+      <tr>
+        <td><%= cat.id %></td>
+        <td><%= link_to cat.name, category_path(cat.id) %></td>
+        <td>$<%= cat.fair_price %></td>
+        <td><%= link_to "Edit ##{cat.id}", edit_category_path(cat.id) %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+</div>

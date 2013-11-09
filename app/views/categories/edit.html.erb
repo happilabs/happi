@@ -1,6 +1,10 @@
-<h1>Editing category</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>
+<div class="about-us grid">
+  <div class="center">
+		<h1>Editing category : <%= @category.name %></h1>
+		
+		<%= render 'form' %>
+		
+		<%= link_to 'Show', @category %> |
+		<%= link_to 'Back', categories_index_path %>
+  </div>
+</div>

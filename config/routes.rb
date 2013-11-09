@@ -8,6 +8,7 @@ Happilabs3::Application.routes.draw do
   devise_for :users
   resources :reports
   resources :categories
+	get "/categories_index" => "Categories#categories_index", as: "categories_index"
   resources :subscribers
 
   root to: "Pages#index"
