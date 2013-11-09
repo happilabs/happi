@@ -97,5 +97,9 @@ class CategoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
+	
+	def categories_index
+		@categories = Category.order("name ASC")
+	end
 
 end
