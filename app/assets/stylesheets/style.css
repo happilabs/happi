@@ -2740,14 +2740,14 @@ padding-top: 18px;
 .reports-list {
 	list-style: none;
 	color: #757575;
-	padding: 10px 0px 30px;
 }
 
 #suckit {
-	font-size: 50px;
+	font-size: 30px;
+	line-height: 30px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 300;
-	padding: 20px 0px;
+	padding: 10px 0px;
 }
 
 .more-margin-bottom {

@@ -123,6 +123,7 @@
         <p class="second-p dash-p"><strong>Never get ripped off again!</strong> Use these reports to ensure you are paying a fair price and using good quality products. Enjoy...</p>
         <% Report.all.reverse.each do |report| %>
         <li class="reports-list"><h4 id="suckit"><%= link_to report.title, "../#{report.link}" %></h4></li>
+				<p class="second-p"><%= report.summary %></p>
         <% end %>
     <% else %>
       <h5>Reports are only available to 200µl or 1000µl customers</h5>
