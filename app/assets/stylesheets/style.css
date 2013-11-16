@@ -1450,10 +1450,11 @@ input[class="voices-btn"]:hover {
 }
 
 .selected-category-frame img {
-	margin-top: 60px;
+	margin-top: 80px;
+	margin-left: 25px;
 	width: 100px;
 	/*background-color: #fff;*/
-	border-radius: 40px;
+	border-radius: 20px;
 }
 
 #img-transparent {
@@ -1472,7 +1473,7 @@ input[class="voices-btn"]:hover {
 }
 
 .selected-category-frame dl {
-	margin-left: 10px;
+	margin-left: 85px;
 	padding: 15px;
 	margin-top: 20px;
 	border-radius: 20px;
@@ -1535,9 +1536,13 @@ input[class="voices-btn"]:hover {
 	margin: 40px 0px 20px 60px;
 	border-bottom: 5px solid #00AEEF;
 	width: 500px;
-
 }
 
+.category-review-show h4 {
+	color: #898989;
+	margin: 0px 0px 20px 60px;
+
+}
 
 
 /* ***** End Product Summary, Begin Brand Summary ********/
