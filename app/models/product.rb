@@ -5,7 +5,7 @@ class Product < ActiveRecord::Base
   has_many :reviews
 
   def to_param
-    "#{self.id}-#{self.product_name}"
+    "#{self.id}-#{self.product_name.parameterize}"
   end
 
 end
