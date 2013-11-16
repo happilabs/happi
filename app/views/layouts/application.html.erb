@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-	
+
 	<meta name="title" content="Happilabs: Data and Reviews for Scientific Products and Lab Supplies">
 	<meta name="description" content="Happilabs is awesome!!!">
   <meta name="keywords" content="happilabs, happy labs, scientific data, research, lab supplies, lab equipment scientific products, reviews, ratings, suppliers">
@@ -74,21 +74,6 @@
           </div>
         </div>
       </div>
-  <!-- <div class="whoareyou">
-    <ul>
-      <li>
-          <div id="user_nav">
-            <% if user_signed_in? %>
-            <li><%= link_to 'Profile', edit_user_registration_path %></li>
-            <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-            <% else %>
-            <li><%= link_to "Sign up", sign_up_path %></li>
-            <li><%= link_to "Login", new_user_session_path %></li>
-            <% end %>
-          </div>
-      </li>
-    </ul>
-  </div> -->
 <body>
 
 <%= yield %>
