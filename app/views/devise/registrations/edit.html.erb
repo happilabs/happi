@@ -25,33 +25,33 @@
     <% end %>
     <br>
 
-    <button class="btn btn-warning" id="edit_profile_toggle_button">Complete Your Profile</button>
+    <!-- <button class="btn btn-warning" id="edit_profile_toggle_button">Complete Your Profile</button>
     <br>
     <br>
 
     <div id="user_profile">
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+      <%# form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
 
-        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-        <% end %>
+        <%# if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%# resource.unconfirmed_email %></div>
+        <%# end %>
 
         <div><br>
-          <%= f.text_field :organization, placeholder: "Organization" %>
-          <%= f.text_field :address, placeholder: "Address" %>
-          <%= f.text_field :zip, placeholder: "ZipCode" %>
-          <%= f.text_field :city, placeholder: "City" %>
-          <%= f.text_field :role, placeholder: "Current Role" %>
+          <%# f.text_field :organization, placeholder: "Organization" %>
+          <%# f.text_field :address, placeholder: "Address" %>
+          <%# f.text_field :zip, placeholder: "ZipCode" %>
+          <%# f.text_field :city, placeholder: "City" %>
+          <%# f.text_field :role, placeholder: "Current Role" %>
         </div>
 
         <div class="yellow"><i>(please enter your current password again to confirm your changes)</i><br />
-        <%= f.password_field :current_password, placeholder: "Current Password" %></div>
+        <%# f.password_field :current_password, placeholder: "Current Password" %></div>
 
-        <div><%= f.submit "Update", class: "btn btn-primary" %></div>
-      <% end %>
+        <div><%# f.submit "Update", class: "btn btn-primary" %></div>
+      <%# end %>
     </div>
     <br>
-    <br>
+    <br> -->
     <!-- For now, comment this section -->
     <% if current_user.subcription_level != "1000" %>
       <button class="btn btn-success" id="upgrade_account_toggle_button">Subscribe Here!</button>

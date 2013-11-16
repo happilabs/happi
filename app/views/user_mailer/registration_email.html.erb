@@ -1,0 +1,13 @@
+<p>Hello <%= @user.first_name if @user.first_name %>,</p>
+
+<p>
+  Thank you for joining our happy community of scientists. You will benefit from one or all of our services:
+  <ul>
+    <li>Avoid using low-quality lab supplies...<%= link_to "read and write products reviews", categories_url %></li>
+    <li>Save time and money by <%= link_to "subscribing to reports", two_hundred_ml_url %> on the price and quality of lab supplies</li>
+    <li>Improve the efficiency of your lab by hiring a <%= link_to "Lab Manager Consultant", one_thousand_ml_url %></li>
+  </ul>
+  Have a happy day! :)
+</p>
+
+<p>The HappiLabs Team</p>

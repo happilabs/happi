@@ -12,6 +12,23 @@
  *= require_tree .
  */
 
+ .blue {
+   color: #00AEEF;
+ }
+
+ #product_qualities {
+   margin-top: 85px;
+   width: 350px;
+   float: right;
+ }
+
+ #product_show_review {
+   background-color: #EAEAEA;
+   padding: 10px;
+   margin-bottom: 5px;
+   border-radius: 10px;
+ }
+
  #error_explanation {
    margin-left: auto;
    margin-right: auto;
