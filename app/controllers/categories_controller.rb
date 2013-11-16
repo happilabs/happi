@@ -5,7 +5,6 @@ class CategoriesController < ApplicationController
   before_filter :validate_admin, :except => [:index, :show, :product_list, :sorted_alphabetically]
   # before_filter :authenticate_user!, :only => [:show]
 
-
   def index
     @categories = Category.order("name ASC")
 
@@ -97,7 +96,7 @@ class CategoriesController < ApplicationController
       format.json { head :no_content }
     end
   end
-	
+
 	def categories_index
 		@categories = Category.order("name ASC")
 	end

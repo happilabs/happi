@@ -4,4 +4,8 @@ class Product < ActiveRecord::Base
   belongs_to :category
   has_many :reviews
 
+  def to_param
+    "#{self.id}-#{self.product_name.parameterize}"
+  end
+
 end
