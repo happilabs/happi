@@ -1247,7 +1247,7 @@ input[class="voices-btn"]:hover {
 }
 
 .noprice-summary-text p {
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 200;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #898989;
@@ -1256,7 +1256,7 @@ input[class="voices-btn"]:hover {
 #fair-price-topay {
 	color: #77cc33;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .category-index-intro-box {
@@ -1473,13 +1473,14 @@ input[class="voices-btn"]:hover {
 }
 
 .selected-category-frame dl {
-	margin-left: 85px;
+	margin-left: 65px;
 	padding: 15px;
 	margin-top: 20px;
 	border-radius: 20px;
 	border-left: 3px solid #d6d6d6;
 	border-right: 3px solid #d6d6d6;
 	border-radius: 9px;
+	width: 300px;
 }
 .selected-category-frame dt {
 	font-size: 18px;
