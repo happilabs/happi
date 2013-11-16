@@ -13,5 +13,11 @@ class User < ActiveRecord::Base
   # belongs_to :organization
   has_many :reviews
 
+  after_create :send_registration_email
+
+  def send_registration_email
+    UserMailer.registration_email(self).deliver
+  end
+
   #write boolean method to see if logged in user is a paying customer
 end
