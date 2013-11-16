@@ -48,7 +48,7 @@
         <%#= image_tag "../products/pipette100.png" %>
         <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
           <dl class='center'>
-            <dt>Fair Price <br>for Academia =</dt>
+            <dt>Fair Price to pay for Academia =</dt>
             <dd>$<%= @category.fair_price %></dd>
             <p class="quantity">per <%= @category.price_quantity %></p>
           </dl>
@@ -57,15 +57,12 @@
           <p><span id="fair-price-topay">What is a fair price?</span><br>Pricing Information <br> currently available <br>for 200µl or 1000µl <br> <strong>services</strong> only</p>
         </dl>
         <% end %>
-        <ul>
-          <h4>Qualities to look for:</h4>
-          <li><%= @category.first_quality %></li>
-          <li><%= @category.second_quality %></li>
-          <li><%= @category.third_quality %></li>
-        </ul>
+        
       </div>
 
       <h3 id="category-brand-title">Brand Ratings & Reviews</h3>
+          <h4>You can read reviews from other scientists or write a new one. Select a brand...</h4>
+
           <% if request.fullpath.include?("sorted_alphabetically") %>
             <p class="sorted_products"><%= link_to "Sort by Rating", category_path %></p>
           <% else %>
