@@ -1247,16 +1247,17 @@ input[class="voices-btn"]:hover {
 }
 
 .noprice-summary-text p {
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 200;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #898989;
+	width: 300px;
 }
 
 #fair-price-topay {
 	color: #77cc33;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 .category-index-intro-box {
