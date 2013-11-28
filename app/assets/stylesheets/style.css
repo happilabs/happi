@@ -720,6 +720,8 @@ input[class="voices-btn"]:hover {
 	width: 960px;
 	margin: 0 auto;
 	padding-top: 40px;
+	padding-left: 100px;
+	margin-bottom: 30px;
 }
 #subscribe-pipette {
 	float: left;
@@ -780,7 +782,7 @@ input[class="voices-btn"]:hover {
 	width: 240px;
 	height: auto;
 	text-align: center;
-	margin: 0px 100px 0px 0px;
+	margin: 0px 50px 0px 100px;
 	float: left;
 	border: 12px solid #d6d6d6;
 	box-shadow: 3px 3px 10px #757575;
@@ -902,6 +904,10 @@ input[class="voices-btn"]:hover {
 		margin-left: 18px;
 }
 
+.benefit h2 {
+	font-size: 30px;
+}
+
 #holding-signup-box {
 	width: 415px;
 	background-color: #00AEEF;
@@ -921,6 +927,7 @@ input[class="voices-btn"]:hover {
 	border-radius: 10px;
 	padding: 20px 20px 0px 20px;
 	margin-top: 30px;
+	float: right;
 }
 
 #holding-signup-box li {
@@ -1288,18 +1295,33 @@ input[class="voices-btn"]:hover {
 
 /*********************   REVIEWS   ******************************/
 
+#margin-auto {
+	margin: 0 auto;
+	width: 950px;
+}
+
 #review-intro {
-	width: 650px;
-	padding: 10px 30px;
+	width: 365px;
+	padding: 10px 10px;
 	margin: 0 auto;
 	line-height: 23px;
-	font-size: 16px;
+	font-size: 12px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #757575;
 	text-align: left;
 	background-color: #EAEAEA;
 	border-radius: 10px;
 	margin-bottom: 30px;
+	margin-left: 65px;
+	float: left;
+}
+
+#review-intro li {
+	margin-bottom: 10px;
+}
+
+#review-intro p {
+	font-size: 16px;
 }
 
 .noprice-summary-text p {
@@ -2835,14 +2857,23 @@ padding-top: 18px;
 /* ###########  Testimonial   ##############  */
 
 .testimonial {
-	width: 800px;
+	width: 450px;
 	background-color: #fff;
 	border-radius: 10px;
+	/*float:left;*/
+	margin: 0 auto;
+	padding: 10px 20px;
+	margin-bottom: 25px;
+	margin-left: 40px;
+	float:left;
 }
 
 .testimonial
 .second-p {
-	font-size: 15px;
+	font-size: 12px;
+	line-height: 20px;
+	margin-bottom: 0px;
+	padding-top: 0px;
 }
 
 #home-testimonial {
@@ -2855,11 +2886,23 @@ padding-top: 18px;
 	width: 425px;
 }
 
-.testimonial-img {
-	margin-right: 20px;
-	float: left;
+.testimonial-p {
+
 }
 
+.testimonial-img {
+	margin-right: 20px;
+	margin-top: 20px;
+	float: left;
+	height: 30%;
+	width: 30%;
+	padding-bottom: 20px;
+}
+
+.testimonial-higlight {
+	font-size: 18px;
+	color: #00Aeef;
+}
 
 /****************** JOBS Page  *********************/
 
