@@ -27,7 +27,7 @@ h2 {
 	font-weight: 800;
 	/*padding-top: 60px;*/
 	text-align: center;
-	text-shadow: 2px 2px 2px #898989;
+	/*text-shadow: 2px 2px 2px #898989;*/
 	letter-spacing: 2px;
 }
 
@@ -48,6 +48,7 @@ h2 {
 .voices-intro h2 {
    margin-top: -10px;
  }
+
  #holding-signup-box h3 {
 	font-size: 25px;
 	line-height: 46px;
@@ -57,7 +58,7 @@ h2 {
 	text-align: center;
 }
 .human-bio h3 {
-	font-size: 18px;
+	font-size: 16px;
 	margin: 0px 0px 20px 0px;
 	padding-top: 30px;
 	letter-spacing: .1em;
@@ -66,6 +67,7 @@ h2 {
 	font-weight: 200;
 	border-bottom: 2px solid green;
 }
+
 .page-header h3 {
   color: #00AEEF;
   font-weight: 200;
@@ -563,6 +565,9 @@ input[class="voices-btn"]:hover {
 
 /* ***********  END OF CONTACT US PAGE ************ */
 
+
+  /***************** OUR PEOPLE *****************/
+
 .section-intro {
 	width: 100%;
 	height: 40px;
@@ -578,6 +583,25 @@ input[class="voices-btn"]:hover {
 	/*margin: 0 auto;*/
 	padding-bottom: 20px;
 }
+
+.human-bio2 {
+	width: 500px;
+	float: left;
+	margin: 20px 20px 20px 40px;
+
+}
+
+.human-bio2 h3 {
+	font-size: 16px;
+	margin: 0px 0px 20px 0px;
+	padding-top: 30px;
+	letter-spacing: .1em;
+	line-height: 30px;
+	color: #898989;
+	font-weight: 200;
+	border-bottom: 2px solid green;
+}
+
 .bio-photo {
 	float: left;
 	height: 200px;
@@ -585,6 +609,26 @@ input[class="voices-btn"]:hover {
 	margin-top: 35px;
 	border-radius: 50%;
 }
+
+.bio-photo2 {
+	float: left;
+	height: 150px;
+	width: 150px;
+	margin-top: 35px;
+	border-radius: 50%;
+}
+
+.col-2-text-right {
+	float: left;
+	width: 265px;
+	padding: 20px 0px 0px 20px;
+	margin: 15px 0 0px 10px;
+	line-height: 20px;
+	font-size: 14px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #757575;
+}
+
 .text-right-img-people {
 	float: left;
 	width: 500px;
@@ -596,10 +640,22 @@ input[class="voices-btn"]:hover {
 	color: #757575;
 }
 .people-name {
-	font-size: 28px;
+	font-size: 20px;
 	color: #00AEEF;
-	text-shadow: 1px 1px 1px #898989;
 }
+
+ .our-people-section-heading {
+ 	font-size: 24px;
+ 	color: #00AEEF;
+  margin: 0 auto;
+  /*margin-top: 20px;*/
+	line-height: 30px;
+	font-family: "open sans", sans-serif;
+	font-weight: 400;
+	padding-top: 20px;
+	text-align: center;
+	letter-spacing: 2px;
+ }
 
 /*  ************  Sign Up/Subscribe  ***********  */
 
@@ -1933,17 +1989,27 @@ footer {
 	letter-spacing: .1em;
 	font-weight: 500;
 	margin-bottom: 7px;
+	font-size: 16px;
 }
 
 .footer-col li {
 	color: #fff;
 	letter-spacing: .1em;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-	line-height: 32px;
-	padding: 5px 0px 0px 0px;
-	text-shadow: 2px 2px 2px #898989;
+	line-height: 20px;
+	padding: 15px 0px 0px 0px;
 	list-style: none;
 	width: 228px;
+	font-size: 14px;
+
+}
+
+#newsletter-text {
+	font-size: 11px;
+}
+
+.footer-col ul {
+	margin-left: 5px;
 }
 
 .footer-col a {
