@@ -33,7 +33,7 @@
 
     <section class='category-review-show group'>
     	<div class='selected-category-frame'>
-        <% #TODO - switch out static photo for dynamic photos %>
+        <%# #TODO - switch out static photo for dynamic photos %>
 
         <!-- This picture is still a placeholder -->
         <!-- make sure this picture is above the h3 tag -->
@@ -44,7 +44,7 @@
         </div>
         <!-- This picture is still a placeholder -->
         <!-- make sure this picture is above the h3 tag -->
-        <h3><%= @category.name %> Summary</h3>
+        <h5>A fair price to pay for <%= @category.name %> is...</h5>
         <%#= image_tag "../products/pipette100.png" %>
         <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
           <dl class='center'>
@@ -54,13 +54,14 @@
           </dl>
         <% else %>
         <dl class='center noprice-summary-text'>
-          <p><span id="fair-price-topay">What is a fair price?</span> Pricing Information currently available for <br> 200µl or 1000µl <strong>services</strong> only</p>
+          <p>Pricing data only available for 200µl or 1000µl <strong>services</strong></p>
         </dl>
         <% end %>
+        <h4>You can read reviews from other scientists or write a new one below.</h4>
       </div>
 
-      <h3 id="category-brand-title">Brand Ratings & Reviews</h3>
-          <h4>You can read reviews from other scientists or write a new one. Select a brand...</h4>
+      
+      <h3 id="category-brand-title">Product Brands</h3>
 
           <% if request.fullpath.include?("sorted_alphabetically") %>
             <p class="sorted_products"><%= link_to "Sort by Rating", category_path %></p>

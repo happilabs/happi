@@ -14,20 +14,54 @@
                 <p id="homepage_messages"><%= alert %></p>
                 <% end %>
               <hr class="half">
-                <h1>Our <span class="yellow">Mission</span>:</h1>
+                <h1><span class="yellow">Intelligent</span> Science, <span class="yellow">Happy</span> Scientists</h1>
                 <h2 class="text-center">
-                <span class="get-it">to improve the happiness of scientists &amp; the quality of their research</span>
+                <span class="get-it">We provide researchers with data for making informed decisions about lab supplies</span>
                 </h2>
-              </hr class="half">
+              </hr>
 
 
             </div>
             <div class="camein">
 
-                  <%= link_to "Read Product Reviews", categories_path, class: "btn btn-large btn-block-third btn-danger" %>
+          <div class="footer-col" id="newsletter-home">
+            <h5>Receive our newsletter</h5>
+            <ul>
+              <!-- <li>Receive our newsletter</li> -->
+              <% @subscriber = Subscriber.new %>
+              <%= form_for(@subscriber) do |f| %>
+                <% if @subscriber.errors.any? %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+
+                    <ul>
+                    <% @subscriber.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+
+                <div class="field">
+
+                  <%= f.text_field :first_name, placeholder: "Name" %>
+                </div>
+
+                <div class="field">
+                  <%= f.text_field :email, placeholder: "Email" %>
+                </div>
+
+                <div class="actions">
+                  <%= f.submit "Submit", :class => "btn btn-success" %>
+                </div>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
 
                   <i class="or">-  -</i>
-                  <%= link_to "Learn More About Us", about_us_url, class: "btn btn-large btn-success btn-block-third" %>
+                  <%= link_to "Learn More About Us", about_us_url, class: "btn btn-large btn-premium btn-block-third" %>
             </div>
 
           </div>
