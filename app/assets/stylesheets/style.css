@@ -57,6 +57,11 @@ h2 {
 	color: #ffff00;
 	text-align: center;
 }
+
+.row-fluid h2 {
+	line-height: 25px;
+	padding-top: 15px;
+}
 .human-bio h3 {
 	font-size: 16px;
 	margin: 0px 0px 20px 0px;
@@ -142,7 +147,7 @@ h4 {
 	text-align: center;
 	line-height: 20px;
 	color: #757575;
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 17px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -289,18 +294,12 @@ h5 {
   z-index:1;
 }
 
-
-/*.whoareyou {
-	width: 200px;
-	background-color: #77cc33;
-	position: fixed;
-	right: 20px;
-	z-index: 3;
-	margin: 30px 0px 0px 0px;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
-	box-shadow: 3px 3px 8px #898989;
-}*/
+#newsletter-home {
+	width: 30%;
+	float: left;
+	padding: 0px 10px 0 10px;
+	margin: 0 10px 0 10px;
+}
 
 .whoareyou {
 	height: 20px;
@@ -322,12 +321,6 @@ h5 {
 .whoareyou li:hover {
 	background-color: #77cc33;
 }
-
-
-/*.whoareyou {
-	color: #00AEEF;
-	display: inline;
-}*/
 
 
 .hello {
@@ -487,24 +480,25 @@ input[class="voices-btn"]:hover {
 	margin: 0 auto;
 	width: 100%;
 }
+
+
 #mission-center {
 	text-align: center;
 	width: 100%;
-	padding: 0px 20px;
+	padding: 20px 20px 20px 20px;
 	margin: 0 auto;
-	margin-top: 30px;
+	margin-bottom: 50px;
+	margin-top: -10px;
 	background-color: #00Aeef;
-	opacity: .2;
 }
 #about-mission-highlight {
-	font-size: 22px;
+	font-size: 25px;
 	color: #fff;
   	margin: 0 auto;
   	margin-top: 20px;
 	line-height: 36px;
-	font-family: "open sans", sans-serif;
-	font-weight: 800;
-	text-transform: uppercase;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 400;
 	text-align: center;
 	letter-spacing: 2px;
 }
@@ -1325,17 +1319,11 @@ input[class="voices-btn"]:hover {
 }
 
 .noprice-summary-text p {
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 200;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #898989;
 	width: 300px;
-}
-
-#fair-price-topay {
-	color: #77cc33;
-	font-weight: 400;
-	font-size: 16px;
 }
 
 .category-index-intro-box {
@@ -1524,8 +1512,10 @@ input[class="voices-btn"]:hover {
 
 .selected-category-frame h4 {
 	font-weight: 300;
-	padding-bottom: 13px;
+	padding-bottom: 0px;
 	letter-spacing: 1px;
+	float: left;
+	font-size: 14px;
 }
 
 .selected-category-frame img {
@@ -1554,7 +1544,7 @@ input[class="voices-btn"]:hover {
 .selected-category-frame dl {
 	margin-left: 65px;
 	padding: 15px;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	border-radius: 20px;
 	border-left: 3px solid #d6d6d6;
 	border-right: 3px solid #d6d6d6;
@@ -1615,7 +1605,7 @@ input[class="voices-btn"]:hover {
 	font-size: 36px;
 	margin: 40px 0px 20px 60px;
 	border-bottom: 5px solid #00AEEF;
-	width: 500px;
+	width: 300px;
 }
 
 .category-review-show h4 {
@@ -2142,7 +2132,7 @@ p {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 100px;
+	margin-top: 75px;
 	padding-bottom: 100px;
 }
 
@@ -2282,7 +2272,7 @@ i.or {
 
 
 .hero-unit h1 {
-	font-size:70px;
+	font-size: 50px;
 }
 
 #header-section {
