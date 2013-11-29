@@ -144,11 +144,11 @@ h4 {
 
 .why-box h4 {
 	padding: 20px;
-	text-align: center;
+	text-align: left;
 	line-height: 20px;
 	color: #757575;
 	font-weight: 400;
-	font-size: 17px;
+	font-size: 14px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .why-box:hover .goals h4 {
@@ -713,9 +713,7 @@ input[class="voices-btn"]:hover {
 .sub-data-box {
 	width: 960px;
 	margin: 0 auto;
-	padding-top: 40px;
-	padding-left: 100px;
-	margin-bottom: 30px;
+	padding-left: 50px;
 }
 #subscribe-pipette {
 	float: left;
@@ -747,9 +745,16 @@ input[class="voices-btn"]:hover {
 	width: 300px;
 	height: auto;
 	text-align: center;
-	margin: 10px 100px 0px 95px;
+	margin: 80px 0px 0px 105px;
+	border: 1px solid #F1F1F1;
 	float: left;
 }
+
+/*.reportimg {
+	float: left;
+	margin: 80px 0px 0px 105px;
+	border: 1px solid #F1F1F1;
+}*/
 
 #price-graph1000 {
 	width: 300px;
@@ -766,8 +771,9 @@ input[class="voices-btn"]:hover {
 }
 
 #big-contact-box {
-	width: 290px;
+	width: 365px;
 	height: auto;
+	float: left;
 	box-shadow: 3px 3px 10px #757575;
 	margin-left: 50px;
 }
@@ -820,11 +826,7 @@ input[class="voices-btn"]:hover {
 	letter-spacing: 1px;
 	margin-left: 20px;
 }
-.reportimg {
-	float: left;
-	margin: 80px 0px 0px 105px;
-	border: 1px solid #F1F1F1;
-}
+
 .report-right {
 	margin-top: 68px;
 	margin-left: 50px;
@@ -1033,7 +1035,7 @@ input[class="voices-btn"]:hover {
 /* *********  WHY WE DO IT  **************** */
 
 .why-box {
-	height: 400px;
+	height: 375px;
 	width: 28%;
 	background-color: #FFF;
   	border-radius: 9px;
@@ -1049,9 +1051,13 @@ input[class="voices-btn"]:hover {
   				-1px -1px 10px #00AEEF;
 }
 
-.first-why-img {
-	margin: 28px 0px;
+.why-box:hover .why-solution {
+	color: #00AEEF;
+	text-shadow: 1px 1px 1px #ffff00;
+	font-size: 16px;
+	font-weight: 500;
 }
+
 .why-box ul {
 	padding: 10px;
 }
@@ -2856,6 +2862,7 @@ padding-top: 18px;
 	margin-bottom: 25px;
 	margin-left: 40px;
 	float:left;
+	border: 1px solid #00aeef;
 }
 
 .testimonial
