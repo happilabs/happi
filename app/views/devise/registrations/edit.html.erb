@@ -21,7 +21,7 @@
     <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
       <h3><%= current_user.subcription_level %>µl</h3>
     <% else %>
-      <h3>10µl</h3>
+      <h3 id="bottom-border">10µl</h3>
     <% end %>
     <br>
 
@@ -99,15 +99,15 @@
 
   <div class="profile_tab_box">
     <ul class="nav nav-tabs dash-tabs">
-      <li class="active" id="comments_tab"><%= link_to "Your Reviews & Voices", "#", id: "show_comments" %></li>
-      <li id="reports_tab"><%= link_to "Your Reports", "#", id: "show_reports" %></li>
+      <li class="active" id="comments_tab"><%= link_to "Your Reviews", "#", id: "show_comments" %></li>
+      <li id="reports_tab"><%= link_to "Reports", "#", id: "show_reports" %></li>
     </ul>
     <ul id="comments_list" class="comments-listing">
 
       <div id="more-margin-bottom">
-        <%= link_to "Write a new review", categories_path, class: "btn btn-warning" %>
+        <%= link_to "Write a new review", categories_path, class: "btn btn-success" %>
       </div>
-      <p class="second-p dash-p"><strong>Thank you</strong> for contributing. Your feedback is important to improving the quality of scientific research.</p>
+      <p class="second-p dash-p"><strong>Remember</strong> your reviews will be used by other scientists. <strong>Be honest</strong>.</p>
 
 
 
@@ -126,7 +126,7 @@
 				<p class="second-p"><%= report.summary %></p>
         <% end %>
     <% else %>
-      <h5>Reports are only available to 200µl or 1000µl customers</h5>
+      <h5>Reports are only available to 200µl or 1000µl members</h5>
     <% end %>
       </ul>
   </div>
