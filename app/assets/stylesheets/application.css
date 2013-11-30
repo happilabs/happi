@@ -16,6 +16,14 @@
    color: #00AEEF;
  }
 
+#review_desc {
+   height: 125px;
+}
+
+.no_margin {
+   margin: 0px;
+}
+
  #product_qualities {
    margin-top: 85px;
    width: 350px;

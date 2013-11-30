@@ -1479,7 +1479,7 @@ input[class="voices-btn"]:hover {
 }
 
 .category-review-images h2 {
-	
+
 }
 
 /********** This is for the mission statement on the category index page *******/
@@ -1510,10 +1510,8 @@ input[class="voices-btn"]:hover {
 	margin-bottom: 60px;
 	padding: 10px;
 	width: 618px;
-	box-shadow: -6px 6px 10px #77cc33;
-	border-right: 2px solid #d6d6d6;
-	border-top: 2px solid #d6d6d6;
 	border-radius: 9px;
+	border: 2px solid #00AEEF;
 }
 .selected-category-frame img,
 .selected-category-frame h3,

@@ -32,6 +32,67 @@
     <!-- ***********   Product Menu Ends  ***************-->
 
     <section class='category-review-show group'>
+      <% if user_signed_in? %>
+      <div class='selected-category-frame'>
+      <h2>Write a review</h2>
+        <%= form_for(@review) do |f| %>
+          <% if @review.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@review.errors.count, "error") %> prevented this review from being saved:</h2>
+
+              <ul>
+              <% @review.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="field">
+            <%= f.hidden_field :user_id, :value => current_user.id %>
+          </div>
+
+          <div class="row">
+            <div class="span3">
+              <%= f.label :product_id %>
+              <%= f.select :product_id, options_from_collection_for_select(Product.where(category_id: params[:id]), :id, :product_name) %>
+            </div>
+            <div class="span3">
+                <%= f.label :rating %>
+              <%= f.select :rating, options_for_select([
+                ["5 Extremely happy (never a problem)", "5"],
+                  ["4", "4"],
+                  ["3 Neither happy nor unhappy", "3"],
+                  ["2", "2"],
+                  ["1 Extremely unhappy (frequent problems)", "1"]]) %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="span3">
+              <!-- <%# f.label :desc, "Your Review:" %><br /> -->
+              <%= f.text_area :desc, rows: 12 , placeholder: "Write your review here..." %>
+
+            </div>
+            <div class="span3">
+              <h5 class="blue no_margin">Features to review</h5>
+              <li><%= @category.first_quality %></li>
+              <li><%= @category.second_quality %></li>
+              <li><%= @category.third_quality %></li>
+            </div>
+          </div>
+
+
+          <br>
+
+          <div class="actions">
+            <%= f.submit :class => "btn btn-danger" %>
+          </div>
+
+        <% end %><!-- end review form -->
+      </div>
+      <% end %>
+
     	<div class='selected-category-frame'>
         <%# #TODO - switch out static photo for dynamic photos %>
 
@@ -60,7 +121,7 @@
         <h4>You can read reviews from other scientists or write a new one below.</h4>
       </div>
 
-      
+
       <h3 id="category-brand-title">Product Brands</h3>
 
           <% if request.fullpath.include?("sorted_alphabetically") %>

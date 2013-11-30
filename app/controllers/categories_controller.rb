@@ -20,6 +20,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @categories = Category.order("name ASC")
     @product_list = @category.products_sorted_by_average_product_rating
+    @review = Review.new
 
     respond_to do |format|
       format.html # show.html.erb
