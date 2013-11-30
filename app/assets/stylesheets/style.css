@@ -1638,9 +1638,6 @@ input[class="voices-btn"]:hover {
 .man-preview-right {
 	width: 240px;
 }
-/*.manufacturer-preview * {
-	border: 1px solid black;
-}*/
 
 .manufacturer-preview {
 	border-bottom: 2px dashed #898989;
@@ -1649,7 +1646,7 @@ input[class="voices-btn"]:hover {
 	background-color: #fff;
 	float: left;
 	margin: 0px 0px 0px 60px;
-	padding: 10px;
+	/*padding: 10px;*/
 	width: 618px;
 	box-shadow: -9px 9px 20px #898989;
 }
@@ -1815,8 +1812,9 @@ input[class="voices-btn"]:hover {
 }
 
 .see-reviews-btn {
-	font-weight: 200;
+	font-weight: 300;
 	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 .write-review-btn {
