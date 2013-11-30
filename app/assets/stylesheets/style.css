@@ -7,7 +7,6 @@ h1 {
 	font-family: "open sans", sans-serif;
 	font-weight: 800;
 	text-align: center;
-	text-shadow: 2px 2px 2px #898989;
 	letter-spacing: 2px;
 }
 .contact-us h1 {
@@ -884,8 +883,8 @@ input[class="voices-btn"]:hover {
 }
 .benefit {
 	width: 400px;
-	margin: 50px 0px 0px 20px;
-	padding: 20px 20px;
+	margin: 20px 0px 0px 20px;
+	padding: 10px 20px;
 	border-radius: 10px;
 	float: left;
 }
@@ -902,14 +901,16 @@ input[class="voices-btn"]:hover {
 
 .benefit h2 {
 	font-size: 30px;
+	color: #00Aeef;
+	background-color: #ffff00;
+	margin-left: 40px;
 }
 
 #holding-signup-box {
 	width: 415px;
 	background-color: #00AEEF;
 	height: auto;
-	float: left;
-	margin-left: 100px;
+	margin: 0 auto;
 	margin-top: 30px;
 	border-radius: 10px;
 	padding: 20px 20px 0px 20px;
@@ -955,7 +956,15 @@ input[class="voices-btn"]:hover {
 	font-weight: 200;
 	font-size: 16px;
 }
+
+#small-margins {
+	width: 400px;
+}
+
 /* ################ About Us page ##############  */
+/* ################ About Us page ##############  */
+
+
 
 .text-right-img {
 	color: #757575;
