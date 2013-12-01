@@ -31,6 +31,37 @@
 
     <!-- ***********   Product Menu Ends  ***************-->
 
+      <div class='selected-category-frame'>
+          <div id="img-transparent">
+            <% if @category.products.present? %>
+            <img src=<%= @category.products.first.photo %>>
+            <% end %>
+          </div>
+        
+          <h1><%= @category.name %></h1>
+
+          <a href="http://www.happilabs.org/200ml">
+            <div id="category-frame-right">
+              <h2>Fair price to pay: </h2>
+
+                <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
+                <dl class='center'>
+                  
+                  <dd>$<%= @category.fair_price %></dd>
+                  <p class="quantity">per <%= @category.price_quantity %></p>
+                </dl>
+              <% else %>
+              <dl class='center noprice-summary-text'>
+                <p>Price data available with <strong>200ul SERVICE</strong></p>
+              </dl>
+              <% end %>
+              
+            </div>
+          </a>
+      </div>
+
+
+
     <section class='category-review-show group'>
       <% if user_signed_in? %>
       <div class='selected-category-frame'>
@@ -93,47 +124,13 @@
       </div>
       <% end %>
 
-      <div class='selected-category-frame'>
-        <div id="img-transparent">
-            <% if @category.products.present? %>
-            <img src=<%= @category.products.first.photo %>>
-            <% end %>
-          </div>
-        <h2><%= @category.name %></h2>
-      </div>
-
-    	<div class='selected-category-frame'>
-        <%# #TODO - switch out static photo for dynamic photos %>
-
-        <!-- This picture is still a placeholder -->
-        <!-- make sure this picture is above the h3 tag -->
-        <div id="img-transparent">
-          <% if @category.products.present? %>
-          <img src=<%= @category.products.first.photo %>>
-          <% end %>
-        </div>
-        <!-- This picture is still a placeholder -->
-        <!-- make sure this picture is above the h3 tag -->
-        <h5>A fair price to pay for <%= @category.name %> is...</h5>
-        <%#= image_tag "../products/pipette100.png" %>
-        <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
-          <dl class='center'>
-            <dt>Fair Price to pay for Academia =</dt>
-            <dd>$<%= @category.fair_price %></dd>
-            <p class="quantity">per <%= @category.price_quantity %></p>
-          </dl>
-        <% else %>
-        <dl class='center noprice-summary-text'>
-          <p>Pricing data only available for 200µl or 1000µl <strong>services</strong></p>
-        </dl>
-        <% end %>
-        <h4>You can read reviews from other scientists or write a new one below.</h4>
-      </div>
 
       <!-- ****** Begin section for brands of products ******** -->
+          <div class="margin-left">
+            <%= link_to "LOGIN to write a review", new_user_session_path, class: "btn btn-success btn-how" %>
+          </div>
 
-
-      <h3 id="category-brand-title">Search Brands</h3>
+      <h3 id="category-brand-title">Ratings & Reviews</h3>
 
           <% if request.fullpath.include?("sorted_alphabetically") %>
             <p class="sorted_products"><%= link_to "Sort by Rating", category_path %></p>
