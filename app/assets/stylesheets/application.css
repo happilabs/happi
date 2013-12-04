@@ -16,6 +16,17 @@
    color: #00AEEF;
  }
 
+#add_review_button {
+   margin-left: 40px;
+   width: 100%;
+   height: 75px;
+   font-size: 40px;
+}
+
+.latest_review {
+   margin-left: 23px;
+}
+
 #review_desc {
    height: 125px;
 }
