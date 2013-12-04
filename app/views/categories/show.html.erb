@@ -37,7 +37,7 @@
             <img src=<%= @category.products.first.photo %>>
             <% end %>
           </div>
-        
+
           <h1><%= @category.name %></h1>
 
           <a href="http://www.happilabs.org/200ml">
@@ -46,7 +46,7 @@
 
                 <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
                 <dl class='center'>
-                  
+
                   <dd>$<%= @category.fair_price %></dd>
                   <p class="quantity">per <%= @category.price_quantity %></p>
                 </dl>
@@ -55,7 +55,7 @@
                 <p>Price data available with <strong>200ul SERVICE</strong></p>
               </dl>
               <% end %>
-              
+
             </div>
           </a>
       </div>
@@ -91,7 +91,7 @@
             <div class="row">
               <div class="span3">
                 <%= f.label :product_id %>
-                <%= f.select :product_id, options_from_collection_for_select(Product.where(category_id: params[:id]), :id, :product_name) %>
+                <%= f.select :product_id, options_from_collection_for_select(Product.where(category_id: params[:id]), :id, :manufacturer_name) %>
               </div>
               <div class="span3">
                   <%= f.label :rating %>
@@ -132,9 +132,12 @@
 
 
       <!-- ****** Begin section for brands of products ******** -->
+
+        <% unless user_signed_in? %>
           <div class="margin-left">
             <%= link_to "LOGIN to write a review", new_user_session_path, class: "btn btn-success btn-how" %>
           </div>
+        <% end %>
 
       <h3 id="category-brand-title">Ratings & Reviews</h3>
 

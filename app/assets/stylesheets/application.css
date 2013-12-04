@@ -25,6 +25,9 @@
 
 .latest_review {
    margin-left: 23px;
+   margin-right: 23px;
+   min-width: 400px;
+   float: left;
 }
 
 #review_desc {
