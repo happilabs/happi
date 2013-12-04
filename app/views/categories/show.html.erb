@@ -37,7 +37,7 @@
             <img src=<%= @category.products.first.photo %>>
             <% end %>
           </div>
-        
+
           <h1><%= @category.name %></h1>
 
           <a href="http://www.happilabs.org/200ml">
@@ -46,7 +46,7 @@
 
                 <% if current_user.try(:subcription_level) == "200" || current_user.try(:subcription_level) == "1000" %>
                 <dl class='center'>
-                  
+
                   <dd>$<%= @category.fair_price %></dd>
                   <p class="quantity">per <%= @category.price_quantity %></p>
                 </dl>
@@ -55,7 +55,7 @@
                 <p>Price data available with <strong>200ul SERVICE</strong></p>
               </dl>
               <% end %>
-              
+
             </div>
           </a>
       </div>
@@ -64,71 +64,80 @@
 
     <section class='category-review-show group'>
       <% if user_signed_in? %>
-      <div class='selected-category-frame'>
-      <h2>Write a review</h2>
-        <%= form_for(@review) do |f| %>
-          <% if @review.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@review.errors.count, "error") %> prevented this review from being saved:</h2>
+        <div class="write-review-btn">
+          <%= button_tag "Write a review", class: "btn btn-danger see-reviews-btn", id: "add_review_button" %>
+        </div>
 
-              <ul>
-              <% @review.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-              </ul>
+      <div id="big_review_form">
+        <div class='selected-category-frame'>
+        <!-- <h2>Write a review</h2> -->
+          <%= form_for(@review) do |f| %>
+            <% if @review.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(@review.errors.count, "error") %> prevented this review from being saved:</h2>
+
+                <ul>
+                <% @review.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+                <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="field">
+              <%= f.hidden_field :user_id, :value => current_user.id %>
             </div>
-          <% end %>
 
-          <div class="field">
-            <%= f.hidden_field :user_id, :value => current_user.id %>
-          </div>
-
-          <div class="row">
-            <div class="span3">
-              <%= f.label :product_id %>
-              <%= f.select :product_id, options_from_collection_for_select(Product.where(category_id: params[:id]), :id, :product_name) %>
+            <div class="row">
+              <div class="span3">
+                <%= f.label :product_id %>
+                <%= f.select :product_id, options_from_collection_for_select(Product.where(category_id: params[:id]), :id, :manufacturer_name) %>
+              </div>
+              <div class="span3">
+                  <%= f.label :rating %>
+                <%= f.select :rating, options_for_select([
+                  ["5 Extremely happy (never a problem)", "5"],
+                    ["4", "4"],
+                    ["3 Neither happy nor unhappy", "3"],
+                    ["2", "2"],
+                    ["1 Extremely unhappy (frequent problems)", "1"]]) %>
+              </div>
             </div>
-            <div class="span3">
-                <%= f.label :rating %>
-              <%= f.select :rating, options_for_select([
-                ["5 Extremely happy (never a problem)", "5"],
-                  ["4", "4"],
-                  ["3 Neither happy nor unhappy", "3"],
-                  ["2", "2"],
-                  ["1 Extremely unhappy (frequent problems)", "1"]]) %>
+
+            <div class="row">
+              <div class="span3">
+                <!-- <%# f.label :desc, "Your Review:" %><br /> -->
+                <%= f.text_area :desc, rows: 12 , placeholder: "Write your review here..." %>
+
+              </div>
+              <div class="span3">
+                <h5 class="blue no_margin">Features to review</h5>
+                <li><%= @category.first_quality %></li>
+                <li><%= @category.second_quality %></li>
+                <li><%= @category.third_quality %></li>
+              </div>
             </div>
-          </div>
 
-          <div class="row">
-            <div class="span3">
-              <!-- <%# f.label :desc, "Your Review:" %><br /> -->
-              <%= f.text_area :desc, rows: 12 , placeholder: "Write your review here..." %>
 
+            <br>
+
+            <div class="actions">
+              <%= f.submit :class => "btn btn-danger" %>
             </div>
-            <div class="span3">
-              <h5 class="blue no_margin">Features to review</h5>
-              <li><%= @category.first_quality %></li>
-              <li><%= @category.second_quality %></li>
-              <li><%= @category.third_quality %></li>
-            </div>
-          </div>
 
-
-          <br>
-
-          <div class="actions">
-            <%= f.submit :class => "btn btn-danger" %>
-          </div>
-
-        <% end %><!-- end review form -->
-      </div>
+          <% end %><!-- end review form -->
+        </div>
+      </div><!-- end #big_review_form -->
       <% end %>
 
 
       <!-- ****** Begin section for brands of products ******** -->
+
+        <% unless user_signed_in? %>
           <div class="margin-left">
             <%= link_to "LOGIN to write a review", new_user_session_path, class: "btn btn-success btn-how" %>
           </div>
+        <% end %>
 
       <h3 id="category-brand-title">Ratings & Reviews</h3>
 
@@ -152,5 +161,11 @@
 <script>
 $(document).ready(function() {
  $('#nav_reviews').addClass('active');
+
+ $('#big_review_form').hide();
+ $("#add_review_button").click(function(){
+   $("#big_review_form").fadeToggle("slow", "linear");
+ });
+
 });
 </script>
