@@ -691,6 +691,10 @@ input[class="voices-btn"]:hover {
 	color: #757575;
 }
 
+#community-graphic h5 {
+	font-size: 10px;
+}
+
 .shoutout {
 	font-size: 10px;
 	width: 120px;
@@ -2974,7 +2978,7 @@ padding-top: 18px;
 /****************** JOBS Page  *********************/
 
 
-#jobs-height {
+/*#jobs-height {
 	height: 300px;
 }
 
@@ -2991,14 +2995,89 @@ padding-top: 18px;
 
 .contact-box-nopadding {
 	padding: 0px;
+}*/
+
+#jobs-intro p {
+	font-size: 14px;
+	padding: 0px;
+}
+
+.jobs-box {
+	width: 385px;
+	padding: 10px 10px;
+	margin: 0 auto;
+	line-height: 22px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #fff;
+	letter-spacing: 1px;
+	background-color: #33cc33;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	margin-left: 65px;
+	float: left;
+}
+
+.jobs-box h4{
+	font-size: 17px;
+	padding-bottom: 10px;
+	letter-spacing: 1px;
+	color: #ffff00;
+	font-weight: 400;
+}
+
+.jobs-box li{
+	font-size: 14px;
+	padding-bottom: 8px;
+	font-weight: 200;
+	line-height: 18px;
+}
+
+.jobs-heading-liner {
+	padding: 15px 0px 30px 0px;
+	font-size: 17px;
+	line-height: 26px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #757575;
+	font-weight: 300;
+	width: 700px;
 }
 
 #jobs-heading {
 	font-weight: 700;
-	text-shadow: 1px 1px 1px #898989,
-	1px 1px 1px #00aeef;
 	font-family: chalkboard, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #00Aeef;
+	margin-bottom: -25px;
+}
+
+#apply-box {
+	background-color: #00Aeef;
+	text-align: center;
+	background: linear-gradient(180deg, #00AEEF, #80D6F7);
+	text-shadow: -1px -1px 2px #898989;
+}
+
+#apply-box:hover {
+	background-color: #00Aeef;
+	text-align: center;
+	margin-left: 63px;
+	margin-top: 2px;
+	box-shadow: 2px 2px 6px #898989;
+}
+
+#apply-box:hover a {
 	color: #ffff00;
+}
+
+#apply-box h4,
+#apply-box a {
+	font-size: 26px;
+	color: #ffff00;
+}
+
+.tom-image-jobs {
+	float: left;
+	height: 250px;
+	width: 227px;
 }
 
 .jobs-contact-box {
@@ -3007,11 +3086,6 @@ padding-top: 18px;
 	border-radius: 40px;
 	/*float: left;*/
 	margin: 0 auto;
-}
-
-.jobs-heading-liner {
-	padding: 15px 0px 30px 0px;
-	font-size: 17px;
 }
 
 .jobs-img-right {
