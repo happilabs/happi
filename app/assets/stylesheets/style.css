@@ -2974,7 +2974,7 @@ padding-top: 18px;
 /****************** JOBS Page  *********************/
 
 
-#jobs-height {
+/*#jobs-height {
 	height: 300px;
 }
 
@@ -2991,14 +2991,33 @@ padding-top: 18px;
 
 .contact-box-nopadding {
 	padding: 0px;
+}*/
+
+.jobs-heading-liner {
+	padding: 15px 0px 30px 0px;
+	font-size: 17px;
+	line-height: 26px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #757575;
+	font-weight: 300;
+	width: 700px;
 }
 
 #jobs-heading {
 	font-weight: 700;
-	text-shadow: 1px 1px 1px #898989,
-	1px 1px 1px #00aeef;
 	font-family: chalkboard, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color: #ffff00;
+	color: #00Aeef;
+	margin-bottom: -25px;
+}
+
+#jobs-hl-summary {
+	padding-top: 50px;
+}
+
+.tom-image-jobs {
+	float: left;
+	height: 250px;
+	width: 227px;
 }
 
 .jobs-contact-box {
@@ -3007,11 +3026,6 @@ padding-top: 18px;
 	border-radius: 40px;
 	/*float: left;*/
 	margin: 0 auto;
-}
-
-.jobs-heading-liner {
-	padding: 15px 0px 30px 0px;
-	font-size: 17px;
 }
 
 .jobs-img-right {
