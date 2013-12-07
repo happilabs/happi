@@ -106,23 +106,24 @@
 
             <div class="row">
               <div class="span3">
-                <!-- <%# f.label :desc, "Your Review:" %><br /> -->
-                <%= f.text_area :desc, rows: 12 , placeholder: "Write your review here..." %>
-
-              </div>
-              <div class="span3">
                 <h5 class="blue no_margin">Features to review</h5>
                 <li><%= @category.first_quality %></li>
                 <li><%= @category.second_quality %></li>
                 <li><%= @category.third_quality %></li>
               </div>
+              <div class="span3">
+                <!-- <%# f.label :desc, "Your Review:" %><br /> -->
+                <%= f.text_area :desc, rows: 12 , placeholder: "Write your review here..." %>
+
+              </div>
+              
             </div>
 
 
             <br>
 
             <div class="actions">
-              <%= f.submit :class => "btn btn-danger" %>
+              <%= f.submit :class => "btn btn-danger float-right button" %>
             </div>
 
           <% end %><!-- end review form -->
@@ -135,7 +136,7 @@
 
         <% unless user_signed_in? %>
           <div class="margin-left">
-            <%= link_to "LOGIN to write a review", new_user_session_path, class: "btn btn-success btn-how" %>
+            <%= link_to "LOGIN to write a review", new_user_session_path, class: "see-reviews-btn btn btn-success" %>
           </div>
         <% end %>
 
