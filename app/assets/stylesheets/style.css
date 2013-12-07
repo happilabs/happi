@@ -1514,6 +1514,13 @@ input[class="voices-btn"]:hover {
 	width: 618px;
 	border-radius: 9px;
 	border: 2px solid #00AEEF;
+	position: relative;
+}
+
+.button {
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
 }
 .selected-category-frame img,
 .selected-category-frame h3,
@@ -1650,9 +1657,9 @@ input[class="voices-btn"]:hover {
 	text-align: center;
 	color: #00AEEF;
 	font-size: 36px;
-	margin: 15px 0px 20px 60px;
+	margin: 75px 0px 20px 60px;
 	border-bottom: 5px solid #00AEEF;
-	width: 350px;
+	width: 450px;
 }
 
 .category-review-show h4 {

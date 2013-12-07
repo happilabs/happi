@@ -18,9 +18,19 @@
 
 #add_review_button {
    margin-left: 40px;
-   width: 100%;
+   width: 450px;
    height: 75px;
    font-size: 40px;
+   background-color: #ffff00;
+   color: #ffff00;
+   background: linear-gradient(180deg, #00AEEF, #80D6F7);
+   text-shadow: -1px -1px 2px #898989;
+}
+
+#add_review_button:hover {
+   margin-top: 2px;
+   margin-left: 42px;
+   box-shadow: 8px 8px 8px #898989;
 }
 
 .latest_review {
@@ -51,6 +61,10 @@
    border-radius: 10px;
  }
 
+.float-right {
+   float:right;
+   margin-right: 170px;
+}
  #error_explanation {
    margin-left: auto;
    margin-right: auto;
