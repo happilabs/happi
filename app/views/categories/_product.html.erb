@@ -26,8 +26,8 @@
         <%= button_to "Explore reviews", product, class: "see-reviews-btn btn btn-info", method: :get %>
       </div>
   </div>
-  <% if product.reviews.last.desc %>
-  <p class="latest_review"><strong>Latest Review: </strong> "<%= product.reviews.last.desc %>"</p>
+  <% if product.reviews.present? %>
+    <p class="latest_review"><strong>Latest Review: </strong> "<%= product.reviews.last.desc %>"</p>
   <% end %>
 </article>
 
