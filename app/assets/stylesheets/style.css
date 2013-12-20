@@ -297,7 +297,7 @@ h5 {
 	width: 30%;
 	float: left;
 	padding: 0px 10px 0 10px;
-	margin: 0 10px 0 10px;
+	margin: 80px 10px 0 10px;
 }
 
 .whoareyou {
@@ -678,7 +678,7 @@ input[class="voices-btn"]:hover {
 .about-image {
 	float: left;
 	/*padding: 10px 0px 0px 20px;*/
-	margin: 40px 20px 0px 20px;
+	margin: 140px 20px 0px 20px;
 }
 
 #community-graphic {
@@ -968,7 +968,12 @@ input[class="voices-btn"]:hover {
 /* ################ About Us page ##############  */
 /* ################ About Us page ##############  */
 
-
+#vimeo {
+	width: 415px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 30px;
+}
 
 .text-right-img {
 	color: #757575;
