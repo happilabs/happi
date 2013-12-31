@@ -1309,7 +1309,7 @@ input[class="voices-btn"]:hover {
 	width: 950px;
 }
 
-#review-intro {
+.review-intro {
 	width: 365px;
 	padding: 10px 10px;
 	margin: 0 auto;
@@ -1325,11 +1325,11 @@ input[class="voices-btn"]:hover {
 	float: left;
 }
 
-#review-intro li {
+.review-intro li {
 	margin-bottom: 10px;
 }
 
-#review-intro p {
+.review-intro p {
 	font-size: 16px;
 }
 
@@ -1453,7 +1453,7 @@ input[class="voices-btn"]:hover {
 .category-review-images {
 	float: none;
 	margin: 0 auto;
-	width: 690px;
+	width: 920px;
 	/*background-color: none;*/
 	margin-bottom: 40px;
 	border-radius: 30px;
@@ -1665,10 +1665,29 @@ input[class="voices-btn"]:hover {
 .category-review-show h4 {
 	color: #898989;
 	margin: 0px 0px 20px 60px;
-
 }
 
+#latest_reviews {
+	height: auto;
+	width: 220px;
+	float: left;
+	padding-top: 100px;
+}
 
+.category-section {
+	float: right;
+	width: 700px;
+}
+
+.category-section li {
+	list-style-type: none;
+}
+
+#yellow-heading {
+	background-color: #ffff00;
+	width: 400px;
+	border-radius: 20px;
+}
 /* ***** End Product Summary, Begin Brand Summary ********/
 
 
