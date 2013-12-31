@@ -7,6 +7,7 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.order("name ASC")
+    @latest_reviews = Review.limit(3).order("created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb

@@ -1,28 +1,28 @@
-<div>
+<div class='container group'>
   <div class="page-heading">
     <h2 class='container content-container'>RATINGS AND REVIEWS</h2>
     <h4 class="container heading-liner">This is a forum to help scientists differentiate high- from low-quality lab supplies. Voice your opinion!</h4>
   </div>
 
   <div id="margin-auto" class="group">
-    <div id="review-intro" class="group">         
-          <p><strong>Why is this important?</strong> Read the reports...</p> 
+    <div class="review-intro" class="group">
+          <p><strong>Why is this important?</strong> Read the reports...</p>
             <ul>
               <li>Via <em>Science</em>: <a href="http://www.sciencemag.org/content/322/5903/917.short">Bioactive Contaminants Leach from Laboratory Plasticware</a></li>
               <li>Via <em>Nature</em>: <a href="http://www.nature.com/news/2010/100423/full/news.2010.200.html">Plastics Hamper DNA Assays</a></li>
             </ul>
         </div>
 
-        <div id="review-intro" class="group">
-                
-          <h2><strong>RAFFLE</strong></h2> 
+        <div class="review-intro" class="group">
+
+          <h2><strong>RAFFLE</strong></h2>
             <ul>
               <li>For every review submitted, receive an entry into our weekly raffle for a $10 coffee gift card</li>
               <li>Please write a review that is useful to other scientists</li>
             </ul>
         </div>
-      
-    </div> 
+        
+    </div>
 
   <%# unless user_signed_in? %>
     <!-- <section class="category-index-intro-box group">
@@ -44,12 +44,20 @@
     </section> -->
   <%# end %>
 
-  <div class='container group'>
-    
 
     <section class='category-review-images group'>
 
-      <h2 class="people-name">SELECT A PRODUCT TO REVIEW</h2>
+
+      <div id="latest_reviews" >
+        <center><h4 class="people-name">RECENT REVIEWS:</h4></br></center>
+        <% @latest_reviews.each do |review| %>
+          <strong class="blue"><%= review.user.first_name %> - <%= review.user.organization %>:</strong></br>
+        <%= review.desc %></br><hr>
+        <% end %>
+      </div>
+
+      <div class="category-section">
+      <h2 class="people-name" id="yellow-heading">SELECT A PRODUCT TO REVIEW</h2>
       <%# #TODO - add pictures to database & put dynamicness in below %>
       <ul>
         <li>
@@ -146,12 +154,12 @@
           </a>
         </li>
       </ul>
+    </div>
     </section>
     <!-- <aside>
       <h3 class='center'>OUR MISSION</h3>
       <p>To improve the happiness of scientists &amp; the quality of theit research</p>
     </aside> -->
-  </div>
 </div>
 
 <script>
