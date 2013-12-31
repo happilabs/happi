@@ -1472,6 +1472,7 @@ input[class="voices-btn"]:hover {
 	display: block;
 	float: left;
 	margin: 22px;
+	font-size: 13px;
 	text-align: center;
 	width: 120px;
 }
@@ -1618,9 +1619,8 @@ input[class="voices-btn"]:hover {
 
 .selected-category-frame h1 {
 	float: left;
-	font-size: 26px;
-	padding-left: 20px;
-	width: 250px;
+	font-size: 20px;
+	width: 290px;
 	line-height: 30px;
 	padding-top: 20px;
 }
@@ -1630,7 +1630,7 @@ input[class="voices-btn"]:hover {
 	width: 165px;
 	border-radius: 9px;
 	padding-right: 8px;
-	margin-left: 36px;
+	margin-left: 20px;
 	background-color: #33CC33;
 }
 
@@ -2908,7 +2908,7 @@ padding-top: 18px;
 }
 
 .margin-left {
-	margin-left: 20px;
+	margin-left: 60px;
 }
 
 .reports-list {
