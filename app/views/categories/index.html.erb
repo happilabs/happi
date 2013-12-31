@@ -51,8 +51,9 @@
       <div id="latest_reviews" >
         <center><h2 class="people-name">RECENT REVIEWS:</h2></br></center>
         <% @latest_reviews.each do |review| %>
-          <strong class="blue"><%= review.user.first_name %> - <%= review.user.organization %>:</strong></br>
-        <%= review.desc %></br><hr>
+          <span class="blue"><%= review.user.first_name %> from <%= review.user.organization %></br>
+          about <%= review.product.category.name %></span></br>
+        <span class="gray"><%= review.desc %></span></br><hr>
         <% end %>
       </div>
 
