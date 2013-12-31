@@ -49,7 +49,7 @@
 
 
       <div id="latest_reviews" >
-        <center><h4 class="people-name">RECENT REVIEWS:</h4></br></center>
+        <center><h2 class="people-name">RECENT REVIEWS:</h2></br></center>
         <% @latest_reviews.each do |review| %>
           <strong class="blue"><%= review.user.first_name %> - <%= review.user.organization %>:</strong></br>
         <%= review.desc %></br><hr>
@@ -133,7 +133,7 @@
             10 mL serological pipet
           </a>
         </li>
-         <li>
+         <!-- <li>
           <a href="<%= category_url(14) %>">
             <img src="products/dome-pcr-tube.png" alt="dome cap pcr tube happy reviews" title="scientific lab supply pcr tube review">0.2 mL PCR tube
           </a>
@@ -149,10 +149,10 @@
           </a>
         </li>
         <li>
-          <a href="<%= category_url(16) %>">
+          <a href="<%= category_url(17) %>">
             <img src="products/pcr-strip-tube.png" alt="genomic dna extraction kit happy reviews" title="scientific lab supply genomic dna extraction kit reviews">PCR 8-strip tubes
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
     </section>

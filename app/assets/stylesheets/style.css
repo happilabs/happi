@@ -1693,7 +1693,7 @@ input[class="voices-btn"]:hover {
 }
 
 #yellow-heading {
-	background-color: #ffff00;
+	border-top: 4px solid orange;
 	width: 400px;
 	border-radius: 20px;
 }
