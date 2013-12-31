@@ -53,7 +53,7 @@
         <% @latest_reviews.each do |review| %>
           <span class="blue"><%= review.user.first_name %> from <%= review.user.organization %></br>
           about <%= review.product.category.name %></span></br>
-        <span class="gray"><%= review.desc %></span></br><hr>
+        <span class="gray"><%= link_to review.desc, review.product %></span></br><hr>
         <% end %>
       </div>
 

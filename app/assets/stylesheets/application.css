@@ -21,6 +21,10 @@
    color: #00AEEF;
  }
 
+ .gray a {
+   color: #898989;
+ }
+
 #add_review_button {
    margin-left: 40px;
    width: 450px;
