@@ -59,7 +59,7 @@
           </li>
         </ul>
       </div>
-          
+
         <iframe src="//player.vimeo.com/video/71992400" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
 
@@ -73,7 +73,7 @@
     <h2 class='container content-container'>RATINGS AND REVIEWS</h2>
     <h4 class="container heading-liner">This is a forum to help scientists differentiate high- from low-quality lab supplies. Voice your opinion!</h4>
   </div>
-  
+
     <div id="margin-auto" class="group">
     <div class="review-intro" class="group">
           <p><strong>Why is this important?</strong> Read the reports...</p>
@@ -91,13 +91,21 @@
               <li>Please write a review that is useful to other scientists</li>
             </ul>
         </div>
-        
+
     </div>
 
 
-  
+
     <section class='category-review-images group'>
-      
+      <div id="latest_reviews" >
+        <center><h2 class="people-name">RECENT REVIEWS:</h2></br></center>
+        <% @latest_reviews.each do |review| %>
+          <span class="blue"><%= review.user.first_name %> from <%= review.user.organization %></br>
+          about <%= review.product.category.name %></span></br>
+        <span class="gray"><%= link_to review.desc, review.product %></span></br><hr>
+        <% end %>
+      </div>
+
 
       <div class='category-section container group'>
       <h2 class="people-name" id="yellow-heading">SELECT A PRODUCT TO REVIEW</h2>
@@ -151,7 +159,7 @@
             Nitrile gloves
           </a>
         </li>
-        
+
         <li>
           <a href="<%= category_url(11) %>">
             <img src="products/t75_flask2_review.png" alt="t75 flask cell culture happy reviews" title="scientific lab supply conical tube review">
@@ -217,13 +225,13 @@
 
       <h5>Happy Testimonials</h5>
         <div class="testimonial group">
-            
+
             <img class="testimonial-img" src="ourpeople/happy_happilabs_customer_uic.jpg" alt="happy happilabs customer testimonial" title="Scientists are happy about HappiLabs">
             <p class="second-p">"HappiLabs has been extremely helpful. To date, they have <strong>saved us over $1,100</strong>. I am happy that a service like this exists; <strong>it makes my job easier.</strong>"</p>
             <p><a href="http://www.rrc.uic.edu/supplycenter/contact"><em>Jenny Beck, Director of the Research Resource Center at University of IL-Chicago</em> (contact Jenny if you have questions)</a></p>
           </div>
           <div class="testimonial group">
-            
+
             <img class="testimonial-img" src="shad_thaxton_happilabs_testimonial.jpg" alt="happy happilabs customer testimonial" title="Scientists are happy about HappiLabs">
             <p class="second-p">"<strong>We recommend HappiLabs to PI's</strong> who need to save time and/or money with selecting the right supplies for their lab"</p>
 
