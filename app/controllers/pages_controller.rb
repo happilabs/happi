@@ -6,6 +6,7 @@ class PagesController < ApplicationController
     @message = Message.new
     @user_voice = UserVoice.new
 		@categories = Category.order("name ASC")
+    @latest_reviews = Review.limit(3).order("created_at DESC")
   end
 
   def about_us
