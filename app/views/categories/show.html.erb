@@ -90,7 +90,7 @@
 
             <div class="row">
               <div class="span3">
-                <%= f.label :product_id %>
+                <%= f.label :Brand %>
                 <%= f.select :product_id, options_from_collection_for_select(Product.where(category_id: params[:id]), :id, :manufacturer_name) %>
               </div>
               <div class="span3">

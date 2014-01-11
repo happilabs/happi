@@ -64,7 +64,7 @@
           <% end %>
          <!--  Alex, the new product URL goes right here :) -->
           <a href="<%= @product.url if @product.url %>">Product Information</a>
-        </div>
+          </div>
       </article>
     </section>
 
@@ -90,7 +90,7 @@
             <%= f.hidden_field :user_id, :value => current_user.id %>
             <%= f.hidden_field :product_id, :value => params[:id] %>
             <div class="field">
-            <%= f.label :rating, "This product makes me"%>
+            <%= f.label :rating, "This brand makes me"%>
             <%= f.select :rating, options_for_select([
               ["5 Extremely happy (never a problem)", "5"],
               ["4", "4"],
