@@ -1,15 +1,15 @@
  <%= form_tag charges_path do %>
     <article>
         <label class="amount">
-          <h3>200ul Data Subscription: $195</h3>
+          <h3>200ul Data Subscription: $250</h3>
         </label>
     </article>
 
       <script src="https://checkout.stripe.com/v2/checkout.js"
               class="stripe-button"
               data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-              data-description="200 ul Annual Subscription"
-              data-amount="19500">
+              data-description="200 ul Subscription."
+              data-amount="25000">
       </script>
          
       <label class="amount">

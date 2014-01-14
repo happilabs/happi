@@ -70,8 +70,8 @@
 
 <div>
   <div class="page-heading">
-    <h2 class='container content-container'>RATINGS AND REVIEWS</h2>
-    <h4 class="container heading-liner">This is a forum to help scientists differentiate high- from low-quality lab supplies. Select a category of lab supply and find out which brands scientists like or dislike.</h4>
+    <h2 class='container content-container'>DATA, RATINGS, AND REVIEWS</h2>
+    <h4 class="container heading-liner">This is a forum where scientists help scientists by sharing price & quality information about lab supplies.</h4>
   </div>
 
     <div id="margin-auto" class="group">
@@ -85,11 +85,12 @@
 
         <div class="review-intro" class="group">
 
-          <h2><strong>RAFFLE</strong></h2>
-            <ul>
-              <li>For every review submitted, receive an entry into our weekly raffle for a $10 coffee gift card</li>
-              <li>Please write a review that is useful to other scientists</li>
-            </ul>
+            <h2><strong>How it works</strong></h2>
+            <ol>
+              <li>Select a category of lab supplies</li>
+              <li>Select a brand and read scientist's product reviews or login to submit your own review</li>
+              <li><%= link_to "200 µL subscribers", two_hundred_ml_path %> can view pricing data for each category</li>
+            </ol>
         </div>
 
     </div>
@@ -108,7 +109,7 @@
 
 
       <div class='category-section container group'>
-      <h2 class="people-name" id="yellow-heading">SELECT A PRODUCT TO REVIEW</h2>
+      <h2 class="people-name" id="yellow-heading">SELECT A CATEGORY</h2>
       <%# #TODO - add pictures to database & put dynamicness in below %>
       <ul>
         <li>
@@ -284,12 +285,12 @@
 
                     <div class="pricing-table-features">
                         <ul class="subscribe-list">
-                          <li><strong>Subscribe</strong> to data and quarterly reports</li>
-                          <li>You'll receive info about the price & quality of lab supplies</li>
+                          <li><strong>Gain access</strong> to pricing data and Product Intelligence Reports</li>
+                          <li>Receive a one-time lab spending analysis</li>
                         </ul>
 
                     </div>
-                    <h5 class="sub-price">$395</h5>
+                    <h5 class="sub-price"><span id="small-price">Starting at </span>$250<span id="small-price">/year</span></h5>
                     <div class="pricing-table-sign-up">
                         <%= link_to "Learn more!", two_hundred_ml_path, class: "btn btn-large btn-premium btn-block btn-price" %>
                     </div>
