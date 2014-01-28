@@ -297,7 +297,7 @@ h5 {
 	width: 30%;
 	float: left;
 	padding: 0px 10px 0 10px;
-	margin: 80px 10px 0 10px;
+	margin: 60px 10px 0 10px;
 }
 
 .whoareyou {
@@ -1302,11 +1302,15 @@ input[class="voices-btn"]:hover {
 
 /*********************   REVIEWS   ******************************/
 
-#margin-auto {
-	margin: 0 auto;
-	width: 950px;
+#review-why {
+	width: 600px;
+	margin: 30px 0px 50px 180px;
 }
 
+#how-it-works {
+	color: orange;
+	font-weight: 300;
+}
 .review-intro {
 	width: 365px;
 	padding: 10px 10px;
@@ -1325,6 +1329,7 @@ input[class="voices-btn"]:hover {
 
 .review-intro li {
 	margin-bottom: 10px;
+	font-size: 16px;
 }
 
 .review-intro p {
