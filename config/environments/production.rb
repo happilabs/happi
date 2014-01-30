@@ -31,7 +31,7 @@ Happilabs3::Application.configure do
      :domain             => 'gmail.com', #you can also use google.com
      :authentication     => :plain,
      :user_name          => 'happidevelopers@gmail.com',
-     :password           => 'Happi2013Ness',
+     :password           => '10Smiles6Today',
      :enable_starttls_auto => true
    }
 
