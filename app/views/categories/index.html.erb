@@ -22,7 +22,7 @@
               <li><%= link_to "200 µL subscribers", two_hundred_ml_path %> can view pricing data for each category</li>
             </ol>
         </div>
-        
+
     </div>
 
   <%# unless user_signed_in? %>
@@ -54,7 +54,7 @@
         <% @latest_reviews.each do |review| %>
           <span class="blue"><%= review.user.first_name %> from <%= review.user.organization %></br>
           about <%= review.product.category.name %></span></br>
-        <span class="gray"><%= link_to review.desc, review.product %></span></br><hr>
+        <span class="gray"><%= link_to review.desc, review.product, class: "sidebar-review" %></span></br><hr>
         <% end %>
       </div>
 
@@ -110,7 +110,7 @@
             Nitrile gloves
           </a>
         </li>
-        
+
         <li>
           <a href="<%= category_url(11) %>">
             <img src="products/t75_flask2_review.png" alt="t75 flask cell culture happy reviews" title="scientific lab supply conical tube review">
@@ -166,6 +166,10 @@
 
 <script>
 $(document).ready(function() {
- $('#nav_reviews').addClass('active');
+  $('#nav_reviews').addClass('active');
+
+  var reviews = document.getElementsByClassName("sidebar-review")
+  for (var i = 0; i< reviews.length; i++)
+    reviews[i].innerHTML = reviews[i].innerHTML.substring(0, 300) + "...";
 });
 </script>
