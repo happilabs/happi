@@ -1,5 +1,5 @@
 class Category < ActiveRecord::Base
-  attr_accessible :name, :fair_price, :price_quantity, :first_quality, :second_quality, :third_quality
+  attr_accessible :name, :fair_price, :price_quantity, :first_quality, :second_quality, :third_quality, :youtube, :hl_logo, :paying_photo
 
   has_many :products
 
