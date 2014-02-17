@@ -718,10 +718,17 @@ input[class="voices-btn"]:hover {
 	margin: 0 auto;
 }
 .sub-data-box {
+	width: 412px;
+	margin: 0 auto;
+	padding-left: 50px;
+}
+
+.sub-data-box200 {
 	width: 960px;
 	margin: 0 auto;
 	padding-left: 50px;
 }
+
 #subscribe-pipette {
 	float: left;
 }
@@ -744,7 +751,7 @@ input[class="voices-btn"]:hover {
 	padding-bottom: 0px;
 }
 .contact-box-nopadding {
-	padding: 0px;
+	padding: 15px;
 }
 
 
@@ -775,6 +782,7 @@ input[class="voices-btn"]:hover {
 	height: auto;
 	box-shadow: 3px 3px 10px #757575;
 	margin-left: 20px;
+	margin-bottom: 45px;
 }
 
 #big-contact-box {
