@@ -14,9 +14,9 @@
                 <p id="homepage_messages"><%= alert %></p>
                 <% end %>
               <hr class="half">
-                <h1><span class="yellow">Welcome to the Community</span></h1>
+                <h1><span class="yellow">Professional Shopping for Scientists</span></h1>
                 <h2 class="text-center">
-                <span class="get-it">Providing scientists with intelligence about the price, quality, & sustainability of scientific supplies and equipment</span>
+                <span class="get-it">We study the price, quality, and sustainability of lab supplies and equipment.</span>
                 </h2>
               </hr>
 
@@ -34,152 +34,7 @@
       </div>
   </div>
 
-<div>
-  <div class="page-heading">
-    <h2 class='container content-container'>DATA, RATINGS, AND REVIEWS</h2>
-    <h4 class="container heading-liner">This is a forum where scientists help scientists by sharing price & quality information about lab supplies.</h4>
-  </div>
 
-    <div id="home-review-space" class="group">
-        <div class="review-intro" class="group">
-          <p><strong>Why is this important?</strong> Read the reports...</p>
-            <ul>
-              <li>Via <em>Science</em>: <a href="http://www.sciencemag.org/content/322/5903/917.short">Bioactive Contaminants Leach from Laboratory Plasticware</a></li>
-              <li>Via <em>Nature</em>: <a href="http://www.nature.com/news/2010/100423/full/news.2010.200.html">Plastics Hamper DNA Assays</a></li>
-            </ul>
-        </div>
-
-        <div class="review-intro group">
-
-            <h2 id="how-it-works">How it works</h2>
-            <ol>
-              <li>Select a category of lab supplies</li>
-              <li>Select a brand and read scientist's product reviews or login to submit your own review</li>
-              <li><%= link_to "200 µL subscribers", two_hundred_ml_path %> can view pricing data for each category</li>
-            </ol>
-        </div>
-
-    </div>
-
-
-
-    <section class='category-review-images group'>
-      <div id="latest_reviews" >
-        <center><h2 class="people-name">RECENT REVIEWS:</h2></br></center>
-        <% @latest_reviews.each do |review| %>
-          <span class="blue"><%= review.user.first_name %> from <%= review.user.organization %></br>
-          about <%= review.product.category.name %></span></br>
-        <span class="gray"><%= link_to review.desc, review.product, class: "sidebar-review" %></span></br><hr>
-        <% end %>
-      </div>
-
-
-      <div class='category-section container group'>
-      <h2 class="people-name" id="yellow-heading">SELECT A CATEGORY</h2>
-      <%# #TODO - add pictures to database & put dynamicness in below %>
-      <ul>
-        <li>
-          <a href="<%= category_url(1) %>">
-            <img src="products/pipette100.png" alt="pipette tip 10 happy reviews" title="scientific lab supply pipette tip review">
-            10 ul tips
-          </a>
-
-        </li>
-        <li>
-          <a href="<%= category_url(2) %>">
-            <img src="products/pipette200.png" alt="pipette tips 200 happy reviews" title="scientific lab supply pipette tip review">
-           200 ul tips
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(3) %>">
-            <img src="products/pipette1000.png" alt="1000 pipette tip happy reviews" title="scientific lab supply pipette tip review">
-            1000 ul tips
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(4) %>">
-            <img src="products/1.5ml_tube.png" alt="eppy microtube happy reviews" title="scientific lab supply eppy microtube review">
-            1.5 mL microtube
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(5) %>">
-            <img src="products/15ml_conical_tube.png" alt="15 ml conical tube happy reviews" title="scientific lab supply 15ml conical tube review">
-            15 mL conical tube
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(6) %>">
-            <img src="products/50ml_conical_tube.png" alt="50ml conical tube happy reviews" title="scientific lab supply conical tube review">50 mL conical tube
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(8) %>">
-            <img src="products/latex-glove_review.png" alt="latex gloves happy reviews" title="scientific lab supply latex gloves review">
-            Latex gloves
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(7) %>">
-            <img src="products/nitrile_glove_review.png" alt="nitrile glove happy reviews" title="scientific lab supply nitrile glove review">
-            Nitrile gloves
-          </a>
-        </li>
-
-        <li>
-          <a href="<%= category_url(11) %>">
-            <img src="products/t75_flask2_review.png" alt="t75 flask cell culture happy reviews" title="scientific lab supply conical tube review">
-            T75 flask
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(12) %>">
-            <img src="products/cell_culture_dish_review.png" alt="cell culture 100mm dish happy reviews" title="scientific lab supply 100mm dish review">
-            100 mm dish
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(9) %>">
-            <img src="products/5ml_serological_pipet.png" alt="5ml serological pipet happy reviews" title="cell culture serological pipet review">
-            5 mL serological pipet
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(10) %>">
-            <img src="products/10ml_serological_pipet.png" alt="10ml serological pipet happy reviews" title="cell culture 10ml serological pipet review">
-            10 mL serological pipet
-          </a>
-        </li>
-         <li>
-          <a href="<%= category_url(14) %>">
-            <img src="products/dome-pcr-tube.png" alt="dome cap pcr tube happy reviews" title="scientific lab supply pcr tube review">0.2 mL PCR tube
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(15) %>">
-            <img src="products/black-pcr-plate.png" alt="96 well pcr plate happy reviews" title="scientific lab supply pcr plate 96 wells review">96-well PCR Plates
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(16) %>">
-            <img src="products/genomic-dna-extraction-kit.png" alt="genomic dna extraction kit happy reviews" title="scientific lab supply genomic dna extraction kit reviews">Genomic DNA Extraction Kits
-          </a>
-        </li>
-        <li>
-          <a href="<%= category_url(17) %>">
-            <img src="products/pcr-strip-tube.png" alt="PCR strips happy reviews" title="scientific lab supply genomic dna pcr 8-strip reviews">PCR 8-strip tubes
-          </a>
-        </li>
-      </ul>
-      </div>
-    </section>
-    <!-- <aside>
-      <h3 class='center'>OUR MISSION</h3>
-      <p>To improve the happiness of scientists &amp; the quality of theit research</p>
-    </aside> -->
-  </div>
-</div>
 
 <div class="small-grid">
   <div class="container content-container subscribe-us group">
