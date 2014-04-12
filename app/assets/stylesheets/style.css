@@ -261,6 +261,10 @@ h5 {
 
 /*  ************  Home Page  ***********  */
 
+#newsletter {
+	font-size: 24px;
+	
+}
 .logo-shrink {
 	height: 50px;
 	width: auto;

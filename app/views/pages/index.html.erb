@@ -14,20 +14,53 @@
                 <p id="homepage_messages"><%= alert %></p>
                 <% end %>
               <hr class="half">
-                <h1><span class="yellow">Professional Shopping for Scientists</span></h1>
+                <h1><span class="yellow">Rent a Virtual Lab Manager</span></h1>
                 <h2 class="text-center">
-                <span class="get-it">We study the price, quality, and sustainability of lab supplies and equipment.</span>
+                <span class="get-it">You focus on your science. We'll focus on shopping for your lab supplies & equipment.</span>
                 </h2>
               </hr>
+              <%= link_to "Become a Member", sign_up_url, class: "btn btn-large btn-success btn-why" %>
+              <div id="vimeo">
+              <h5 id="newsletter">Receive our newsletter</h5>
+            <ul>
 
+              <li id="newsletter-text">For info about jobs, coffee raffles, and recommendations for managing your lab</li>
+            </ul>
+            <ul>
+              <!-- <li>Receive our newsletter</li> -->
+              <% @subscriber = Subscriber.new %>
+              <%= form_for(@subscriber) do |f| %>
+                <% if @subscriber.errors.any? %>
+                  <div id="error_explanation">
+                    <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
 
+                    <ul>
+                    <% @subscriber.errors.full_messages.each do |msg| %>
+                      <li><%= msg %></li>
+                    <% end %>
+                    </ul>
+                  </div>
+                <% end %>
+
+                <div class="field">
+
+                  <%= f.text_field :first_name, placeholder: "Name" %>
+                </div>
+
+                <div class="field">
+                  <%= f.text_field :email, placeholder: "Email" %>
+                </div>
+
+                <div class="actions">
+                  <%= f.submit "Submit", :class => "btn btn-success" %>
+                </div>
+              <% end %>
+            </ul>
+          </li>
+        </ul>
+      </div>
             </div>
-            <div class="camein">
-
-          
-
-        <iframe src="//player.vimeo.com/video/71992400" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-            </div>
+            
 
           </div>
         </div>
