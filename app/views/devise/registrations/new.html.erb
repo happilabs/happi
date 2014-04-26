@@ -4,7 +4,7 @@
 	<% #TODO - rename subscriptions in the USERS table - it is mispelled  %>
 
 	<div class="signup">
-		<h2>Sign up</h2>
+		<h2>Join our community</h2>
 
 	</div>
 			  <h6><%= devise_error_messages! %></h6>
@@ -12,7 +12,7 @@
 	<div class="center">
 
 		<div class="information">
-			<p id="register-headline">Join our community of scientists!</p>
+			<p id="register-headline">Sign up to write product reviews</p>
 			<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 
 			  <div><%= f.text_field :first_name, placeholder: "First Name" %></div>

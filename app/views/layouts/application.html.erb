@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 	
 	<meta name="title" content="Happilabs: quality and sustainability ratings, reviews, reports, and consulting consultants for happy lab managers about scientific products, management, and lab supplies">
-	<meta name="description" content="HappiLabs is our name. Professional shopping for making research and science labs happy.">
+	<meta name="description" content="HappiLabs is our name. Professional shopping and virtual lab managers for making research labs happy.">
   <meta name="keywords" content="happilabs, happi labs, happy labs, happy scientists, quality, sustainability, price comparison, research, lab supplies, lab equipment scientific products, reviews, ratings, suppliers, lab manager">
   <meta name="author" content="Tom Ruginis">
 
@@ -46,8 +46,8 @@
           <nav class="nav-collapse collapse" >
             <ul class="nav pull-right" id="nav">
               <!-- #TODO: make active page highlighted- can use class="active" but needs to be dynamic -->
-              <li id="about"><%= link_to "About", about_us_path %></li>
-              <li id= "nav_reviews"><%= link_to "Lab reviews", categories_path %></li>
+              <li id="about"><%= link_to "About HL", about_us_path %></li>
+              <!-- <li id= "nav_reviews"><%= link_to "Lab reviews", categories_path %></li> -->
               <li id="sign_up"><%= link_to "Services", sign_up_path %></li>
               <li id="contact"><%= link_to "Contact", contact_path %></li>
               <li id="contact"><a href="http://happilabs.wordpress.com/">Blog</a></li>
@@ -98,9 +98,9 @@
           <li><%= link_to "What We Do", about_us_path %></li>
           <li><%= link_to "How We Do It", about_us_path(anchor: "how_we_do_it") %></li>
           <li><%= link_to "Why We Do It", about_us_path(anchor: "why_we_do_it") %></li>
-          <li><%= link_to "People Who Make It Happen", our_people_path   %></li>
+          <li><%= link_to "People Who Make It Happen", our_people_path %></li>
           <li><%= link_to "Privacy Policy", privacy_policy_path   %></li>
-          <li><a href="http://www.happilabs.org/jobs">Job Opportunities</a></li>
+          <li><a href="http://www.happilabs.org/jobs">Science Jobs</a></li>
         </ul>
       </div>
 
@@ -108,9 +108,9 @@
         <h5>Happy Services</h5>
         <ul>
           <li><a href="http://happilabs.wordpress.com/">FREE advice at our blog</a></li>
-          <li><%= link_to "10 µL - Reviews about Lab Supplies", categories_path %></li>
-          <li><%= link_to "200 µL - Shopping Membership", two_hundred_ml_path %></li>
-          <li><%= link_to "1000 µL - Rent a Lab Manager Consultant", one_thousand_ml_path %></li>
+          <li><%= link_to "Reviews about Lab Supplies", categories_path %></li>
+          <li><%= link_to "Buy a Shopping Membership", two_hundred_ml_path %></li>
+          <li><%= link_to "Rent a Virtual Lab Manager", one_thousand_ml_path %></li>
         </ul>
       </div>
       <div class="footer-col">
