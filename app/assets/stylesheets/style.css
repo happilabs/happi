@@ -263,8 +263,41 @@ h5 {
 
 #newsletter {
 	font-size: 24px;
-	
+	padding-top: 20px;
+	text-align: left;
+	color: black;
 }
+
+#newsletter-text {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+#get-it {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 20px;
+}
+
+.gray-background {
+	background-color: #898989;
+  	background-size: 100%;
+}
+
+#home-cloud-margin-right {
+	margin-right: 200px;
+}
+
+#home-box {
+	width: 915px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 30px;
+	opacity: .8;
+	border-radius: 30px;
+}
+
 .logo-shrink {
 	height: 50px;
 	width: auto;
@@ -316,7 +349,7 @@ h5 {
 	font-weight: 500;
 	padding: 4px;
 	color: #fff;
-	background-color: #ffff00;
+	background-color: #ffffff;
 	border-radius: 5px;
 	letter-spacing: 1px;
 }
@@ -1187,15 +1220,6 @@ input[class="voices-btn"]:hover {
   text-align: left;
   font-size: 16px;
 }
-
-.get-it {
-  font-size: 30px;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 40px;
-}
-
-
 
 /*
 .btn.btn-danger {
@@ -2109,10 +2133,6 @@ footer {
 
 }
 
-#newsletter-text {
-	font-size: 11px;
-}
-
 .footer-col ul {
 	margin-left: 5px;
 }
@@ -2445,6 +2465,7 @@ hr.half {
 	height: auto;
 	display: block;
 	margin-left: 110px;
+	border-radius: 10px;
 }
 
 .price-header{
@@ -3112,8 +3133,8 @@ padding-top: 18px;
 
 .tom-image-jobs {
 	float: left;
-	height: 250px;
-	width: 227px;
+	height: 300px;
+	width: 270px;
 }
 
 .jobs-contact-box {

@@ -1,11 +1,8 @@
-  <div class="innerbg">
-    <div class="leftbg">
-    </div>
-
-      <div class="hero-unit">
-        <div class="container">
-          <div class="row-fluid">
-            <div class="">
+<div class="innerbg">
+  <div class="hero-unit">
+    <div class="container">
+          <div class="">
+            <div >
                 <% if notice.present? %>
                 <p id="homepage_messages"><%= notice %></p>
                 <% end %>
@@ -14,58 +11,55 @@
                 <p id="homepage_messages"><%= alert %></p>
                 <% end %>
               <hr class="half">
-                <h1><span class="yellow">Rent a Virtual Lab Manager</span></h1>
-                <h2 class="text-center">
-                <span class="get-it">You focus on your science. We'll focus on shopping for your lab supplies & equipment.</span>
-                </h2>
+                <h1><span class="yellow">Professional Shopping for Scientists</span></h1>
+                
               </hr>
-              <%= link_to "Become a Member", sign_up_url, class: "btn btn-large btn-success btn-why" %>
-              <div id="vimeo">
-              <h5 id="newsletter">Receive our newsletter</h5>
-            <ul>
+              
+                  <div id="home-box" class="gray-background group">
 
-              <li id="newsletter-text">For info about jobs, coffee raffles, and recommendations for managing your lab</li>
-            </ul>
-            <ul>
-              <!-- <li>Receive our newsletter</li> -->
-              <% @subscriber = Subscriber.new %>
-              <%= form_for(@subscriber) do |f| %>
-                <% if @subscriber.errors.any? %>
-                  <div id="error_explanation">
-                    <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+                    <h2 class="">
+                    <span id="get-it">You focus on your science. We'll focus on shopping for your lab supplies & equipment.</span>
+                    </h2>
 
-                    <ul>
-                    <% @subscriber.errors.full_messages.each do |msg| %>
-                      <li><%= msg %></li>
+                    <img src="happy_virtual_lab_managers.png" alt="data for lab managers and pi's" title="We are a community of happy scientists" class="tom-image-jobs margin-left" id="home-cloud-margin-right">
+                    <h5 id="newsletter">Receive our e-newsletter</h5>
+                      <h4 id="newsletter-text">for shopping and lab managing tips, and job opportunities</h4>
+     
+                  <!-- <li>Receive our newsletter</li> -->
+                      <% @subscriber = Subscriber.new %>
+                      <%= form_for(@subscriber) do |f| %>
+                      <% if @subscriber.errors.any? %>
+                        <div id="error_explanation">
+                          <h2><%= pluralize(@subscriber.errors.count, "error") %> prohibited this subscriber from being saved:</h2>
+
+                          <ul>
+                          <% @subscriber.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                          <% end %>
+                          </ul>
+                        </div>
+                      <% end %>
+
+                      <div class="field">
+
+                        <%= f.text_field :first_name, placeholder: "Name" %>
+                      </div>
+
+                      <div class="field">
+                        <%= f.text_field :email, placeholder: "Email" %>
+                      </div>
+
+                      <div class="actions">
+                        <%= f.submit "Submit", :class => "btn btn-success" %>
+                      </div>
                     <% end %>
-                    </ul>
+                
                   </div>
-                <% end %>
-
-                <div class="field">
-
-                  <%= f.text_field :first_name, placeholder: "Name" %>
-                </div>
-
-                <div class="field">
-                  <%= f.text_field :email, placeholder: "Email" %>
-                </div>
-
-                <div class="actions">
-                  <%= f.submit "Submit", :class => "btn btn-success" %>
-                </div>
-              <% end %>
-            </ul>
-          </li>
-        </ul>
-      </div>
             </div>
-            
-
           </div>
-        </div>
-      </div>
+    </div>
   </div>
+</div>
 
 
 
@@ -84,7 +78,8 @@
             <img class="testimonial-img" src="ourpeople/happy_happilabs_customer_uic.jpg" alt="happy happilabs customer testimonial" title="Scientists are happy about HappiLabs">
             <p class="second-p">"HappiLabs has been extremely helpful. To date, they have <strong>saved us over $1,100</strong>. I am happy that a service like this exists; <strong>it makes my job easier.</strong>"</p>
             <p><a href="http://www.rrc.uic.edu/supplycenter/contact"><em>Jenny Beck, Director of the Research Resource Center at University of IL-Chicago</em> (contact Jenny if you have questions)</a></p>
-          </div>
+        </div>
+
           <div class="testimonial group">
 
             <img class="testimonial-img" src="shad_thaxton_happilabs_testimonial.jpg" alt="happy happilabs customer testimonial" title="Scientists are happy about HappiLabs">
@@ -103,7 +98,7 @@
                     </div>
                     <div class="pricing-table-header">
 
-                        <img src="happy_community.png" alt="10ul service read product reviews for scientists" title="read and write lab supply product ratings and reviews for happy scientists" class="price-photo">
+                        <img src="pcr_tubes.jpg" alt="10ul service read product reviews for scientists" title="read and write lab supply product ratings and reviews for happy scientists" class="price-photo">
                     </div>
 
                     <div class="pricing-table-features">
@@ -133,7 +128,7 @@
                 </div>
                 <div class="pricing-table-header">
 
-                  <img src="happy_data.png" alt="200ul subscription to happi reports" title="subscribe to happi labs reports about the price and quality of lab supplies" class="price-photo">
+                  <img src="ourpeople/Raudel_Sandoval_PhD_HappiLabs_Scientific_Consultant.JPG" alt="lab manager shopping membership for lab supplies and equipment" title="subscribe to happilabs about the price and quality of lab supplies" class="price-photo">
 
                 </div>
 
@@ -159,15 +154,15 @@
                   </div>
 
                   <div class="pricing-table-header">
-                    <img src="happy_lab_organization.png" alt="10ul subscription for happilabs lab manager report" title="hire a happy lab manager consultant to save money and time" class="price-photo">
+                    <img src="happy_virtual_lab_managers.png" alt="1000ul membership for happilabs virtual lab manager" title="hire a happy lab manager consultant to save money and time" class="price-photo">
                   </div>
 
                   <div class="pricing-table-space"></div>
                     <div class="pricing-table-features">
                         <!-- <h4>Rent-a-lab-manager to</h4> -->
                         <ul class="subscribe-list">
-                          <li>Rent a <strong>Lab Manager Consultant</strong></li>
-                          <li>We will search, shop, and negotiate purchasing for supplies</li>
+                          <li>Rent a <strong>Virtual Lab Manager</strong></li>
+                          <li>We're in your lab, but we're not</li>
                         </ul>
                          <h5 class="sub-price"><span id="small-price">Starting at </span>$65<span id="small-price">/hour</span></h5>
                     </div>
@@ -177,107 +172,8 @@
                     </div>
                   </div>
               </div>
-
-
           </div>
         </div>
   </div>
 </div>
 
-
-<!--
-  <div class="sky-background content-container group" id="share_your_voice">
-
-
-      <div class="voices-intro">
-
-        <h2>Share Your Voice</h2>
-        <p class="second-p">This is the place to voice your opinion, ask for help, or make a suggestion about life in the lab. <strong>We're here to listen</strong>.</p>
-        <p class="second-p">Our goal is to identify common sources of happiness and unhappiness in labs. Then we'll celebrate with you or find you a solution, respectively. Share your voice with other scientists and let's make life in the lab a happier place!</p>
-
-      </div>
-
-      <div class="voices-section group">
-        <div class="voicesbox group">
-
-        <div class="voices-background">
-          <div class="voices-yellow group">
-            <h5 class="happy">Happy</h5>
-            <p>"My paper was accepted!"</p>
-            <img src="smiley-face-test.png" alt="Happy voices from scientists" class="smiley-image">
-          </div>
-        </div>
-
-          <div class="voices group">
-            <h5 class="unhappy">Unhappy</h5>
-            <p>"People borrowing your stuff without asking."</p>
-          </div>
-
-          <div class="voices-question group">
-            <h5 class="question">Question</h5>
-            <p>"How do I use twitter to communicate my research?"</p>
-          </div>
-
-        </div>
-
-        <%# if user_signed_in? %>
-          <div class= "voices-textbox">
-            <%# form_for @user_voice, :url => user_voices_path do |f| %>
-
-              <%# f.hidden_field :user_id, :value => current_user.id %>
-              <div>
-              <%# f.text_area :message, placeholder: "Share one thing that makes you happy or unhappy in your lab", :rows => 10, :columns => 8 %>
-              </div>
-
-              <div>
-                <%# f.submit "Send", :class => "voices-btn" %>
-              </div>
-            <%# end %>
-          </div>
-        <%# else %>
-          <div class="voices-textbox">
-            <%# form_for @message, :url => voices_path do |f| %>
-                <div>
-                  <%# f.text_field :name, :placeholder => "Name" %>
-                </div>
-
-                <div>
-                  <%# f.text_field :email, :placeholder => "Email" %>
-                </div>
-
-                <div>
-                  <%# f.text_area :body, :placeholder => "Share one thing that makes you happy or unhappy in your lab, or ask us a question", :rows => 6 %>
-                </div>
-
-                <div>
-                <%# f.submit "Send", :class => "voices-btn" %>
-                </div>
-            <%# end %>
-          </div>
-        <%# end %>
-
-
-        <div class="voicesbox group">
-
-          <div class="voices-question group">
-            <h5 class="question">Question</h5>
-            <p>"Is there an easier way to keep track of my mouse inventory?"</p>
-          </div>
-
-          <div class="voices-yellow group">
-            <h5 class="happy">Happy</h5>
-            <p>"Solid co-workers."</p>
-            <img src="smiley-face-test.png" alt="Happy voices from scientists" class="smiley-image">
-          </div>
-
-          <div class="voices group">
-            <h5 class="unhappy">Unhappy</h5>
-            <p>"My snow boots have a hole in them and sitting here with wet feet sucks."</p>
-          </div>
-
-        </div>
-      </div>
-
-  </div>
-
- -->

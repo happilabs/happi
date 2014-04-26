@@ -46,8 +46,8 @@
           <nav class="nav-collapse collapse" >
             <ul class="nav pull-right" id="nav">
               <!-- #TODO: make active page highlighted- can use class="active" but needs to be dynamic -->
-              <li id="about"><%= link_to "About", about_us_path %></li>
-              <li id= "nav_reviews"><%= link_to "Lab reviews", categories_path %></li>
+              <li id="about"><%= link_to "About HL", about_us_path %></li>
+              <!-- <li id= "nav_reviews"><%= link_to "Lab reviews", categories_path %></li> -->
               <li id="sign_up"><%= link_to "Services", sign_up_path %></li>
               <li id="contact"><%= link_to "Contact", contact_path %></li>
               <li id="contact"><a href="http://happilabs.wordpress.com/">Blog</a></li>
@@ -98,7 +98,7 @@
           <li><%= link_to "What We Do", about_us_path %></li>
           <li><%= link_to "How We Do It", about_us_path(anchor: "how_we_do_it") %></li>
           <li><%= link_to "Why We Do It", about_us_path(anchor: "why_we_do_it") %></li>
-          <li><%= link_to "People Who Make It Happen", categories_path %></li>
+          <li><%= link_to "People Who Make It Happen", our_people_path %></li>
           <li><%= link_to "Privacy Policy", privacy_policy_path   %></li>
           <li><a href="http://www.happilabs.org/jobs">Science Jobs</a></li>
         </ul>
