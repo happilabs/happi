@@ -702,7 +702,7 @@ input[class="voices-btn"]:hover {
 	font-size: 14px;	}
 
 .subscribe-us {
-	width: 1100px;
+	max-width: 1100px;
 	margin: 0 auto;
 	padding-bottom: 100px;
 }
@@ -2164,6 +2164,8 @@ footer {
   background-color: #FFF;
   border-radius: 9px;
   padding: 14px;
+  overflow: auto;
+  min-width: 306px;
   position: relative;
   text-align: center;
   -webkit-box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.5);
@@ -2718,6 +2720,57 @@ padding-top: 18px;
 
 
 /*****************************  @MEDIA ***********************************/
+
+@media (max-width: 720px) {
+  #home-box, #newsletter {
+    text-align: center;
+  }
+
+  #home-box {
+    border-radius: 0px;
+    width: auto;
+    max-width: 915px;
+  }
+
+  .hero-unit {
+    width: 100%;
+    padding: 100px 0;
+  }
+
+  /*.testimonial {
+    margin-left: 0 !important;
+  }*/
+
+  .subscribe-us {
+    display: none;
+  }
+
+  .footer-col:nth-child(1) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer-col:not(:nth-child(1)) {
+    display: none;
+  }
+
+  #main-nav {
+    display: none;
+  }
+
+  #home-cloud-margin-right {
+    margin-right: 0;
+    float: none;
+    margin: 0 auto;
+    display: block;
+    overflow: auto;
+  }
+
+  .tom-image-jobs.margin-left {
+    margin-left: 0;
+  }
+}
 
 @media (min-width:1200px){
 	#main-nav select {
