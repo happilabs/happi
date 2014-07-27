@@ -261,6 +261,12 @@ h5 {
 
 /*  ************  Home Page  ***********  */
 
+#main_title {
+	text-shadow: 0 1px 3px #00aeef, 0 0 30px #00AEEF;
+	padding-bottom: 26px;
+	font-weight: 600;
+}
+
 #newsletter {
 	font-size: 24px;
 	padding-top: 20px;
@@ -274,10 +280,16 @@ h5 {
 }
 
 #get-it {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: 500;
   color: #ffffff;
-  line-height: 20px;
+  line-height: 35px;
+}
+
+#home-box h2 {
+	font-size: 30px;
+	line-height: 36px;
+	padding: 20px 0 20px 0px;
 }
 
 .gray-background {
@@ -294,7 +306,6 @@ h5 {
 	height: auto;
 	margin: 0 auto;
 	margin-top: 30px;
-	opacity: .8;
 	border-radius: 30px;
 }
 
@@ -303,7 +314,8 @@ h5 {
 	width: auto;
 }
 .innerbg {
-	background: rgba(44, 62, 80, 0.8) url(HappiLabs_Virtual_Lab_Managers.jpg) 100% 0 fixed repeat;
+	border-bottom: thick dotted #00aeef;
+	/*background: rgba(44, 62, 80, 0.8) url(HappiLabs_Virtual_Lab_Managers.jpg) 100% 0 fixed repeat;
 	min-height:650px;
 	width:100%;
 	display:inline-block;
@@ -314,12 +326,12 @@ h5 {
 	-o-background-size: cover;
 	-webkit-background-size: cover;
 	position:relative;
-	padding-bottom:50px;
+	padding-bottom:50px;*/
 }
 
 .leftbg {
   /*background: rgba(40, 170, 157, 0.4) url(pixel.png) 0% 0% repeat;*/
-  min-height:100%;
+  /*min-height:100%;
   height:100%;
   width:100%;
   display:block;
@@ -327,7 +339,7 @@ h5 {
   padding:0px 0px 0px 0px;
   position:absolute;
   bottom:0px;
-  z-index:1;
+  z-index:1;*/
 }
 
 #newsletter-home {
@@ -2533,7 +2545,7 @@ hr.half {
 
 .price-box {
 	height: 510px;
-	opacity: .7;
+	opacity: .8;
 }
 
 .price-box:hover {
