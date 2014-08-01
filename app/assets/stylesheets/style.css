@@ -262,7 +262,7 @@ h5 {
 /*  ************  Home Page  ***********  */
 
 #main_title {
-	text-shadow: 0 1px 3px #00aeef, 0 0 30px #00AEEF;
+	text-shadow: 0 6px 10px #00aeef, 0 0 30px #00AEEF;
 	padding-bottom: 26px;
 	font-weight: 600;
 }
@@ -289,7 +289,7 @@ h5 {
 #home-box h2 {
 	font-size: 30px;
 	line-height: 36px;
-	padding: 20px 0 20px 0px;
+	padding: 20px 0 65px 0px;
 }
 
 .gray-background {
@@ -298,7 +298,8 @@ h5 {
 }
 
 #home-cloud-margin-right {
-	margin-right: 200px;
+	margin-right: 50px;
+	margin-left: 40px;
 }
 
 #home-box {
@@ -3146,7 +3147,7 @@ padding-top: 18px;
 .tom-image-jobs {
 	float: left;
 	height: 300px;
-	width: 270px;
+	width: 295px;
 }
 
 .jobs-contact-box {
