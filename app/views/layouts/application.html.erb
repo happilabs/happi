@@ -6,7 +6,7 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 	
-	<meta name="title" content="Happilabs: virtual lab managers who specialize in lab shopping, quality and sustainability ratings, reviews, reports, and consulting consultants for happy lab managers about scientific products, management, and lab supplies">
+	<meta name="title" content="Happilabs: virtual lab managers who specialize in lab shopping, purchasing, procurement, quality and sustainability ratings, reviews, reports, and consulting consultants for happy lab managers about scientific products, management, and lab supplies">
 	<meta name="description" content="HappiLabs provides affordable virtual lab managers for small academic labs and biotech companies. Happy scientists is our goal.">
   <meta name="keywords" content="happilabs, happi labs, happy labs, happy scientists, quality, sustainability, price comparison, research, lab supplies, lab equipment scientific products, reviews, ratings, suppliers, lab manager">
   <meta name="author" content="Tom Ruginis">
@@ -52,21 +52,21 @@
               <li id="contact"><%= link_to "Contact", contact_path %></li>
               <li id="contact"><a href="http://happilabs.wordpress.com/">Blog</a></li>
 
-              <li>
+              <!-- <li>
                   <div>
                     <div id="user_nav">
                       <ul class="whoareyou">
-                        <% if user_signed_in? %>
-                        <li><%= link_to 'Profile', edit_user_registration_path %></li>
-                        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-                        <% else %>
-                        <li><%= link_to "Sign up", new_user_registration_path %></li>
-                        <li><%= link_to "Login", new_user_session_path %></li>
-                        <% end %>
+                        <%# if user_signed_in? %>
+                        <li><%#= link_to 'Profile', edit_user_registration_path %></li>
+                        <li><%#= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+                        <%# else %>
+                        <li><%#= link_to "Sign up", new_user_registration_path %></li>
+                        <li><%#= link_to "Login", new_user_session_path %></li>
+                        <%# end %>
                       </ul>
                     </div>
                   </div>
-              </li>
+              </li> -->
 
             </ul>
           </nav>
@@ -109,8 +109,8 @@
         <ul>
           <li><a href="http://happilabs.wordpress.com/">FREE advice at our blog</a></li>
           <li><%= link_to "Reviews about Lab Supplies", categories_path %></li>
-          <li><%= link_to "Buy a Shopping Membership", two_hundred_ml_path %></li>
-          <li><%= link_to "Rent a Virtual Lab Manager", one_thousand_ml_path %></li>
+          <li><%= link_to "Lab Shopping Consultants", two_hundred_ml_path %></li>
+          <li><%= link_to "Hire a Virtual Lab Manager™", one_thousand_ml_path %></li>
         </ul>
       </div>
       <div class="footer-col">
