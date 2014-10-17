@@ -3011,7 +3011,7 @@ padding-top: 18px;
 
 .testimonial
 .second-p {
-	font-size: 12px;
+	font-size: 15px;
 	line-height: 20px;
 	margin-bottom: 0px;
 	padding-top: 0px;
@@ -3070,6 +3070,10 @@ padding-top: 18px;
 #jobs-intro p {
 	font-size: 14px;
 	padding: 0px;
+}
+
+#jobs-intro ul {
+	font-size: 14px;
 }
 
 .jobs-box {
