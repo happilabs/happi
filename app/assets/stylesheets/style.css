@@ -281,9 +281,10 @@ h5 {
 
 #get-it {
   font-size: 30px;
-  font-weight: 300;
-  color: #ffffff;
+  font-weight: 500;
+  color: #898989;
   line-height: 45px;
+  text-shadow: none;
 }
 
 .home-logo {
