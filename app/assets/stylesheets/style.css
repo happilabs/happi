@@ -305,7 +305,7 @@ h5 {
 }
 
 .gray-background {
-	background-color: #898989;
+	background-color: #ececec;
   	background-size: 100%;
 }
 
@@ -1181,6 +1181,8 @@ input[class="voices-btn"]:hover {
 	background-color: #CEF3FF;
   	background-size: 100%;
 }
+
+
 
 .blue-background {
 	background-color: #00Aeef;
